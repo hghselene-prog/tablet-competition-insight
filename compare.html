@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>产品参数对比 | 平板电脑竞品分析</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="tn-brand">平板竞品分析</div>
+  <div class="tn-links">
+    <a href="index.html">概览</a>
+    <a href="products.html">产品列表</a>
+    <a href="insights.html">市场洞察</a>
+  </div>
+</nav>
+
+<div class="cmp-page-nav">
+  <a href="products.html">← 返回选品</a>
+  <div class="nav-count">已选 <span id="navCount">0</span> / 5 款</div>
+  <div class="cmp-page-actions">
+    <button class="btn-clear" onclick="clearCompare()">清空对比</button>
+  </div>
+  <div class="nav-title">产品参数对比</div>
+</div>
+
+<div class="container">
+  <div class="section-desc">最多 5 款产品横向并排对比，右侧为多维能力雷达图（性价比 / 屏幕 / 性能 / 续航 / 音效 / 生态）。绿色高亮为该行最优值。</div>
+
+  <div class="cmp-wrap">
+    <div class="cmp-section" id="cmpSection">
+      <div class="cmp-toolbar">
+        <span class="cmp-count">已选 <strong id="cmpCount">0</strong>/5 款产品</span>
+        <button class="btn-add" onclick="openPicker()">+ 添加产品</button>
+      </div>
+      <div id="cmpGridCt"></div>
+    </div>
+    <div class="radar-sec">
+      <div class="radar-title">多维能力雷达图</div>
+      <div class="radar-desc">性价比 / 屏幕 / 性能 / 续航 / 音效 / 生态</div>
+      <div class="radar-cc" id="radarCt">
+        <div class="radar-empty"><div class="re-icon">&#128202;</div><div>选择产品后显示雷达图</div></div>
+      </div>
+      <div class="radar-legend" id="radarLegend"></div>
+    </div>
+  </div>
+
+    <div id="emptyBanner" style="display:none;background:#fff;border-radius:var(--r);box-shadow:var(--shadow);padding:40px 24px;text-align:center;color:var(--ts);margin-bottom:48px;">
+    <div style="font-size:40px;opacity:.4;margin-bottom:12px;">&#128269;</div>
+    <div style="font-size:15px;font-weight:600;">尚未选择任何产品</div>
+    <div style="font-size:13px;margin-top:6px;">点击下方「+ 添加产品」即可在对比页直接选品，或返回首页勾选</div>
+    <button style="margin-top:16px;padding:10px 22px;background:#2563eb;color:#fff;text-decoration:none;border:none;border-radius:8px;font-weight:700;font-size:13px;cursor:pointer;" onclick="openPicker()">+ 添加产品</button>
+  </div>
+</div>
+
+<!-- ===== Product Picker (shared selection on compare page) ===== -->
+<div class="picker-overlay" id="picker" style="display:none;" onclick="if(event.target===this)closePicker()">
+  <div class="picker-panel">
+    <div class="picker-head">
+      <div class="picker-title">选择产品加入对比 <span class="picker-sub">（已选 <span id="pkCount">0</span>/5）</span></div>
+      <button class="picker-close" onclick="closePicker()">&times;</button>
+    </div>
+    <div class="picker-bar">
+      <input class="pk-search" id="pkSearch" placeholder="搜索产品名 / 品牌…" oninput="renderPickerList()">
+      <div class="pk-chips" id="pkChips"></div>
+    </div>
+    <div class="pk-list" id="pkList"></div>
+    <div class="picker-foot">
+      <span class="pk-tip">点击产品切换加入 / 移除，最多 5 款</span>
+      <button class="picker-done" onclick="closePicker()">完成</button>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <p>平板电脑竞品分析 · 数据采集自各品牌官方网站 · 2026年7月</p>
+  <p style="margin-top:6px;">价格信息以官网实时标价为准，首销价为产品发布时官方起售价，本页面仅供参考</p>
+</div>
+
+<script src="data.js"></script>
+<script>
+onCompareChange=function(){
+  renderCmpGrid();
+  renderRadar();
+  const nc=document.getElementById("navCount");if(nc)nc.textContent=compareList.length;
+  const cc=document.getElementById("cmpCount");if(cc)cc.textContent=compareList.length;
+  const bn=document.getElementById("emptyBanner");if(bn)bn.style.display=compareList.length===0?"block":"none";
+};
+// init
+onCompareChange();
+updateCompareUI();
+
+// ===== Product Picker =====
+let pkBrand="all";
+function openPicker(){const o=document.getElementById("picker");o.style.display="flex";renderPickerList();}
+function closePicker(){document.getElementById("picker").style.display="none";}
+function renderPickerChips(){
+  const c=document.getElementById("pkChips");
+  const all=[{k:"all",n:"全部"}].concat(brandOrder.map(b=>({k:b,n:brandInfo[b].name})));
+  c.innerHTML=all.map(x=>`<div class="pk-chip ${pkBrand===x.k?'on':''}" onclick="pkSetBrand('${x.k}')">${x.n}</div>`).join("");
+}
+function pkSetBrand(b){pkBrand=b;renderPickerChips();renderPickerList();}
+function priceLabel(p){return p.price>0?("¥"+p.price.toLocaleString()+(p.priceFrom?" 起":"")):"缺货/EOL";}
+function renderPickerList(){
+  const q=(document.getElementById("pkSearch").value||"").trim().toLowerCase();
+  const list=document.getElementById("pkList");
+  const groups={};
+  products.forEach((p,i)=>{
+    if(pkBrand!=="all"&&p.brand!==pkBrand)return;
+    if(q&&!(p.name.toLowerCase().includes(q)||p.brandName.toLowerCase().includes(q)||(p.subBrand||"").toLowerCase().includes(q)))return;
+    (groups[p.brand]=groups[p.brand]||[]).push(i);
+  });
+  let h="";
+  brandOrder.forEach(b=>{
+    if(!groups[b])return;
+    const info=brandInfo[b];
+    h+=`<div class="pk-group"><div class="pk-group-h"><span class="pk-dot" style="background:${info.color}"></span>${info.name}</div>`;
+    groups[b].forEach(i=>{
+      const p=products[i],sel=compareList.indexOf(i)>=0,full=(!sel&&compareList.length>=MAX_COMPARE);
+      h+=`<div class="pk-item ${sel?'sel':''} ${full?'full':''}" onclick="pickerToggle(${i})">
+        <div class="pk-check">${sel?'✓':''}</div>
+        <div class="pk-info">
+          <div class="pk-name">${p.name}${p.subBrand?' <span class="pk-sub">'+p.subBrand+'</span>':''}</div>
+          <div class="pk-meta"><span class="tv ${p.tier}">${tierInfo[p.tier].name}</span> ${priceLabel(p)}</div>
+        </div>
+      </div>`;
+    });
+    h+="</div>";
+  });
+  list.innerHTML=h||'<div class="pk-none">无匹配产品</div>';
+  const pc=document.getElementById("pkCount");if(pc)pc.textContent=compareList.length;
+}
+function pickerToggle(idx){
+  const pos=compareList.indexOf(idx);
+  if(pos>=0){compareList.splice(pos,1);}
+  else{if(compareList.length>=MAX_COMPARE){return;}compareList.push(idx);}
+  saveCompare();updateCompareUI();
+}
+function refreshPicker(){
+  const o=document.getElementById("picker");
+  if(o&&o.style.display!=="none"){renderPickerChips();renderPickerList();}
+}
+</script>
+</body>
+</html>

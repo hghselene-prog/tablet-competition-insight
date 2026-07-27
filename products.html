@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>产品列表 | 平板电脑竞品分析</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="tn-brand">平板竞品分析</div>
+  <div class="tn-links">
+    <a href="index.html">概览</a>
+    <a href="products.html" class="tn-on">产品列表</a>
+    <a href="insights.html">市场洞察</a>
+  </div>
+</nav>
+
+<div class="page-head">
+  <h1>产品列表</h1>
+  <p class="subtitle">六大品牌全部在售平板产品，按品牌与价格档位分组。可直接在顶部「快速选品」面板一次性勾选多款，或在卡片勾选，选好后点底部「查看对比」进入对比页（最多 5 款）。</p>
+</div>
+
+<div class="quick-sel" id="quickSel">
+  <div class="qs-bar" id="qsToggle" onclick="toggleQuickSel()">
+    <div class="qs-title">快速选品 <span class="qs-chev">▾</span></div>
+    <div class="qs-actions">
+      <span class="qs-count">已选 <strong id="qsCount">0</strong>/5</span>
+      <span class="qs-toggle-label" id="qsToggleLabel">展开选品 ▾</span>
+    </div>
+  </div>
+  <div class="qs-body" id="qsBody">
+    <div class="qs-hint">点击芯片即加入/移出对比（最多 5 款，选满后其余置灰）</div>
+    <div class="qs-actions qs-actions-body">
+      <button class="qs-btn" onclick="event.stopPropagation();selectCurrentFilter()">全选当前筛选</button>
+      <button class="qs-btn ghost" onclick="event.stopPropagation();clearCompare()">清空</button>
+    </div>
+    <div class="qs-wrap" id="qsChips"></div>
+  </div>
+</div>
+
+<div class="filter-bar" id="filterBar">
+  <div class="filter-section">
+    <span class="filter-label">品牌</span>
+    <button class="filter-btn active" data-brand="all">全部</button>
+    <button class="filter-btn" data-brand="apple"><span class="dot"></span>Apple</button>
+    <button class="filter-btn" data-brand="huawei"><span class="dot"></span>华为</button>
+    <button class="filter-btn" data-brand="honor"><span class="dot"></span>荣耀</button>
+    <button class="filter-btn" data-brand="xiaomi"><span class="dot"></span>小米/红米</button>
+    <button class="filter-btn" data-brand="oppo"><span class="dot"></span>OPPO</button>
+    <button class="filter-btn" data-brand="vivo"><span class="dot"></span>vivo/iQOO</button>
+  </div>
+  <div class="filter-divider"></div>
+  <div class="filter-section">
+    <span class="filter-label">价格档位</span>
+    <button class="filter-btn active" data-tier="all">全部</button>
+    <button class="filter-btn" data-tier="ultra">超旗舰 ¥6K+</button>
+    <button class="filter-btn" data-tier="flagship">高端 ¥4K-6K</button>
+    <button class="filter-btn" data-tier="midhigh">中高端 ¥3K-4K</button>
+    <button class="filter-btn" data-tier="mid">中端 ¥2K-3K</button>
+    <button class="filter-btn" data-tier="entry">入门 <¥2K</button>
+  </div>
+</div>
+
+<div class="container">
+  <div id="productSections"></div>
+</div>
+
+<div class="compare-tray" id="cmpTray">
+  <div class="compare-tray-info">已选 <strong id="cmpCountTray">0</strong>/5 款产品</div>
+  <div class="compare-tray-items" id="cmpItems"></div>
+  <button class="btn-go-cmp disabled" id="goCompare" onclick="if(compareList.length>0)location.href='compare.html'">查看对比 →</button>
+  <button class="btn-clear" onclick="clearCompare()">清空</button>
+</div>
+
+<div class="footer">
+  <p>平板电脑竞品分析 · 数据采集自各品牌官方网站 · 2026年7月</p>
+  <p style="margin-top:6px;">价格信息以官网实时标价为准，首销价为产品发布时官方起售价，本页面仅供参考</p>
+</div>
+
+<script src="data.js"></script>
+<script>
+// ===== Page 2: product list =====
+renderProducts();setupFilterBar();renderQuickSelect();updateCompareUI();
+function toggleQuickSel(){
+  const p=document.getElementById("quickSel");
+  const open=p.classList.toggle("open");
+  document.getElementById("qsToggleLabel").textContent=open?"收起 ▴":"展开选品 ▾";
+}
+</script>
+</body>
+</html>

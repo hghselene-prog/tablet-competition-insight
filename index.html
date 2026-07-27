@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>平板电脑竞品分析 | 市场全景</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="tn-brand">平板竞品分析</div>
+  <div class="tn-links">
+    <a href="index.html" class="tn-on">概览</a>
+    <a href="products.html">产品列表</a>
+    <a href="insights.html">市场洞察</a>
+  </div>
+</nav>
+
+<div class="header">
+  <h1>平板电脑竞品分析</h1>
+  <p class="subtitle">覆盖 Apple / 华为 / 荣耀 / 小米(含红米) / OPPO / vivo 六大品牌，全网在售平板产品全景对比</p>
+  <div class="stats-bar">
+    <div class="stat-item"><div class="num">6</div><div class="label">品牌</div></div>
+    <div class="stat-item"><div class="num">49</div><div class="label">在售产品</div></div>
+    <div class="stat-item"><div class="num">2</div><div class="label">EOL 缺货</div></div>
+    <div class="stat-item"><div class="num">¥1,099</div><div class="label">最低起售价</div></div>
+    <div class="stat-item"><div class="num">¥13,499</div><div class="label">最高起售价</div></div>
+    <div class="stat-item"><div class="num">5</div><div class="label">价格档位</div></div>
+  </div>
+  <div class="meta"><span>数据来源：各品牌官方网站</span><span>|</span><span>采集时间：2026年7月</span><span>|</span><span>含首销价与现价对比</span></div>
+</div>
+
+<div class="tier-ov">
+  <div class="tier-ov-title">产品价格档位全景图</div>
+  <div class="tier-ov-desc">每个圆点代表一款产品，横轴为品牌，纵轴为当前官网售价，颜色代表价格档位。虚线圆点为 EOL/缺货产品。点击圆点即可加入对比。</div>
+  <div class="tier-ov-chart" id="tierOvContainer">
+    <div id="tierOv"></div>
+    <div class="ov-tip" id="ovTip"></div>
+  </div>
+</div>
+
+<div class="filter-bar" id="filterBar">
+  <div class="filter-section">
+    <span class="filter-label">品牌</span>
+    <button class="filter-btn active" data-brand="all">全部</button>
+    <button class="filter-btn" data-brand="apple"><span class="dot"></span>Apple</button>
+    <button class="filter-btn" data-brand="huawei"><span class="dot"></span>华为</button>
+    <button class="filter-btn" data-brand="honor"><span class="dot"></span>荣耀</button>
+    <button class="filter-btn" data-brand="xiaomi"><span class="dot"></span>小米/红米</button>
+    <button class="filter-btn" data-brand="oppo"><span class="dot"></span>OPPO</button>
+    <button class="filter-btn" data-brand="vivo"><span class="dot"></span>vivo/iQOO</button>
+  </div>
+  <div class="filter-divider"></div>
+  <div class="filter-section">
+    <span class="filter-label">价格档位</span>
+    <button class="filter-btn active" data-tier="all">全部</button>
+    <button class="filter-btn" data-tier="ultra">超旗舰 ¥6K+</button>
+    <button class="filter-btn" data-tier="flagship">高端 ¥4K-6K</button>
+    <button class="filter-btn" data-tier="midhigh">中高端 ¥3K-4K</button>
+    <button class="filter-btn" data-tier="mid">中端 ¥2K-3K</button>
+    <button class="filter-btn" data-tier="entry">入门 <¥2K</button>
+  </div>
+</div>
+
+<div class="container">
+  <div class="tier-sum" id="tierSumGrid"></div>
+
+  <div class="section-title"><span class="icon"></span>降价幅度排行 TOP 10</div>
+  <p class="section-desc">首销价与当前官网价差异最大的产品，反映促销力度和价格调整幅度。标有「调价」徽标的产品存在价格变动。</p>
+  <div class="drop-chart-section"><div id="dropChart"></div></div>
+  <p class="data-note">数据口径：官网仅公开「首销价」与「当前价」，不提供近 1 个月调价历史。上表「调价」以首销价→现价变动为代理指标，反映产品上市至今的调整幅度；如需真实近 1 月 Δ，请提供价格追踪数据源。</p>
+
+  <div class="section-title"><span class="icon"></span>品牌价格带分布</div>
+  <p class="section-desc">各品牌平板产品起售价区间一览，反映品牌定位策略</p>
+  <div class="price-chart-section"><div class="price-chart-title">起售价区间（人民币）</div><div id="priceChart"></div></div>
+
+  <div class="section-title"><span class="icon"></span>全产品规格对比表</div>
+  <p class="section-desc">含首销价、现价、降价幅度和价格档位标签，横向滚动查看完整信息（受上方筛选影响）</p>
+  <div class="table-wrapper">
+    <table id="cmpTable"><thead><tr>
+      <th>品牌</th><th>产品名称</th><th>价格档位</th><th>屏幕尺寸</th><th>处理器</th><th>分辨率</th><th>首销价</th><th>现价</th><th>降价幅度</th><th>定位</th>
+    </tr></thead><tbody id="tableBody"></tbody></table>
+  </div>
+</div>
+
+<div class="compare-tray" id="cmpTray">
+  <div class="compare-tray-info">已选 <strong id="cmpCountTray">0</strong>/5 款产品</div>
+  <div class="compare-tray-items" id="cmpItems"></div>
+  <button class="btn-go-cmp disabled" id="goCompare" onclick="if(compareList.length>0)location.href='compare.html'">查看对比 →</button>
+  <button class="btn-clear" onclick="clearCompare()">清空</button>
+</div>
+
+<div class="footer">
+  <p>平板电脑竞品分析 · 数据采集自各品牌官方网站 · 2026年7月</p>
+  <p style="margin-top:6px;">价格信息以官网实时标价为准，首销价为产品发布时官方起售价，本页面仅供参考</p>
+</div>
+
+<script src="data.js"></script>
+<script>
+// ===== Page 1: overview dashboard =====
+renderTierOv();renderTierSum();renderTable();renderPriceChart();renderDropChart();setupFilterBar();updateCompareUI();
+</script>
+</body>
+</html>
