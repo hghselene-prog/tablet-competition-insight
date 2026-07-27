@@ -15,8 +15,8 @@ function getTier(price){ if(price<=0) return "mid"; if(price>=6000) return "ultr
 // ===== Product Data (49 products, 2 EOL) =====
 const products = [
   // Apple (6)
-  {brand:"apple",brandName:"Apple",name:'iPad Pro (M5) 11"',series:"iPad Pro",screen:'11"',chip:"Apple M5",resolution:"2420×1668",price:10799,launchPrice:10799,priceFrom:true,positioning:"专业旗舰",isNew:true,specs:{battery:"—",speaker:"四扬声器",os:"iPadOS",pen:"Apple Pencil Pro"}},
-  {brand:"apple",brandName:"Apple",name:'iPad Pro (M5) 13"',series:"iPad Pro",screen:'13"',chip:"Apple M5",resolution:"2752×2064",price:13499,launchPrice:13499,priceFrom:true,positioning:"专业旗舰",isNew:true,specs:{battery:"—",speaker:"四扬声器",os:"iPadOS",pen:"Apple Pencil Pro"}},
+  {brand:"apple",brandName:"Apple",name:'iPad Pro (M5) 11"',series:"iPad Pro",screen:'11"',chip:"Apple M5",resolution:"2420×1668",price:10799,launchPrice:9599,priceFrom:true,positioning:"专业旗舰",isNew:true,specs:{battery:"—",speaker:"四扬声器",os:"iPadOS",pen:"Apple Pencil Pro"}},
+  {brand:"apple",brandName:"Apple",name:'iPad Pro (M5) 13"',series:"iPad Pro",screen:'13"',chip:"Apple M5",resolution:"2752×2064",price:13499,launchPrice:11699,priceFrom:true,positioning:"专业旗舰",isNew:true,specs:{battery:"—",speaker:"四扬声器",os:"iPadOS",pen:"Apple Pencil Pro"}},
   {brand:"apple",brandName:"Apple",name:'iPad Air (M4) 11"',series:"iPad Air",screen:'11"',chip:"Apple M4",resolution:"2360×1640",price:5999,launchPrice:5999,priceFrom:true,positioning:"轻薄生产力",isNew:true,specs:{battery:"—",speaker:"双扬声器",os:"iPadOS",pen:"Apple Pencil Pro"}},
   {brand:"apple",brandName:"Apple",name:'iPad Air (M4) 13"',series:"iPad Air",screen:'13"',chip:"Apple M4",resolution:"2732×2048",price:7999,launchPrice:7999,priceFrom:true,positioning:"轻薄生产力",isNew:true,specs:{battery:"—",speaker:"双扬声器",os:"iPadOS",pen:"Apple Pencil Pro"}},
   {brand:"apple",brandName:"Apple",name:'iPad (A16) 11"',series:"iPad",screen:'11"',chip:"Apple A16",resolution:"2360×1640",price:3799,launchPrice:2999,priceFrom:true,positioning:"入门主力",specs:{battery:"—",speaker:"双扬声器",os:"iPadOS",pen:"Apple Pencil (USB-C)"}},
@@ -318,7 +318,7 @@ function renderPriceChart(){
 // ===== Drop Chart =====
 function renderDropChart(){
   const ct=document.getElementById("dropChart");if(!ct)return;ct.innerHTML="";
-  const drops=products.filter(p=>p.launchPrice>0&&p.price>0&&p.launchPrice!==p.price).map(p=>({name:p.name,brand:p.brand,diff:p.price-p.launchPrice,pct:((p.price-p.launchPrice)/p.launchPrice)*100})).sort((a,b)=>Math.abs(b.diff)-Math.abs(a.diff)).slice(0,10);
+  const drops=products.filter(p=>p.launchPrice>0&&p.price>0&&p.launchPrice!==p.price).map(p=>({name:p.name,brand:p.brand,diff:p.price-p.launchPrice,pct:((p.price-p.launchPrice)/p.launchPrice)*100})).sort((a,b)=>Math.abs(b.diff)-Math.abs(a.diff));
   const md=drops.length>0?Math.max(...drops.map(d=>Math.abs(d.diff))):1;
   drops.forEach((d,i)=>{const up=d.diff>0,wp=(Math.abs(d.diff)/md)*100,info=brandInfo[d.brand];const mt='<span class="month-pill '+(up?'up':'down')+'" style="margin-left:6px;">调价 '+(up?'↑+':'↓-')+'¥'+Math.abs(d.diff).toLocaleString()+'</span>';const row=document.createElement("div");row.className="drop-item";row.innerHTML='<div class="drop-rank">'+(i+1)+'</div><div class="drop-name"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:'+info.color+';margin-right:4px;"></span>'+d.name+mt+'</div><div class="drop-bar-container"><div class="drop-bar" style="width:'+wp+'%;background:'+info.color+';">'+(up?'+':'-')+Math.abs(d.pct).toFixed(1)+'%</div></div><div class="drop-amount">'+(up?'+¥':'-¥')+Math.abs(d.diff).toLocaleString()+'</div>';ct.appendChild(row);});
   if(drops.length===0)ct.innerHTML='<p style="color:var(--ts);text-align:center;padding:20px;">暂无价格变动数据</p>';
