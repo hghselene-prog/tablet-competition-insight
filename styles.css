@@ -166,6 +166,21 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei
 .cmp-grid .plc .plus{font-size:28px;font-weight:300}
 .cmp-grid .plc .at{font-size:11px;font-weight:600}
 
+/* New-product summary + export */
+.new-summary{background:var(--card-bg);border-radius:var(--r);box-shadow:var(--shadow);padding:24px 28px;margin-bottom:28px}
+.new-sum-body{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.new-sum-count{font-size:14px;color:var(--ts)}
+.new-sum-count .ns-num{font-size:26px;font-weight:800;color:#f59e0b;margin-right:4px}
+.new-sum-brands{display:flex;gap:10px;flex-wrap:wrap}
+.new-sum-brands .ns-brand{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:600;background:#fff7ed;color:#b45309;padding:4px 10px;border-radius:12px}
+.new-sum-brands .ns-dot{width:7px;height:7px;border-radius:50%;background:#f59e0b}
+.new-sum-link{margin-left:auto;font-size:13px;font-weight:700;color:#2563eb;text-decoration:none}
+.new-sum-link:hover{text-decoration:underline}
+.tool-bar{display:flex;align-items:center;gap:12px;margin:-4px 0 20px}
+.btn-export{padding:9px 18px;background:#16a34a;color:#fff;border:none;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;transition:.15s}
+.btn-export:hover{background:#15803d}
+.tool-hint{font-size:12px;color:var(--ts)}
+
 /* Radar */
 .radar-sec{background:var(--card-bg);border-radius:var(--r);box-shadow:var(--shadow);padding:24px 20px;position:sticky;top:70px}
 .radar-title{font-size:16px;font-weight:800;margin-bottom:4px;text-align:center}

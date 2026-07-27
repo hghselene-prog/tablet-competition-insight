@@ -61,6 +61,17 @@
     <button class="filter-btn" data-tier="mid">中端 ¥2K-3K</button>
     <button class="filter-btn" data-tier="entry">入门 <¥2K</button>
   </div>
+  <div class="filter-divider"></div>
+  <div class="filter-section">
+    <span class="filter-label">新品</span>
+    <button class="filter-btn active" data-new="all">全部</button>
+    <button class="filter-btn" data-new="new">只看新品</button>
+  </div>
+</div>
+
+<div class="tool-bar">
+  <button class="btn-export" onclick="exportTable()">⬇ 导出当前表格 (CSV)</button>
+  <span class="tool-hint">导出范围 = 上方筛选结果（品牌 / 档位 / 新品）</span>
 </div>
 
 <div class="container">
@@ -83,6 +94,8 @@
 <script>
 // ===== Page 2: product list =====
 renderProducts();setupFilterBar();renderQuickSelect();updateCompareUI();
+// URL ?new=1 → 自动只看新品
+(function(){const u=new URLSearchParams(location.search);if(u.get('new')==='1'){currentNewFilter='new';const b=document.querySelector('.filter-btn[data-new="new"]');if(b){document.querySelectorAll('.filter-btn[data-new]').forEach(x=>x.classList.remove('active'));b.classList.add('active');}renderProducts();}})();
 function toggleQuickSel(){
   const p=document.getElementById("quickSel");
   const open=p.classList.toggle("open");

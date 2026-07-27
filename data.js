@@ -195,8 +195,8 @@ function monthTrendPill(p){
 }
 
 // ===== Shared filter state =====
-let currentBrandFilter="all", currentTierFilter="all";
-function getFiltered(){return products.map((p,i)=>({...p,_idx:i})).filter(p=>{if(currentBrandFilter!=="all"&&p.brand!==currentBrandFilter)return false;if(currentTierFilter!=="all"&&p.tier!==currentTierFilter)return false;return true;});}
+let currentBrandFilter="all", currentTierFilter="all", currentNewFilter="all";
+function getFiltered(){return products.map((p,i)=>({...p,_idx:i})).filter(p=>{if(currentBrandFilter!=="all"&&p.brand!==currentBrandFilter)return false;if(currentTierFilter!=="all"&&p.tier!==currentTierFilter)return false;if(currentNewFilter==="new"&&!p.isNew)return false;return true;});}
 
 // ===== Scatter Chart (all 49 products) =====
 function renderTierOv(){
@@ -227,7 +227,7 @@ function renderTierOv(){
       const sel=compareList.includes(p._idx);
       const dim=(currentBrandFilter!=="all"&&p.brand!==currentBrandFilter)||(currentTierFilter!=="all"&&p.tier!==currentTierFilter);
       svg+='<g class="ov-dot'+(sel?' sel':'')+(dim?' dim':'')+'" data-idx="'+p._idx+'" data-name="'+p.name+'" data-brand="'+p.brandName+'" data-price="'+p.price+'" data-tier="'+tierInfo[p.tier].name+'" data-eol="0">';
-      svg+='<circle cx="'+x+'" cy="'+y+'" r="'+(sel?11:9)+'" fill="'+col+'" fill-opacity="'+(dim?0.12:0.85)+'" stroke="'+(sel?'#1a1a2e':(dim?'none':'#fff'))+'" stroke-width="'+(sel?3:2)+'"/>';
+      svg+='<circle cx="'+x+'" cy="'+y+'" r="'+(sel?11:9)+'" fill="'+col+'" fill-opacity="'+(dim?0.12:0.85)+'" stroke="'+(sel?'#1a1a2e':(dim?'none':'#fff'))+'" stroke-width="'+(sel?3:2)+'"/>'+(p.isNew?'<text x="'+(x+8)+'" y="'+(y-7)+'" font-size="13" font-weight="700" fill="#f59e0b" text-anchor="middle">★</text>':'');
       svg+='</g>';
     });
     eol.forEach((p,j)=>{
@@ -244,6 +244,7 @@ function renderTierOv(){
   brandOrder.forEach(b=>{const c=brandInfo[b].color;svg+='<circle cx="'+lx+'" cy="'+ly+'" r="6" fill="'+c+'" fill-opacity="0.85" stroke="#fff" stroke-width="1.5"/>';svg+='<text x="'+(lx+12)+'" y="'+(ly+4)+'" font-size="11" font-weight="600" fill="#4b5563">'+brandInfo[b].name+'</text>';lx+=(brandInfo[b].name.length>4?96:76);});
   svg+='<circle cx="'+lx+'" cy="'+ly+'" r="6" fill="#9ca3af" fill-opacity="0.35" stroke="#6b7280" stroke-width="1.5" stroke-dasharray="2,2"/>';svg+='<text x="'+(lx+12)+'" y="'+(ly+4)+'" font-size="11" font-weight="600" fill="#4b5563">EOL/缺货</text>';
   svg+='<text x="'+(W-padR-4)+'" y="'+(ly+4)+'" text-anchor="end" font-size="11" fill="#9ca3af" font-style="italic">点击圆点加入对比 (最多5款)</text>';
+  lx+=110;svg+='<text x="'+lx+'" y="'+(ly+4)+'" font-size="15" font-weight="700" fill="#f59e0b">★</text>';svg+='<text x="'+(lx+16)+'" y="'+(ly+4)+'" font-size="11" font-weight="600" fill="#4b5563">新品</text>';
   svg+='</svg>';
   ct.innerHTML=svg;
   ct.querySelectorAll(".ov-dot").forEach(dot=>{
@@ -272,7 +273,7 @@ function renderProducts(){
   const brands=currentBrandFilter==="all"?brandOrder:[currentBrandFilter];
   brands.forEach(b=>{
     const all=products.map((p,i)=>({...p,_idx:i})).filter(p=>p.brand===b);if(all.length===0)return;
-    const fi=currentTierFilter==="all"?all:all.filter(p=>p.tier===currentTierFilter);if(fi.length===0)return;
+    const fi=currentTierFilter==="all"?all:all.filter(p=>p.tier===currentTierFilter);if(currentNewFilter==="new")fi=fi.filter(p=>p.isNew);if(fi.length===0)return;
     const info=brandInfo[b],sec=document.createElement("div");sec.className="brand-section";sec.dataset.brand=b;
     let h='<div class="brand-header" data-brand="'+b+'"><div class="brand-logo">'+info.logo+'</div><div><div class="brand-name">'+info.name+'</div><div class="brand-tag">'+info.tag+'</div></div><div class="brand-count">'+fi.length+' 款'+(currentTierFilter!=="all"?"（当前档位）":"在售")+'</div></div>';
     if(currentTierFilter==="all"){tierOrder.forEach(t=>{const ti=fi.filter(p=>p.tier===t);if(ti.length===0)return;const tinfo=tierInfo[t];h+='<div class="tier-group"><div class="tier-header"><span class="tier-badge '+t+'">'+tinfo.name+'</span><span class="tier-price-range">'+tinfo.range+' · '+ti.length+' 款</span></div><div class="product-grid">';ti.forEach(p=>{h+=renderCard(p);});h+='</div></div>';});}else{h+='<div class="product-grid">';fi.forEach(p=>{h+=renderCard(p);});h+='</div>';}
@@ -324,10 +325,39 @@ function renderDropChart(){
   if(drops.length===0)ct.innerHTML='<p style="color:var(--ts);text-align:center;padding:20px;">暂无价格变动数据</p>';
 }
 
+// ===== New-product summary (home) =====
+function renderNewSummary(){
+  const ct=document.getElementById("newSumBody");if(!ct)return;
+  const news=products.filter(p=>p.isNew);
+  const byB={};news.forEach(p=>{byB[p.brandName]=(byB[p.brandName]||0)+1;});
+  let h='<div class="new-sum-count"><span class="ns-num">'+news.length+'</span> 款近月新品</div><div class="new-sum-brands">';
+  Object.keys(byB).forEach(b=>{h+='<span class="ns-brand"><span class="ns-dot"></span>'+b+' '+byB[b]+'</span>';});
+  h+='</div><a class="new-sum-link" href="products.html?new=1">查看新品卡片 →</a>';
+  ct.innerHTML=h;
+}
+
+// ===== Export current filtered table to CSV =====
+function exportTable(){
+  const rows=getFiltered();
+  if(rows.length===0){alert("当前筛选无产品可导出");return;}
+  const head=["品牌","产品名称","子品牌","价格档位","屏幕尺寸","处理器","分辨率","首销价","现价","价格变动","定位"];
+  let csv="\uFEFF"+head.join(",")+"\n";
+  rows.forEach(p=>{
+    const diff=(p.launchPrice>0&&p.price>0)?(p.price-p.launchPrice):null;
+    const diffTxt=diff===null?"":(diff>0?"+¥"+diff.toLocaleString():"-¥"+(-diff).toLocaleString());
+    const tier=tierInfo[p.tier]?tierInfo[p.tier].name:"";
+    const cells=[p.brandName,p.name,p.subBrand||"",tier,p.screen||"",p.chip||"",p.resolution||"",p.launchPrice>0?"¥"+p.launchPrice.toLocaleString():"",p.price>0?"¥"+p.price.toLocaleString():"",diffTxt,p.positioning||""];
+    csv+=cells.map(c=>{c=String(c);if(c.indexOf(",")>=0)c='"'+c+'"';return c;}).join(",")+"\n";
+  });
+  const blob=new Blob([csv],{type:"text/csv;charset=utf-8;"});
+  const url=URL.createObjectURL(blob);
+  const a=document.createElement("a");a.href=url;a.download="平板竞品分析_"+new Date().toISOString().slice(0,10)+".csv";document.body.appendChild(a);a.click();document.body.removeChild(a);URL.revokeObjectURL(url);
+}
+
 // ===== Shared filter bar wiring (acts on whatever sections exist on the page) =====
 function setupFilterBar(){
   const bar=document.getElementById("filterBar");if(!bar)return;
-  bar.addEventListener("click",e=>{const btn=e.target.closest(".filter-btn");if(!btn)return;if(btn.dataset.brand!==undefined){bar.querySelectorAll(".filter-btn[data-brand]").forEach(b=>b.classList.remove("active"));btn.classList.add("active");currentBrandFilter=btn.dataset.brand;}if(btn.dataset.tier!==undefined){bar.querySelectorAll(".filter-btn[data-tier]").forEach(b=>b.classList.remove("active"));btn.classList.add("active");currentTierFilter=btn.dataset.tier;}if(document.getElementById("productSections"))renderProducts();if(document.getElementById("tableBody"))renderTable();if(document.getElementById("tierOv"))renderTierOv();});
+  bar.addEventListener("click",e=>{const btn=e.target.closest(".filter-btn");if(!btn)return;if(btn.dataset.brand!==undefined){bar.querySelectorAll(".filter-btn[data-brand]").forEach(b=>b.classList.remove("active"));btn.classList.add("active");currentBrandFilter=btn.dataset.brand;}if(btn.dataset.tier!==undefined){bar.querySelectorAll(".filter-btn[data-tier]").forEach(b=>b.classList.remove("active"));btn.classList.add("active");currentTierFilter=btn.dataset.tier;}if(btn.dataset.new!==undefined){bar.querySelectorAll(".filter-btn[data-new]").forEach(b=>b.classList.remove("active"));btn.classList.add("active");currentNewFilter=btn.dataset.new;}if(document.getElementById("productSections"))renderProducts();if(document.getElementById("tableBody"))renderTable();if(document.getElementById("tierOv"))renderTierOv();});
 }
 
 // ===== Shared onCompareChange: sync scatter dots + product cards (both pages) =====

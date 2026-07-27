@@ -33,7 +33,7 @@
 
 <div class="tier-ov">
   <div class="tier-ov-title">产品价格档位全景图</div>
-  <div class="tier-ov-desc">每个圆点代表一款产品，横轴为品牌，纵轴为当前官网售价，底色分区代表价格档位、圆点颜色代表品牌。虚线圆点为 EOL/缺货产品。点击圆点即可加入对比。</div>
+  <div class="tier-ov-desc">每个圆点代表一款产品，横轴为品牌，纵轴为当前官网售价，底色分区代表价格档位、圆点颜色代表品牌。虚线圆点为 EOL/缺货产品，<strong>★ 金色星标</strong>代表近月新品。点击圆点即可加入对比。</div>
   <div class="tier-ov-chart" id="tierOvContainer">
     <div id="tierOv"></div>
     <div class="ov-tip" id="ovTip"></div>
@@ -65,6 +65,12 @@
 
 <div class="container">
   <div class="tier-sum" id="tierSumGrid"></div>
+
+  <div class="section new-summary" id="newSummary">
+    <div class="section-title"><span class="icon"></span>近月新品速览</div>
+    <p class="section-desc">下列为本站标注的近期上市新品，点击可进入产品列表查看新品卡片（列表页可按「只看新品」筛选）。</p>
+    <div class="new-sum-body" id="newSumBody"></div>
+  </div>
 
   <div class="section-title"><span class="icon"></span>价格变动排行（涨 / 跌）</div>
   <p class="section-desc">按「首销价 → 当前价」变动绝对值排序，绿色 ↑ 为上涨、红色 ↓ 为下降，反映产品上市至今的价格调整方向与幅度。</p>
@@ -99,7 +105,7 @@
 <script src="data.js"></script>
 <script>
 // ===== Page 1: overview dashboard =====
-renderTierOv();renderTierSum();renderTable();renderPriceChart();renderDropChart();setupFilterBar();updateCompareUI();
+renderTierOv();renderTierSum();renderTable();renderPriceChart();renderDropChart();renderNewSummary();setupFilterBar();updateCompareUI();
 </script>
 </body>
 </html>
