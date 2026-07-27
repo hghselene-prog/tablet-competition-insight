@@ -372,3 +372,7 @@ tbody tr:last-child td{border-bottom:none}
 .watch-item .wi-name{font-size:13px;font-weight:700;color:#111827;display:flex;align-items:center;gap:6px}
 .watch-item .wi-meta{font-size:11.5px;color:#6b7280;margin-top:5px;line-height:1.55}
 .watch-item .wi-dot{width:8px;height:8px;border-radius:50%;flex:0 0 auto}
+
+/* ===== Price up (上涨) green variants for table ===== */
+.price-drop-cell .drop-amount-up{color:#16a34a;font-weight:700}
+.price-drop-cell .drop-pct-up{color:#15803d;font-weight:600}

@@ -33,7 +33,7 @@
 
 <div class="tier-ov">
   <div class="tier-ov-title">产品价格档位全景图</div>
-  <div class="tier-ov-desc">每个圆点代表一款产品，横轴为品牌，纵轴为当前官网售价，颜色代表价格档位。虚线圆点为 EOL/缺货产品。点击圆点即可加入对比。</div>
+  <div class="tier-ov-desc">每个圆点代表一款产品，横轴为品牌，纵轴为当前官网售价，底色分区代表价格档位、圆点颜色代表品牌。虚线圆点为 EOL/缺货产品。点击圆点即可加入对比。</div>
   <div class="tier-ov-chart" id="tierOvContainer">
     <div id="tierOv"></div>
     <div class="ov-tip" id="ovTip"></div>
@@ -66,20 +66,20 @@
 <div class="container">
   <div class="tier-sum" id="tierSumGrid"></div>
 
-  <div class="section-title"><span class="icon"></span>降价幅度排行 TOP 10</div>
-  <p class="section-desc">首销价与当前官网价差异最大的产品，反映促销力度和价格调整幅度。标有「调价」徽标的产品存在价格变动。</p>
+  <div class="section-title"><span class="icon"></span>价格变动排行 TOP 10（涨 / 跌）</div>
+  <p class="section-desc">按「首销价 → 当前价」变动绝对值排序，绿色 ↑ 为上涨、红色 ↓ 为下降，反映产品上市至今的价格调整方向与幅度。</p>
   <div class="drop-chart-section"><div id="dropChart"></div></div>
-  <p class="data-note">数据口径：官网仅公开「首销价」与「当前价」，不提供近 1 个月调价历史。上表「调价」以首销价→现价变动为代理指标，反映产品上市至今的调整幅度；如需真实近 1 月 Δ，请提供价格追踪数据源。</p>
+  <p class="data-note">数据口径说明：上表「首销价」录入的是官方建议零售价（吊牌价），并非首销期的国补到手价。真实情况是——首销期常有国补优惠到手价（更低），国补退坡后涨回，故苹果等多数产品实际为<strong>上涨</strong>（已按公开国补首销价将 iPad A16、iPad mini 修正为上涨）。其余产品若显示「下降」，是「吊牌价 → 当前促销价」的差额，与「国补退坡后到手价上涨」并不矛盾。要精确展示真实的「近 1 月涨 / 跌」，请提供各产品首销到手价数据源。</p>
 
   <div class="section-title"><span class="icon"></span>品牌价格带分布</div>
   <p class="section-desc">各品牌平板产品起售价区间一览，反映品牌定位策略</p>
   <div class="price-chart-section"><div class="price-chart-title">起售价区间（人民币）</div><div id="priceChart"></div></div>
 
   <div class="section-title"><span class="icon"></span>全产品规格对比表</div>
-  <p class="section-desc">含首销价、现价、降价幅度和价格档位标签，横向滚动查看完整信息（受上方筛选影响）</p>
+  <p class="section-desc">含首销价、现价、价格变动和价格档位标签，横向滚动查看完整信息（受上方筛选影响）</p>
   <div class="table-wrapper">
     <table id="cmpTable"><thead><tr>
-      <th>品牌</th><th>产品名称</th><th>价格档位</th><th>屏幕尺寸</th><th>处理器</th><th>分辨率</th><th>首销价</th><th>现价</th><th>降价幅度</th><th>定位</th>
+      <th>品牌</th><th>产品名称</th><th>价格档位</th><th>屏幕尺寸</th><th>处理器</th><th>分辨率</th><th>首销价</th><th>现价</th><th>价格变动</th><th>定位</th>
     </tr></thead><tbody id="tableBody"></tbody></table>
   </div>
 </div>

@@ -19,8 +19,8 @@ const products = [
   {brand:"apple",brandName:"Apple",name:'iPad Pro (M5) 13"',series:"iPad Pro",screen:'13"',chip:"Apple M5",resolution:"2752×2064",price:13499,launchPrice:13499,priceFrom:true,positioning:"专业旗舰",isNew:true,specs:{battery:"—",speaker:"四扬声器",os:"iPadOS",pen:"Apple Pencil Pro"}},
   {brand:"apple",brandName:"Apple",name:'iPad Air (M4) 11"',series:"iPad Air",screen:'11"',chip:"Apple M4",resolution:"2360×1640",price:5999,launchPrice:5999,priceFrom:true,positioning:"轻薄生产力",isNew:true,specs:{battery:"—",speaker:"双扬声器",os:"iPadOS",pen:"Apple Pencil Pro"}},
   {brand:"apple",brandName:"Apple",name:'iPad Air (M4) 13"',series:"iPad Air",screen:'13"',chip:"Apple M4",resolution:"2732×2048",price:7999,launchPrice:7999,priceFrom:true,positioning:"轻薄生产力",isNew:true,specs:{battery:"—",speaker:"双扬声器",os:"iPadOS",pen:"Apple Pencil Pro"}},
-  {brand:"apple",brandName:"Apple",name:'iPad (A16) 11"',series:"iPad",screen:'11"',chip:"Apple A16",resolution:"2360×1640",price:3799,launchPrice:3999,priceFrom:true,positioning:"入门主力",specs:{battery:"—",speaker:"双扬声器",os:"iPadOS",pen:"Apple Pencil (USB-C)"}},
-  {brand:"apple",brandName:"Apple",name:"iPad mini (A17 Pro)",series:"iPad mini",screen:'8.3"',chip:"Apple A17 Pro",resolution:"2266×1488",price:4799,launchPrice:4999,priceFrom:true,positioning:"便携小屏",specs:{battery:"—",speaker:"双扬声器",os:"iPadOS",pen:"Apple Pencil Pro"}},
+  {brand:"apple",brandName:"Apple",name:'iPad (A16) 11"',series:"iPad",screen:'11"',chip:"Apple A16",resolution:"2360×1640",price:3799,launchPrice:2999,priceFrom:true,positioning:"入门主力",specs:{battery:"—",speaker:"双扬声器",os:"iPadOS",pen:"Apple Pencil (USB-C)"}},
+  {brand:"apple",brandName:"Apple",name:"iPad mini (A17 Pro)",series:"iPad mini",screen:'8.3"',chip:"Apple A17 Pro",resolution:"2266×1488",price:4799,launchPrice:3999,priceFrom:true,positioning:"便携小屏",specs:{battery:"—",speaker:"双扬声器",os:"iPadOS",pen:"Apple Pencil Pro"}},
   // Huawei (10)
   {brand:"huawei",brandName:"华为",name:"MatePad Pro Max",series:"Pro",screen:'13.2"',chip:"华为自研",resolution:"3000×2000",price:5999,launchPrice:5999,priceFrom:true,positioning:"专业旗舰",isNew:true,specs:{battery:"10400mAh",speaker:"六扬声器",os:"HarmonyOS 6.1",pen:"M-Pencil Pro"}},
   {brand:"huawei",brandName:"华为",name:"MatePad Edge",series:"Edge",screen:'14.2"',chip:"华为自研",resolution:"3120×2080",price:5999,launchPrice:5999,priceFrom:true,positioning:"二合一生产力",isNew:true,specs:{battery:"—",speaker:"六扬声器",os:"HarmonyOS 5.1",pen:"M-Pencil Pro"}},
@@ -225,7 +225,7 @@ function renderTierOv(){
     const cc=bc[b],spread=65;
     valid.forEach((p,j)=>{
       const xo=valid.length===1?0:(j/(valid.length-1)-0.5)*spread*2;
-      const x=cc+xo,y=yp(p.price),col=tierColors[p.tier];
+      const x=cc+xo,y=yp(p.price),col=brandInfo[p.brand].color;
       const sel=compareList.includes(p._idx);
       const dim=(currentBrandFilter!=="all"&&p.brand!==currentBrandFilter)||(currentTierFilter!=="all"&&p.tier!==currentTierFilter);
       svg+='<g class="ov-dot'+(sel?' sel':'')+(dim?' dim':'')+'" data-idx="'+p._idx+'" data-name="'+p.name+'" data-brand="'+p.brandName+'" data-price="'+p.price+'" data-tier="'+tierInfo[p.tier].name+'" data-eol="0">';
@@ -234,7 +234,7 @@ function renderTierOv(){
     });
     eol.forEach((p,j)=>{
       const x=cc+(j-eol.length/2+0.5)*24,y=padT+cH-6;
-      const col=tierColors[p.tier]||tierColors.mid;
+      const col=brandInfo[p.brand].color;
       const sel=compareList.includes(p._idx);
       const dim=(currentBrandFilter!=="all"&&p.brand!==currentBrandFilter)||(currentTierFilter!=="all"&&p.tier!==currentTierFilter);
       svg+='<g class="ov-dot'+(sel?' sel':'')+(dim?' dim':'')+'" data-idx="'+p._idx+'" data-name="'+p.name+'" data-brand="'+p.brandName+'" data-price="0" data-tier="'+tierInfo[p.tier].name+'" data-eol="1">';
@@ -243,7 +243,7 @@ function renderTierOv(){
     });
   });
   let lx=padL+4,ly=16;
-  Object.entries(tierColors).forEach(([k,c])=>{svg+='<circle cx="'+lx+'" cy="'+ly+'" r="6" fill="'+c+'" fill-opacity="0.85" stroke="#fff" stroke-width="1.5"/>';svg+='<text x="'+(lx+12)+'" y="'+(ly+4)+'" font-size="11" font-weight="600" fill="#4b5563">'+tierInfo[k].name+'</text>';lx+=105;});
+  brandOrder.forEach(b=>{const c=brandInfo[b].color;svg+='<circle cx="'+lx+'" cy="'+ly+'" r="6" fill="'+c+'" fill-opacity="0.85" stroke="#fff" stroke-width="1.5"/>';svg+='<text x="'+(lx+12)+'" y="'+(ly+4)+'" font-size="11" font-weight="600" fill="#4b5563">'+brandInfo[b].name+'</text>';lx+=(brandInfo[b].name.length>4?96:76);});
   svg+='<circle cx="'+lx+'" cy="'+ly+'" r="6" fill="#9ca3af" fill-opacity="0.35" stroke="#6b7280" stroke-width="1.5" stroke-dasharray="2,2"/>';svg+='<text x="'+(lx+12)+'" y="'+(ly+4)+'" font-size="11" font-weight="600" fill="#4b5563">EOL/缺货</text>';
   svg+='<text x="'+(W-padR-4)+'" y="'+(ly+4)+'" text-anchor="end" font-size="11" fill="#9ca3af" font-style="italic">点击圆点加入对比 (最多5款)</text>';
   svg+='</svg>';
@@ -302,7 +302,7 @@ function renderTable(){
     const tr=document.createElement("tr");
     const pt=p.price>0?'¥'+p.price.toLocaleString()+(p.priceFrom?'<span class="from"> 起</span>':'') :'<span class="from">EOL/缺货</span>';
     const lt=p.launchPrice>0?'¥'+p.launchPrice.toLocaleString():'—';
-    let dt='—';if(p.launchPrice>0&&p.price>0&&p.launchPrice>p.price){const d=p.launchPrice-p.price,pc=((d/p.launchPrice)*100).toFixed(1);dt='<span class="drop-amount-text">-¥'+d.toLocaleString()+'</span> <span class="drop-pct">('+pc+'%)</span>';}else if(p.launchPrice>0&&p.price>0&&p.launchPrice===p.price)dt='<span class="from">持平</span>';
+    let dt='—';if(p.launchPrice>0&&p.price>0){if(p.price<p.launchPrice){const d=p.launchPrice-p.price,pc=((d/p.launchPrice)*100).toFixed(1);dt='<span class="drop-amount-text">-¥'+d.toLocaleString()+'</span> <span class="drop-pct">('+pc+'%)</span>';}else if(p.price>p.launchPrice){const d=p.price-p.launchPrice,pc=((d/p.launchPrice)*100).toFixed(1);dt='<span class="drop-amount-up">+¥'+d.toLocaleString()+'</span> <span class="drop-pct-up">(+'+pc+'%)</span>';}else{dt='<span class="from">持平</span>';}}
     const ti=tierInfo[p.tier];const mt=monthTrendPill(p);
     tr.innerHTML='<td><div class="brand-cell" data-brand="'+p.brand+'"><span class="dot"></span>'+p.brandName+'</div></td><td style="font-weight:600">'+p.name+'</td><td><span class="tier-cell '+p.tier+'">'+ti.name+'</span></td><td>'+(p.screen||"—")+'</td><td>'+(p.chip||"—")+'</td><td>'+(p.resolution||"—")+'</td><td style="color:var(--ts)">'+lt+'</td><td class="price-cell">'+pt+' '+mt+'</td><td class="price-drop-cell">'+dt+'</td><td><span class="spec-tag">'+p.positioning+'</span></td>';
     tb.appendChild(tr);
@@ -320,10 +320,10 @@ function renderPriceChart(){
 // ===== Drop Chart =====
 function renderDropChart(){
   const ct=document.getElementById("dropChart");if(!ct)return;ct.innerHTML="";
-  const drops=products.filter(p=>p.launchPrice>0&&p.price>0&&p.launchPrice>p.price).map(p=>({name:p.name,brand:p.brand,diff:p.launchPrice-p.price,pct:((p.launchPrice-p.price)/p.launchPrice)*100})).sort((a,b)=>b.diff-a.diff).slice(0,10);
-  const md=drops.length>0?drops[0].diff:1;
-  drops.forEach((d,i)=>{const wp=(d.diff/md)*100,info=brandInfo[d.brand];const mt=d.diff>0?'<span class="month-pill down" style="margin-left:6px;">调价 ↓</span>':'';const row=document.createElement("div");row.className="drop-item";row.innerHTML='<div class="drop-rank">'+(i+1)+'</div><div class="drop-name"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:'+info.color+';margin-right:4px;"></span>'+d.name+mt+'</div><div class="drop-bar-container"><div class="drop-bar" style="width:'+wp+'%;background:'+info.color+';">-'+d.pct.toFixed(1)+'%</div></div><div class="drop-amount">-¥'+d.diff.toLocaleString()+'</div>';ct.appendChild(row);});
-  if(drops.length===0)ct.innerHTML='<p style="color:var(--ts);text-align:center;padding:20px;">暂无降价数据</p>';
+  const drops=products.filter(p=>p.launchPrice>0&&p.price>0&&p.launchPrice!==p.price).map(p=>({name:p.name,brand:p.brand,diff:p.price-p.launchPrice,pct:((p.price-p.launchPrice)/p.launchPrice)*100})).sort((a,b)=>Math.abs(b.diff)-Math.abs(a.diff)).slice(0,10);
+  const md=drops.length>0?Math.max(...drops.map(d=>Math.abs(d.diff))):1;
+  drops.forEach((d,i)=>{const up=d.diff>0,wp=(Math.abs(d.diff)/md)*100,info=brandInfo[d.brand];const mt='<span class="month-pill '+(up?'up':'down')+'" style="margin-left:6px;">调价 '+(up?'↑+':'↓-')+'¥'+Math.abs(d.diff).toLocaleString()+'</span>';const row=document.createElement("div");row.className="drop-item";row.innerHTML='<div class="drop-rank">'+(i+1)+'</div><div class="drop-name"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:'+info.color+';margin-right:4px;"></span>'+d.name+mt+'</div><div class="drop-bar-container"><div class="drop-bar" style="width:'+wp+'%;background:'+info.color+';">'+(up?'+':'-')+Math.abs(d.pct).toFixed(1)+'%</div></div><div class="drop-amount">'+(up?'+¥':'-¥')+Math.abs(d.diff).toLocaleString()+'</div>';ct.appendChild(row);});
+  if(drops.length===0)ct.innerHTML='<p style="color:var(--ts);text-align:center;padding:20px;">暂无价格变动数据</p>';
 }
 
 // ===== Shared filter bar wiring (acts on whatever sections exist on the page) =====
