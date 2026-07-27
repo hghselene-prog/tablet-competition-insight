@@ -134,7 +134,6 @@ function renderCmpGrid(){
   if(sel.length===0){ct.innerHTML='<div class="cmp-empty"><div class="hint-icon">&#128269;</div><div class="hint-text">尚未选择对比产品</div><div class="hint-sub">点击下方「+ 添加产品」选择，或返回首页勾选（最多 5 款）</div></div>';return;}
   let h=`<div class="cmp-grid" style="--cc:${cc};"><div class="cell label-cell"></div>`;
   sel.forEach((p,i)=>{const info=brandInfo[p.brand];h+=`<div class="cell ph-cell"><div class="bs" style="background:${info.color}"></div><button class="p-rm" onclick="removeFromCompare(${compareList[i]})">&times;</button><div class="pn-col">${p.name}</div><div class="pb-col">${p.brandName}${p.subBrand?" · "+p.subBrand:""}</div></div>`;});
-  for(let i=sel.length;i<MAX_COMPARE;i++)h+=`<div class="cell ph-cell plc" onclick="openPicker()"><div class="bs" style="background:#e5e7eb"></div><div class="plus">+</div><div class="at">添加产品</div></div>`;
   rows.forEach(row=>{
     h+=`<div class="cell label-cell">${row.l}</div>`;
     let bi=-1;
@@ -156,7 +155,6 @@ function renderCmpGrid(){
       else if(row.t==="text"){if(row.k==="os"){const raw=(p.specs&&p.specs.os)?p.specs.os:'—';val=raw!=="—"?raw:'<span class="di">—</span>';}else if(row.k==="pen"){const raw=(p.specs&&p.specs.pen)?p.specs.pen:'—';val=raw!=="—"?raw:'<span class="di">—</span>';}else{const raw=p[row.k];val=(raw&&raw!=="—")?raw:'<span class="di">—</span>';}}
       if(i===bi)cls="best";h+=`<div class="cell ${cls}">${val}</div>`;
     });
-    for(let j=sel.length;j<MAX_COMPARE;j++)h+=`<div class="cell"><span class="di">—</span></div>`;
   });
   h+="</div>";ct.innerHTML=h;
 }

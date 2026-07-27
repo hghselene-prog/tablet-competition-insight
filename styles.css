@@ -146,7 +146,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei
 .cmp-empty .hint-icon{font-size:40px;margin-bottom:12px;opacity:.4}
 .cmp-empty .hint-text{font-size:15px;font-weight:600}
 .cmp-empty .hint-sub{font-size:13px;margin-top:4px}
-.cmp-grid{display:grid;grid-template-columns:120px repeat(var(--cc,5),1fr);background:var(--card-bg);border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden}
+.cmp-grid{display:grid;grid-template-columns:120px repeat(var(--cc,5),minmax(0,1fr));background:var(--card-bg);border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden}
 .cmp-grid .cell{padding:14px 10px;border-bottom:1px solid var(--border);font-size:13px;display:flex;align-items:center;justify-content:center;text-align:center}
 .cmp-grid .label-cell{font-weight:700;color:var(--ts);background:#f9f9fb;justify-content:flex-start;padding-left:16px;font-size:12px}
 .cmp-grid .ph-cell{flex-direction:column;gap:6px;padding:22px 10px 18px;position:relative}
