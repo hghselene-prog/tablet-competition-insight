@@ -366,6 +366,10 @@ tbody tr:last-child td{border-bottom:none}
 
 /* ===== Insights: source tags ===== */
 .src{display:inline-block;font-size:10.5px;font-weight:700;color:#6b7280;background:#f3f4f6;border:1px solid #e5e7eb;border-radius:5px;padding:1px 6px;margin:0 4px 4px 0;white-space:nowrap}
+.src-link{display:inline-block;font-size:10.5px;font-weight:700;color:#1d4ed8;background:#eff6ff;border:1px solid #bfdbfe;border-radius:5px;padding:1px 6px;margin:0 4px 4px 0;white-space:nowrap;text-decoration:none;transition:.15s}
+.src-link:hover{background:#dbeafe;border-color:#93c5fd;text-decoration:underline}
+.src-link::after{content:" \2197";font-size:9px;opacity:.7}
+.src-note{display:inline-block;font-size:10.5px;font-style:normal;font-weight:700;color:#9a3412;background:#fff7ed;border:1px dashed #fdba74;border-radius:5px;padding:1px 6px;margin:0 4px 4px 0}
 .insight-body .src{margin-top:6px}
 .ins-head{display:flex;align-items:baseline;gap:10px;margin:34px 0 14px}
 .ins-head .num{font-size:20px;font-weight:900;color:#2563eb}
