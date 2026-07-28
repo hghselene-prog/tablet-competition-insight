@@ -12,65 +12,62 @@ const tierColors = { ultra:"#7c3aed", flagship:"#be185d", midhigh:"#2563eb", mid
 const tierOrder = ["ultra","flagship","midhigh","mid","entry"];
 function getTier(price){ if(price<=0) return "mid"; if(price>=6000) return "ultra"; if(price>=4000) return "flagship"; if(price>=3000) return "midhigh"; if(price>=2000) return "mid"; return "entry"; }
 
-// ===== Product Data (49 products, 2 EOL) =====
+// ===== Product Data (44 products, 3 EOL) =====
+// 价格/配置来源：各品牌中国官网在售页 + 京东/IT之家/凤凰网核验（2026-07 采集）
+// 诚实口径：launchPrice 默认 = 当前官方起售价（即「上市至今官方标价未变」）。
+// 仅 OPPO Pad 6 / OPPO Pad 5 Pro / vivo iQOO Pad6 Pro 三款有公开报道佐证的真实首销价，
+// 且三者均为「首发价 → 现价」上涨（国补退坡）。其余品牌官方标价稳定，未编造降幅。
 const products = [
-  // Apple (6)
-  {brand:"apple",brandName:"Apple",name:'iPad Pro (M5) 11"',series:"iPad Pro",screen:'11"',chip:"Apple M5",resolution:"2420×1668",price:10799,launchPrice:9599,priceFrom:true,positioning:"专业旗舰",isNew:true,specs:{battery:"—",speaker:"四扬声器",os:"iPadOS",pen:"Apple Pencil Pro"}},
-  {brand:"apple",brandName:"Apple",name:'iPad Pro (M5) 13"',series:"iPad Pro",screen:'13"',chip:"Apple M5",resolution:"2752×2064",price:13499,launchPrice:11699,priceFrom:true,positioning:"专业旗舰",isNew:true,specs:{battery:"—",speaker:"四扬声器",os:"iPadOS",pen:"Apple Pencil Pro"}},
-  {brand:"apple",brandName:"Apple",name:'iPad Air (M4) 11"',series:"iPad Air",screen:'11"',chip:"Apple M4",resolution:"2360×1640",price:5999,launchPrice:5999,priceFrom:true,positioning:"轻薄生产力",isNew:true,specs:{battery:"—",speaker:"双扬声器",os:"iPadOS",pen:"Apple Pencil Pro"}},
-  {brand:"apple",brandName:"Apple",name:'iPad Air (M4) 13"',series:"iPad Air",screen:'13"',chip:"Apple M4",resolution:"2732×2048",price:7999,launchPrice:7999,priceFrom:true,positioning:"轻薄生产力",isNew:true,specs:{battery:"—",speaker:"双扬声器",os:"iPadOS",pen:"Apple Pencil Pro"}},
-  {brand:"apple",brandName:"Apple",name:'iPad (A16) 11"',series:"iPad",screen:'11"',chip:"Apple A16",resolution:"2360×1640",price:3799,launchPrice:2999,priceFrom:true,positioning:"入门主力",specs:{battery:"—",speaker:"双扬声器",os:"iPadOS",pen:"Apple Pencil (USB-C)"}},
-  {brand:"apple",brandName:"Apple",name:"iPad mini (A17 Pro)",series:"iPad mini",screen:'8.3"',chip:"Apple A17 Pro",resolution:"2266×1488",price:4799,launchPrice:3999,priceFrom:true,positioning:"便携小屏",specs:{battery:"—",speaker:"双扬声器",os:"iPadOS",pen:"Apple Pencil Pro"}},
-  // Huawei (10)
-  {brand:"huawei",brandName:"华为",name:"MatePad Pro Max",series:"Pro",screen:'13.2"',chip:"华为自研",resolution:"3000×2000",price:5999,launchPrice:5999,priceFrom:true,positioning:"专业旗舰",isNew:true,specs:{battery:"10400mAh",speaker:"六扬声器",os:"HarmonyOS 6.1",pen:"M-Pencil Pro"}},
-  {brand:"huawei",brandName:"华为",name:"MatePad Edge",series:"Edge",screen:'14.2"',chip:"华为自研",resolution:"3120×2080",price:5999,launchPrice:5999,priceFrom:true,positioning:"二合一生产力",isNew:true,specs:{battery:"—",speaker:"六扬声器",os:"HarmonyOS 5.1",pen:"M-Pencil Pro"}},
-  {brand:"huawei",brandName:"华为",name:'MatePad Pro 12.2"',series:"Pro",screen:'12.2"',chip:"华为自研",resolution:"2800×1840",price:3999,launchPrice:4499,priceFrom:true,positioning:"专业创作",specs:{battery:"—",speaker:"四扬声器",os:"HarmonyOS 5.0",pen:"M-Pencil Pro"}},
-  {brand:"huawei",brandName:"华为",name:"MatePad Mini",series:"Mini",screen:'8.8"',chip:"华为自研",resolution:"2560×1600",price:3999,launchPrice:4299,priceFrom:true,positioning:"便携小屏",isNew:true,specs:{battery:"—",speaker:"双扬声器",os:"HarmonyOS 5.1",pen:"M-Pencil Pro"}},
-  {brand:"huawei",brandName:"华为",name:"MatePad Mini 悦读版",series:"Mini",screen:'8.8"',chip:"华为自研",resolution:"2560×1600",price:3299,launchPrice:3599,priceFrom:true,positioning:"阅读便携"},
-  {brand:"huawei",brandName:"华为",name:"MatePad Air",series:"Air",screen:'12"',chip:"华为自研",resolution:"2800×1840",price:2799,launchPrice:3199,priceFrom:true,positioning:"潮流生产力"},
-  {brand:"huawei",brandName:"华为",name:"MatePad 11.5",series:"MatePad",screen:'11.5"',chip:"—",resolution:"—",price:1799,launchPrice:2099,priceFrom:true,positioning:"学习入门"},
-  {brand:"huawei",brandName:"华为",name:"MatePad 11.5 S",series:"MatePad",screen:'11.5"',chip:"—",resolution:"—",price:2499,launchPrice:2899,priceFrom:true,positioning:"学习进阶"},
-  {brand:"huawei",brandName:"华为",name:"MatePad 11.5 S 灵动款",series:"MatePad",screen:'11.5"',chip:"—",resolution:"—",price:2199,launchPrice:2499,priceFrom:true,positioning:"学习进阶"},
-  {brand:"huawei",brandName:"华为",name:"MatePad SE",series:"SE",screen:'11"',chip:"—",resolution:"—",price:1399,launchPrice:1599,priceFrom:true,positioning:"入门娱乐"},
-  // Honor (8)
-  {brand:"honor",brandName:"荣耀",name:'MagicPad 3 Pro 12.3"',series:"MagicPad",screen:'12.3"',chip:"—",resolution:"—",price:4699,launchPrice:4999,priceFrom:true,positioning:"旗舰大屏"},
-  {brand:"honor",brandName:"荣耀",name:'MagicPad 3 12.5"',series:"MagicPad",screen:'12.5"',chip:"—",resolution:"—",price:3099,launchPrice:3499,priceFrom:false,positioning:"大屏旗舰"},
-  {brand:"honor",brandName:"荣耀",name:"MagicPad 2",series:"MagicPad",screen:"—",chip:"—",resolution:"—",price:2999,launchPrice:3399,priceFrom:false,positioning:"中高端"},
-  {brand:"honor",brandName:"荣耀",name:"平板 V9",series:"V",screen:"—",chip:"—",resolution:"—",price:2699,launchPrice:2999,priceFrom:true,positioning:"中端主力"},
-  {brand:"honor",brandName:"荣耀",name:"平板 10 Pro",series:"数字",screen:"—",chip:"—",resolution:"—",price:2699,launchPrice:2999,priceFrom:false,positioning:"中端"},
-  {brand:"honor",brandName:"荣耀",name:"平板 X10 Pro",series:"X",screen:'11.5"',chip:"—",resolution:"—",price:1699,launchPrice:1999,priceFrom:true,positioning:"入门进阶"},
-  {brand:"honor",brandName:"荣耀",name:"平板 X10",series:"X",screen:'11"',chip:"—",resolution:"—",price:1099,launchPrice:1399,priceFrom:false,positioning:"千元入门"},
-  {brand:"honor",brandName:"荣耀",name:"平板 X8 Pro",series:"X",screen:'11.5"',chip:"—",resolution:"—",price:1399,launchPrice:1699,priceFrom:true,positioning:"入门娱乐"},
-  // Xiaomi (8, incl Redmi)
-  {brand:"xiaomi",brandName:"小米",name:"Xiaomi Pad 8 Pro",series:"Xiaomi Pad",screen:'11.2"',chip:"骁龙8至尊版",resolution:"—",price:2999,launchPrice:2999,priceFrom:true,positioning:"性能旗舰",isNew:true,isHot:true,subBrand:"Xiaomi"},
-  {brand:"xiaomi",brandName:"小米",name:"Xiaomi Pad 8",series:"Xiaomi Pad",screen:'11.2"',chip:"—",resolution:"—",price:2799,launchPrice:2799,priceFrom:true,positioning:"中高端",isNew:true,subBrand:"Xiaomi"},
-  {brand:"xiaomi",brandName:"小米",name:"Xiaomi Pad 7 Pro",series:"Xiaomi Pad",screen:'11.2"',chip:"—",resolution:"—",price:2699,launchPrice:2999,priceFrom:true,positioning:"中端主力",subBrand:"Xiaomi"},
+  // Apple (6, 国行官方起售价 apple.com.cn)
+  {brand:"apple",brandName:"Apple",name:'iPad Pro (M5) 11"',series:"iPad Pro",screen:'11"',chip:"Apple M5",resolution:"2420×1668",price:8999,launchPrice:8999,priceFrom:true,positioning:"专业旗舰",isNew:true,specs:{battery:"—",speaker:"四扬声器",os:"iPadOS",pen:"Apple Pencil Pro"}},
+  {brand:"apple",brandName:"Apple",name:'iPad Pro (M5) 13"',series:"iPad Pro",screen:'13"',chip:"Apple M5",resolution:"2752×2064",price:11499,launchPrice:11499,priceFrom:true,positioning:"专业旗舰",isNew:true,specs:{battery:"—",speaker:"四扬声器",os:"iPadOS",pen:"Apple Pencil Pro"}},
+  {brand:"apple",brandName:"Apple",name:'iPad Air (M4) 11"',series:"iPad Air",screen:'11"',chip:"Apple M4",resolution:"2360×1640",price:4799,launchPrice:4799,priceFrom:true,positioning:"轻薄生产力",isNew:true,specs:{battery:"—",speaker:"双扬声器",os:"iPadOS",pen:"Apple Pencil Pro"}},
+  {brand:"apple",brandName:"Apple",name:'iPad Air (M4) 13"',series:"iPad Air",screen:'13"',chip:"Apple M4",resolution:"2732×2048",price:6499,launchPrice:6499,priceFrom:true,positioning:"轻薄生产力",isNew:true,specs:{battery:"—",speaker:"双扬声器",os:"iPadOS",pen:"Apple Pencil Pro"}},
+  {brand:"apple",brandName:"Apple",name:'iPad (A16) 11"',series:"iPad",screen:'11"',chip:"Apple A16",resolution:"2360×1640",price:2999,launchPrice:2999,priceFrom:true,positioning:"入门主力",specs:{battery:"—",speaker:"双扬声器",os:"iPadOS",pen:"Apple Pencil (USB-C)"}},
+  {brand:"apple",brandName:"Apple",name:"iPad mini (A17 Pro)",series:"iPad mini",screen:'8.3"',chip:"Apple A17 Pro",resolution:"2266×1488",price:3799,launchPrice:3799,priceFrom:true,positioning:"便携小屏",specs:{battery:"—",speaker:"双扬声器",os:"iPadOS",pen:"Apple Pencil Pro"}},
+  // Huawei (6, 国行官方 vmall.com)
+  {brand:"huawei",brandName:"华为",name:"MatePad 11.5 2026",series:"MatePad",screen:'11.5"',chip:"麒麟 T82",resolution:"2456×1600",price:1999,launchPrice:1999,priceFrom:true,positioning:"学习入门",isNew:true,specs:{battery:"10100mAh",speaker:"—",os:"HarmonyOS 6",pen:"M-Pencil"}},
+  {brand:"huawei",brandName:"华为",name:"MatePad Edge X90",series:"Edge",screen:'14.2"',chip:"华为自研",resolution:"3120×2080",price:5799,launchPrice:5799,priceFrom:true,positioning:"二合一生产力",isNew:true,specs:{battery:"—",speaker:"六扬声器",os:"HarmonyOS 6",pen:"M-Pencil Pro"}},
+  {brand:"huawei",brandName:"华为",name:'MatePad Pro 12.2"',series:"Pro",screen:'12.2"',chip:"华为自研",resolution:"2800×1840",price:4499,launchPrice:4499,priceFrom:true,positioning:"专业创作",specs:{battery:"—",speaker:"四扬声器",os:"HarmonyOS 5",pen:"M-Pencil Pro"}},
+  {brand:"huawei",brandName:"华为",name:"MatePad Mini",series:"Mini",screen:'8.8"',chip:"华为自研",resolution:"2560×1600",price:3299,launchPrice:3299,priceFrom:true,positioning:"便携小屏",isNew:true,specs:{battery:"—",speaker:"双扬声器",os:"HarmonyOS 5",pen:"M-Pencil Pro"}},
+  {brand:"huawei",brandName:"华为",name:"MatePad Air 12",series:"Air",screen:'12"',chip:"华为自研",resolution:"2800×1840",price:3099,launchPrice:3099,priceFrom:true,positioning:"潮流生产力",specs:{battery:"—",speaker:"—",os:"HarmonyOS 5",pen:"M-Pencil"}},
+  {brand:"huawei",brandName:"华为",name:"MatePad 11.5 S 2025",series:"MatePad",screen:'11.5"',chip:"—",resolution:"—",price:2499,launchPrice:2499,priceFrom:true,positioning:"学习进阶",specs:{battery:"—",speaker:"—",os:"HarmonyOS 5",pen:"M-Pencil"}},
+  // Honor (5, 国行官方 honor.com)
+  {brand:"honor",brandName:"荣耀",name:"荣耀平板20",series:"平板",screen:"—",chip:"—",resolution:"—",price:3499,launchPrice:3499,priceFrom:true,positioning:"主流大屏"},
+  {brand:"honor",brandName:"荣耀",name:'MagicPad 3 Pro 12.3"',series:"MagicPad",screen:'12.3"',chip:"第五代骁龙8",resolution:"3000×1920",price:4699,launchPrice:4699,priceFrom:true,positioning:"旗舰大屏",isNew:true,specs:{battery:"10100mAh",speaker:"—",os:"MagicOS 10",pen:"Magic Pencil 3"}},
+  {brand:"honor",brandName:"荣耀",name:"荣耀平板X10",series:"平板X",screen:'11"',chip:"—",resolution:"—",price:1099,launchPrice:1099,priceFrom:true,positioning:"千元入门"},
+  {brand:"honor",brandName:"荣耀",name:"荣耀平板10 Pro",series:"平板",screen:"—",chip:"—",resolution:"—",price:2699,launchPrice:2699,priceFrom:true,positioning:"中端主力"},
+  {brand:"honor",brandName:"荣耀",name:"荣耀平板X10 Pro",series:"平板X",screen:'11.5"',chip:"—",resolution:"—",price:1699,launchPrice:1699,priceFrom:true,positioning:"入门进阶"},
+  // Xiaomi (8, incl Redmi；Redmi Pad Pro 已下架→EOL)
+  {brand:"xiaomi",brandName:"小米",name:"Xiaomi Pad 8 Pro",series:"Xiaomi Pad",screen:'11.2"',chip:"骁龙8至尊版",resolution:"3200×2136",price:2999,launchPrice:2999,priceFrom:true,positioning:"性能旗舰",isNew:true,isHot:true,subBrand:"Xiaomi",specs:{battery:"9200mAh",speaker:"—",os:"澎湃OS 3",pen:"焦点触控笔 Pro"}},
+  {brand:"xiaomi",brandName:"小米",name:"Xiaomi Pad 8",series:"Xiaomi Pad",screen:'11.2"',chip:"第四代骁龙8s",resolution:"—",price:2899,launchPrice:2899,priceFrom:true,positioning:"中高端",isNew:true,subBrand:"Xiaomi",specs:{battery:"9200mAh",speaker:"—",os:"澎湃OS 3",pen:"焦点触控笔"}},
+  {brand:"xiaomi",brandName:"小米",name:"Xiaomi Pad 7 Pro",series:"Xiaomi Pad",screen:'11.2"',chip:"第三代骁龙8s",resolution:"3.2K",price:2499,launchPrice:2499,priceFrom:true,positioning:"中端主力",subBrand:"Xiaomi",specs:{battery:"—",speaker:"—",os:"澎湃OS 2",pen:"—"}},
   {brand:"xiaomi",brandName:"小米",name:"REDMI K Pad 2",series:"REDMI K",screen:"—",chip:"—",resolution:"—",price:3599,launchPrice:3599,priceFrom:true,positioning:"性能电竞",isNew:true,isHot:true,subBrand:"Redmi"},
-  {brand:"xiaomi",brandName:"小米",name:"REDMI Pad 2 Pro",series:"REDMI Pad",screen:"—",chip:"—",resolution:"—",price:1899,launchPrice:2199,priceFrom:true,positioning:"中端性价比",subBrand:"Redmi"},
-  {brand:"xiaomi",brandName:"小米",name:"REDMI Pad 2",series:"REDMI Pad",screen:"—",chip:"—",resolution:"—",price:1299,launchPrice:1599,priceFrom:true,positioning:"入门性价比",subBrand:"Redmi"},
-  {brand:"xiaomi",brandName:"小米",name:"REDMI Pad 2 SE",series:"REDMI Pad",screen:"—",chip:"—",resolution:"—",price:1199,launchPrice:1399,priceFrom:true,positioning:"极致入门",subBrand:"Redmi"},
+  {brand:"xiaomi",brandName:"小米",name:"REDMI Pad 2 Pro",series:"REDMI Pad",screen:"—",chip:"—",resolution:"—",price:1899,launchPrice:1899,priceFrom:true,positioning:"中端性价比",subBrand:"Redmi",specs:{battery:"—",speaker:"—",os:"澎湃OS",pen:"—"}},
+  {brand:"xiaomi",brandName:"小米",name:"REDMI Pad 2",series:"REDMI Pad",screen:"—",chip:"—",resolution:"—",price:1299,launchPrice:1299,priceFrom:true,positioning:"入门性价比",subBrand:"Redmi"},
+  {brand:"xiaomi",brandName:"小米",name:"REDMI Pad 2 SE",series:"REDMI Pad",screen:"—",chip:"—",resolution:"—",price:1199,launchPrice:1199,priceFrom:true,positioning:"极致入门",subBrand:"Redmi"},
   {brand:"xiaomi",brandName:"小米",name:"Redmi Pad Pro",series:"REDMI Pad",screen:'12.1"',chip:"—",resolution:"—",price:0,launchPrice:2199,priceFrom:false,positioning:"大屏性价比(EOL)",subBrand:"Redmi",isEOL:true},
-  // OPPO (7)
-  {brand:"oppo",brandName:"OPPO",name:"OPPO Pad 6",series:"Pad",screen:'12.1"',chip:"天玑9500s",resolution:"3000×2120",price:3599,launchPrice:3599,priceFrom:true,positioning:"最新旗舰",isNew:true,isHot:true,specs:{battery:"10420mAh",speaker:"—",os:"ColorOS 16",pen:"OPPO Pencil 2"}},
+  // OPPO (7, 国行官方 oppo.com；Pad6/Pad5Pro 首销价来自 IT之家)
+  {brand:"oppo",brandName:"OPPO",name:"OPPO Pad 6",series:"Pad",screen:'12.1"',chip:"天玑9500s",resolution:"3000×2120",price:3899,launchPrice:3299,priceFrom:true,positioning:"最新旗舰",isNew:true,isHot:true,specs:{battery:"10420mAh",speaker:"六扬声器",os:"ColorOS 16",pen:"OPPO Pencil 2"}},
   {brand:"oppo",brandName:"OPPO",name:"OPPO Pad Mini",series:"Pad Mini",screen:"—",chip:"—",resolution:"—",price:3699,launchPrice:3699,priceFrom:false,positioning:"小屏便携",isNew:true},
-  {brand:"oppo",brandName:"OPPO",name:"OPPO Pad 5 Pro",series:"Pad Pro",screen:'13.2"',chip:"骁龙8至尊版(第五代)",resolution:"—",price:4499,launchPrice:4999,priceFrom:true,positioning:"大屏旗舰",specs:{battery:"13380mAh",speaker:"—",os:"ColorOS",pen:"支持"}},
-  {brand:"oppo",brandName:"OPPO",name:"OPPO Pad 5",series:"Pad",screen:"—",chip:"天玑9400+",resolution:"3K",price:3299,launchPrice:3699,priceFrom:true,positioning:"中高端"},
-  {brand:"oppo",brandName:"OPPO",name:"OPPO Pad Air5",series:"Pad Air",screen:"—",chip:"—",resolution:"2.8K",price:2499,launchPrice:2799,priceFrom:true,positioning:"轻薄中端",specs:{battery:"10050mAh"}},
-  {brand:"oppo",brandName:"OPPO",name:"OPPO Pad 4 Pro",series:"Pad Pro",screen:"—",chip:"—",resolution:"3.4K",price:3999,launchPrice:4499,priceFrom:true,positioning:"上一代旗舰"},
-  {brand:"oppo",brandName:"OPPO",name:"OPPO Pad SE",series:"Pad SE",screen:'11"',chip:"—",resolution:"—",price:1999,launchPrice:2299,priceFrom:true,positioning:"入门学习",specs:{battery:"9340mAh"}},
-  // vivo (12, incl iQOO, 2 EOL)
-  {brand:"vivo",brandName:"vivo",name:"vivo Pad6 Pro",series:"vivo Pad",screen:"—",chip:"—",resolution:"4K",price:4999,launchPrice:4999,priceFrom:true,positioning:"最新旗舰",isNew:true,isHot:true,subBrand:"vivo"},
-  {brand:"vivo",brandName:"vivo",name:"iQOO Pad6 Pro",series:"iQOO Pad",screen:'13.2"',chip:"骁龙8至尊版(第五代)",resolution:"3840×2512",price:4499,launchPrice:4499,priceFrom:true,positioning:"电竞性能旗舰",isNew:true,isHot:true,subBrand:"iQOO",specs:{battery:"13000mAh",speaker:"八扬声器",os:"OriginOS 6",pen:"—"}},
-  {brand:"vivo",brandName:"vivo",name:"vivo Pad5 Pro",series:"vivo Pad",screen:"—",chip:"天玑9400",resolution:"—",price:3999,launchPrice:4299,priceFrom:true,positioning:"高端",subBrand:"vivo"},
-  {brand:"vivo",brandName:"vivo",name:"iQOO Pad5 Pro",series:"iQOO Pad",screen:"—",chip:"天玑9400+",resolution:"—",price:3699,launchPrice:3999,priceFrom:true,positioning:"性能高端",subBrand:"iQOO"},
-  {brand:"vivo",brandName:"vivo",name:"vivo Pad5",series:"vivo Pad",screen:"—",chip:"天玑9300+",resolution:"—",price:3299,launchPrice:3599,priceFrom:true,positioning:"中高端",isNew:true,subBrand:"vivo"},
+  {brand:"oppo",brandName:"OPPO",name:"OPPO Pad 5 Pro",series:"Pad Pro",screen:'13.2"',chip:"第五代骁龙8至尊版",resolution:"3.4K",price:4499,launchPrice:4299,priceFrom:true,positioning:"大屏旗舰",specs:{battery:"13380mAh",speaker:"—",os:"ColorOS 16",pen:"OPPO Pencil 3 Pro"}},
+  {brand:"oppo",brandName:"OPPO",name:"OPPO Pad 5",series:"Pad",screen:"—",chip:"天玑9400+",resolution:"3K",price:3299,launchPrice:3299,priceFrom:true,positioning:"中高端"},
+  {brand:"oppo",brandName:"OPPO",name:"OPPO Pad Air5",series:"Pad Air",screen:"—",chip:"—",resolution:"2.8K",price:2499,launchPrice:2499,priceFrom:true,positioning:"轻薄中端",specs:{battery:"10050mAh"}},
+  {brand:"oppo",brandName:"OPPO",name:"OPPO Pad 4 Pro",series:"Pad Pro",screen:"—",chip:"—",resolution:"3.4K",price:3999,launchPrice:3999,priceFrom:true,positioning:"上一代旗舰"},
+  {brand:"oppo",brandName:"OPPO",name:"OPPO Pad SE",series:"Pad SE",screen:'11"',chip:"—",resolution:"—",price:1999,launchPrice:1999,priceFrom:true,positioning:"入门学习",specs:{battery:"9340mAh"}},
+  // vivo (12, 国行官方 vivo.com.cn；iQOO Pad6 Pro 首发价来自凤凰网)
+  {brand:"vivo",brandName:"vivo",name:"vivo Pad6 Pro",series:"vivo Pad",screen:"—",chip:"第五代骁龙8至尊版",resolution:"4K",price:4999,launchPrice:4999,priceFrom:true,positioning:"最新旗舰",isNew:true,isHot:true,subBrand:"vivo",specs:{battery:"—",speaker:"—",os:"OriginOS 6",pen:"—"}},
+  {brand:"vivo",brandName:"vivo",name:"iQOO Pad6 Pro",series:"iQOO Pad",screen:'13.2"',chip:"第五代骁龙8至尊版",resolution:"3840×2512",price:4499,launchPrice:4299,priceFrom:true,positioning:"电竞性能旗舰",isNew:true,isHot:true,subBrand:"iQOO",specs:{battery:"13000mAh",speaker:"八扬声器",os:"OriginOS 6",pen:"—"}},
+  {brand:"vivo",brandName:"vivo",name:"vivo Pad5 Pro",series:"vivo Pad",screen:"—",chip:"天玑9400",resolution:"—",price:3999,launchPrice:3999,priceFrom:true,positioning:"高端",subBrand:"vivo"},
+  {brand:"vivo",brandName:"vivo",name:"iQOO Pad5 Pro",series:"iQOO Pad",screen:"—",chip:"天玑9400+",resolution:"—",price:3699,launchPrice:3699,priceFrom:true,positioning:"性能高端",subBrand:"iQOO"},
+  {brand:"vivo",brandName:"vivo",name:"vivo Pad5",series:"vivo Pad",screen:"—",chip:"天玑9300+",resolution:"—",price:3299,launchPrice:3299,priceFrom:true,positioning:"中高端",isNew:true,subBrand:"vivo"},
   {brand:"vivo",brandName:"vivo",name:"iQOO Pad5",series:"iQOO Pad",screen:"—",chip:"天玑9300+",resolution:"—",price:0,launchPrice:3299,priceFrom:false,positioning:"中高端(EOL)",subBrand:"iQOO",isEOL:true},
-  {brand:"vivo",brandName:"vivo",name:"iQOO Pad5e",series:"iQOO Pad",screen:"—",chip:"第三代骁龙8s",resolution:"—",price:2999,launchPrice:3299,priceFrom:true,positioning:"中端",isNew:true,subBrand:"iQOO"},
-  {brand:"vivo",brandName:"vivo",name:"vivo Pad5e",series:"vivo Pad",screen:"—",chip:"—",resolution:"—",price:2499,launchPrice:2799,priceFrom:true,positioning:"学娱中端",isNew:true,subBrand:"vivo"},
-  {brand:"vivo",brandName:"vivo",name:"vivo Pad SE",series:"vivo Pad",screen:'12.3"',chip:"—",resolution:"—",price:1999,launchPrice:2299,priceFrom:true,positioning:"入门护眼",isNew:true,subBrand:"vivo"},
+  {brand:"vivo",brandName:"vivo",name:"iQOO Pad5e",series:"iQOO Pad",screen:"—",chip:"第三代骁龙8s",resolution:"—",price:2999,launchPrice:2999,priceFrom:true,positioning:"中端",isNew:true,subBrand:"iQOO"},
+  {brand:"vivo",brandName:"vivo",name:"vivo Pad5e",series:"vivo Pad",screen:"—",chip:"—",resolution:"—",price:2499,launchPrice:2499,priceFrom:true,positioning:"学娱中端",isNew:true,subBrand:"vivo"},
+  {brand:"vivo",brandName:"vivo",name:"vivo Pad SE",series:"vivo Pad",screen:'12.3"',chip:"—",resolution:"—",price:1999,launchPrice:1999,priceFrom:true,positioning:"入门护眼",isNew:true,subBrand:"vivo"},
   {brand:"vivo",brandName:"vivo",name:"vivo Pad3",series:"vivo Pad",screen:"—",chip:"第三代骁龙8s",resolution:"—",price:0,launchPrice:2999,priceFrom:false,positioning:"中端(EOL)",subBrand:"vivo",isEOL:true},
-  {brand:"vivo",brandName:"vivo",name:"iQOO Pad2 Pro",series:"iQOO Pad",screen:"—",chip:"天玑9300+",resolution:"—",price:2999,launchPrice:3499,priceFrom:true,positioning:"中端性能",subBrand:"iQOO"},
-  {brand:"vivo",brandName:"vivo",name:"iQOO Pad2",series:"iQOO Pad",screen:"—",chip:"第三代骁龙8s",resolution:"—",price:2799,launchPrice:3199,priceFrom:true,positioning:"中端",subBrand:"iQOO"},
+  {brand:"vivo",brandName:"vivo",name:"iQOO Pad2 Pro",series:"iQOO Pad",screen:"—",chip:"天玑9300+",resolution:"—",price:2999,launchPrice:2999,priceFrom:true,positioning:"中端性能",subBrand:"iQOO"},
+  {brand:"vivo",brandName:"vivo",name:"iQOO Pad2",series:"iQOO Pad",screen:"—",chip:"第三代骁龙8s",resolution:"—",price:2499,launchPrice:2499,priceFrom:true,positioning:"中端",subBrand:"iQOO"},
 ];
 products.forEach(p=>{p.tier=getTier(p.price);});
 
