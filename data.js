@@ -49,7 +49,7 @@ const products = [
   {brand:"xiaomi",brandName:"小米",name:"REDMI Pad 2 Pro",series:"REDMI Pad",screen:"—",chip:"—",resolution:"—",price:1899,launchPrice:2199,priceFrom:true,positioning:"中端性价比",subBrand:"Redmi"},
   {brand:"xiaomi",brandName:"小米",name:"REDMI Pad 2",series:"REDMI Pad",screen:"—",chip:"—",resolution:"—",price:1299,launchPrice:1599,priceFrom:true,positioning:"入门性价比",subBrand:"Redmi"},
   {brand:"xiaomi",brandName:"小米",name:"REDMI Pad 2 SE",series:"REDMI Pad",screen:"—",chip:"—",resolution:"—",price:1199,launchPrice:1399,priceFrom:true,positioning:"极致入门",subBrand:"Redmi"},
-  {brand:"xiaomi",brandName:"小米",name:"Redmi Pad Pro",series:"REDMI Pad",screen:'12.1"',chip:"—",resolution:"—",price:1799,launchPrice:2199,priceFrom:false,positioning:"大屏性价比",subBrand:"Redmi"},
+  {brand:"xiaomi",brandName:"小米",name:"Redmi Pad Pro",series:"REDMI Pad",screen:'12.1"',chip:"—",resolution:"—",price:0,launchPrice:2199,priceFrom:false,positioning:"大屏性价比(EOL)",subBrand:"Redmi",isEOL:true},
   // OPPO (7)
   {brand:"oppo",brandName:"OPPO",name:"OPPO Pad 6",series:"Pad",screen:'12.1"',chip:"天玑9500s",resolution:"3000×2120",price:3599,launchPrice:3599,priceFrom:true,positioning:"最新旗舰",isNew:true,isHot:true,specs:{battery:"10420mAh",speaker:"—",os:"ColorOS 16",pen:"OPPO Pencil 2"}},
   {brand:"oppo",brandName:"OPPO",name:"OPPO Pad Mini",series:"Pad Mini",screen:"—",chip:"—",resolution:"—",price:3699,launchPrice:3699,priceFrom:false,positioning:"小屏便携",isNew:true},

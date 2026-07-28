@@ -5,7 +5,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei
 .header::after{content:'';position:absolute;bottom:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--apple),var(--huawei),var(--honor),var(--xiaomi),var(--oppo),var(--vivo))}
 .header h1{font-size:36px;font-weight:800;margin-bottom:10px}
 .header .subtitle{font-size:16px;color:rgba(255,255,255,.7);max-width:680px;margin:0 auto}
-.header .meta{margin-top:18px;font-size:13px;color:rgba(255,255,255,.5)}.header .meta span{margin:0 8px}
+.header .meta{margin-top:18px;font-size:13px;color:rgba(255,255,255,.5)}.header .meta span{margin:0 8px}.header .meta .warn{color:#fbbf24;font-weight:700}
 .stats-bar{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-top:28px}
 .stat-item{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:12px 24px;text-align:center}
 .stat-item .num{font-size:28px;font-weight:800}.stat-item .label{font-size:12px;color:rgba(255,255,255,.6);margin-top:2px}
@@ -57,7 +57,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei
 /* Section */
 .section-title{font-size:24px;font-weight:800;margin:48px 0 6px;display:flex;align-items:center;gap:10px}
 .section-title .icon{width:4px;height:24px;border-radius:2px;background:#1a1a2e}
-.section-desc{font-size:14px;color:var(--ts);margin-bottom:24px}
+.section-desc{font-size:14px;color:var(--ts);margin-bottom:24px}.warn-in-line{color:#b45309;font-weight:600;background:#fef3c7;padding:1px 6px;border-radius:4px}
 
 /* Tier Summary Cards */
 .tier-sum{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-bottom:48px}
