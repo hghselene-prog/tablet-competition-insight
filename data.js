@@ -196,7 +196,7 @@ function monthTrendPill(p){
 }
 
 // ===== Shared filter state =====
-let currentBrandFilter="all", currentTierFilter="all", currentNewFilter="all";
+let currentBrandFilter="all", currentTierFilter="all", currentNewFilter="all", dropBrand="all";
 function getFiltered(){return products.map((p,i)=>({...p,_idx:i})).filter(p=>{if(currentBrandFilter!=="all"&&p.brand!==currentBrandFilter)return false;if(currentTierFilter!=="all"&&p.tier!==currentTierFilter)return false;if(currentNewFilter==="new"&&!p.isNew)return false;return true;});}
 
 // ===== Scatter Chart (all 49 products) =====
@@ -320,11 +320,27 @@ function renderPriceChart(){
 
 // ===== Drop Chart =====
 function renderDropChart(){
-  const ct=document.getElementById("dropChart");if(!ct)return;ct.innerHTML="";
-  const drops=products.filter(p=>p.launchPrice>0&&p.price>0&&p.launchPrice!==p.price).map(p=>({name:p.name,brand:p.brand,diff:p.price-p.launchPrice,pct:((p.price-p.launchPrice)/p.launchPrice)*100})).sort((a,b)=>Math.abs(b.diff)-Math.abs(a.diff));
+  const ct=document.getElementById("dropChart");if(!ct)return;
+  // ---- 品牌选择按钮 ----
+  const bar=document.getElementById("dropBrandBar");
+  if(bar){
+    let bh='<span class="dbb-label">按品牌：</span>';
+    const list=[{k:"all",n:"全部"}].concat(brandOrder.map(b=>({k:b,n:brandInfo[b].name})));
+    list.forEach(b=>{
+      const dot=b.k==="all"?"":'<span class="dbb-dot" style="background:'+brandInfo[b.k].color+'"></span>';
+      bh+='<button class="dbb-btn'+(dropBrand===b.k?' active':'')+'" data-brand="'+b.k+'">'+dot+b.n+'</button>';
+    });
+    bar.innerHTML=bh;
+    bar.querySelectorAll(".dbb-btn").forEach(btn=>{
+      btn.addEventListener("click",()=>{ dropBrand=btn.dataset.brand; renderDropChart(); });
+    });
+  }
+  // ---- 图表主体（按品牌筛选）----
+  ct.innerHTML="";
+  const drops=products.filter(p=>p.launchPrice>0&&p.price>0&&p.launchPrice!==p.price&&(dropBrand==="all"||p.brand===dropBrand)).map(p=>({name:p.name,brand:p.brand,diff:p.price-p.launchPrice,pct:((p.price-p.launchPrice)/p.launchPrice)*100})).sort((a,b)=>Math.abs(b.diff)-Math.abs(a.diff));
   const md=drops.length>0?Math.max(...drops.map(d=>Math.abs(d.diff))):1;
   drops.forEach((d,i)=>{const up=d.diff>0,wp=(Math.abs(d.diff)/md)*100,info=brandInfo[d.brand];const mt='<span class="month-pill '+(up?'up':'down')+'" style="margin-left:6px;">调价 '+(up?'↑+':'↓-')+'¥'+Math.abs(d.diff).toLocaleString()+'</span>';const row=document.createElement("div");row.className="drop-item";row.innerHTML='<div class="drop-rank">'+(i+1)+'</div><div class="drop-name"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:'+info.color+';margin-right:4px;"></span>'+d.name+mt+'</div><div class="drop-bar-container"><div class="drop-bar" style="width:'+wp+'%;background:'+info.color+';">'+(up?'+':'-')+Math.abs(d.pct).toFixed(1)+'%</div></div><div class="drop-amount">'+(up?'+¥':'-¥')+Math.abs(d.diff).toLocaleString()+'</div>';ct.appendChild(row);});
-  if(drops.length===0)ct.innerHTML='<p style="color:var(--ts);text-align:center;padding:20px;">暂无价格变动数据</p>';
+  if(drops.length===0)ct.innerHTML='<p style="color:var(--ts);text-align:center;padding:20px;">该品牌暂无首销→现价格变动数据</p>';
 }
 
 // ===== New-product summary (home) =====
