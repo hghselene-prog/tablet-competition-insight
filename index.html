@@ -72,20 +72,20 @@
     <div class="new-sum-body" id="newSumBody"></div>
   </div>
 
-  <div class="section-title"><span class="icon"></span>价格变动排行（涨 / 跌）</div>
-  <p class="section-desc">按「首销价 → 当前价」变动绝对值排序，绿色 ↑ 为上涨、红色 ↓ 为下降。<span class="warn-inline">⚠ 首销价默认 = 当前官方起售价（即上市至今官方标价未变）；仅 OPPO Pad 6 / Pad 5 Pro / vivo iQOO Pad6 Pro 三款有公开报道佐证的真实首销价，且均为「首发价 → 现价」上涨（国补退坡）。</span></p>
+  <div class="section-title"><span class="icon"></span>首销起售价 → 现起售价（入门版对比）</div>
+  <p class="section-desc">按「首销起售价 → 现官网起售价」差额绝对值排序，仅作版本不同下的参考。<span class="warn-inline">⚠ 首销价取自 IT之家 / 凤凰网 / 官网参数页 等首发稿（带来源链接，见下方对比表）；首销为「起售价/入门版」，与现价直接相减可能因配置版本不同而不代表真实涨跌（例：OPPO Pad 6「3299→3899」是 8+256 首销 vs 12+256 现，非同 SKU 涨价）。苹果 MSRP 长期稳定，多为持平。</span></p>
   <div class="drop-chart-section"><div id="dropChart"></div></div>
-  <p class="data-note"><strong>数据口径与诚信说明（2026-07-28 已用官网真实数据重写）：</strong>本页价格与配置<strong>已逐品牌核对各品牌中国官网在售页 + 京东 / IT之家 / 凤凰网交叉核验</strong>（采集日 2026-07）。<br>① <strong>现价</strong>：取各品牌官网中国区起售价（WLAN 基础版）。<br>② <strong>首销价</strong>：默认 = 当前官方起售价（即官方标价自上市至今未调整，显示「持平」）。<strong>仅 3 款有公开报道佐证的真实首销价</strong>——OPPO Pad 6（首销 ¥3299 → 现价 ¥3899，<strong>涨 ¥600</strong>）、OPPO Pad 5 Pro（首销 ¥4299 → ¥4499，<strong>涨 ¥200</strong>）、vivo iQOO Pad6 Pro（首发 ¥4299 → ¥4499，<strong>涨 ¥200</strong>），来源为 IT之家 / 凤凰网首发报道。<br>③ <strong>苹果</strong>：官网起售价稳定（iPad Pro 11″ M5 ¥8999 / 13″ M5 ¥11499 / Air 11″ M4 ¥4799 / Air 13″ M4 ¥6499 / iPad A16 ¥2999 / mini A17 Pro ¥3799），官方标价未变，故显示「持平」。<strong>注意</strong>：苹果「国补退坡后到手价上涨」是另一维度的真实现象，但官网 MSRP 不体现，需接入逐款历史到手价（如你账号下的 jd-price-tracker）才能展示。<br>④ 仍有少量型号的配置（芯片 / 分辨率）官网未完整披露，以「—」标注，<strong>不编造</strong>。</p>
+  <p class="data-note"><strong>数据口径与诚信说明（2026-07-29 已用官网 + 新闻真实数据重写）：</strong>本页价格与配置<strong>逐品牌核对各品牌中国官网在售页（现价）+ IT之家 / 凤凰网 / 中关村在线 / 站长之家 首发稿（首销价，带来源链接）</strong>（采集日 2026-07）。<br>① <strong>现价</strong>：品牌官网中国区起售价（WLAN 基础版）。<br>② <strong>首销价</strong>：产品发布时官方起售价，取自 IT之家 / 凤凰网 / 官网参数页 等首发报道，<strong>每条均在对比表与产品卡标注来源链接，可点开核查</strong>。<br>③ <strong>⚠ 起售价口径提醒</strong>：首销价为「起售价/入门版」，与现价（在售起售价）直接相减<strong>可能因配置版本不同而不代表真实涨跌</strong>。例如 OPPO Pad 6「3299首销→3899现」是 8+256 首销 vs 12+256 现，并非同 SKU 涨价；苹果 MSRP 长期稳定，多为持平。<strong>此前误报的「OPPO/vivo 三款涨价」已更正</strong>——按同配置核对并无真实涨价。<br>④ <strong>待官网复核的当前价</strong>：荣耀平板20（¥3499，首销区间仅 ¥1899–2599，疑似高配/礼盒版）、OPPO Pad SE（¥1999，首销顶配柔光仅 ¥1399）。<br>⑤ 少量型号配置（芯片/分辨率）官网未完整披露，以「—」标注，<strong>不编造</strong>。</p>
 
   <div class="section-title"><span class="icon"></span>品牌价格带分布</div>
   <p class="section-desc">各品牌平板产品起售价区间一览，反映品牌定位策略</p>
   <div class="price-chart-section"><div class="price-chart-title">起售价区间（人民币）</div><div id="priceChart"></div></div>
 
   <div class="section-title"><span class="icon"></span>全产品规格对比表</div>
-  <p class="section-desc">含首销价、现价、价格变动和价格档位标签，横向滚动查看完整信息（受上方筛选影响）</p>
+  <p class="section-desc">含首销价、现价、首销→现对照（带 IT之家/凤凰网来源链接）和价格档位标签，横向滚动查看完整信息（受上方筛选影响）</p>
   <div class="table-wrapper">
     <table id="cmpTable"><thead><tr>
-      <th>品牌</th><th>产品名称</th><th>价格档位</th><th>屏幕尺寸</th><th>处理器</th><th>分辨率</th><th>首销价</th><th>现价</th><th>价格变动</th><th>定位</th>
+      <th>品牌</th><th>产品名称</th><th>价格档位</th><th>屏幕尺寸</th><th>处理器</th><th>分辨率</th><th>首销价</th><th>现价</th><th>首销→现(起售价)</th><th>定位</th>
     </tr></thead><tbody id="tableBody"></tbody></table>
   </div>
 </div>
