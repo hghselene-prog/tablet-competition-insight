@@ -82,6 +82,7 @@
   <p class="section-desc">各品牌平板产品起售价区间一览，反映品牌定位策略</p>
   <div class="price-chart-section"><div class="price-chart-title">起售价区间（人民币）</div><div id="priceChart"></div></div>
 
+  <div class="filter-section" id="tableTierBar"></div>
   <div class="section-title"><span class="icon"></span>全产品规格对比表</div>
   <p class="section-desc">含首销价、现价、首销→现对照（带 IT之家/凤凰网来源链接）和价格档位标签，横向滚动查看完整信息（受上方筛选影响）</p>
   <div class="table-wrapper">
@@ -106,7 +107,7 @@
 <script src="data.js"></script>
 <script>
 // ===== Page 1: overview dashboard =====
-renderTierOv();renderTierSum();renderTable();renderPriceChart();renderDropChart();renderNewSummary();setupFilterBar();updateCompareUI();
+renderTierOv();renderTierSum();renderTable();renderPriceChart();renderDropChart();renderNewSummary();setupFilterBar();renderTableTierBar();updateCompareUI();
 </script>
 </body>
 </html>

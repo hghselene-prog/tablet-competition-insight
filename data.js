@@ -377,7 +377,23 @@ function exportTable(){
 // ===== Shared filter bar wiring (acts on whatever sections exist on the page) =====
 function setupFilterBar(){
   const bar=document.getElementById("filterBar");if(!bar)return;
-  bar.addEventListener("click",e=>{const btn=e.target.closest(".filter-btn");if(!btn)return;if(btn.dataset.brand!==undefined){bar.querySelectorAll(".filter-btn[data-brand]").forEach(b=>b.classList.remove("active"));btn.classList.add("active");currentBrandFilter=btn.dataset.brand;}if(btn.dataset.tier!==undefined){bar.querySelectorAll(".filter-btn[data-tier]").forEach(b=>b.classList.remove("active"));btn.classList.add("active");currentTierFilter=btn.dataset.tier;}if(btn.dataset.new!==undefined){bar.querySelectorAll(".filter-btn[data-new]").forEach(b=>b.classList.remove("active"));btn.classList.add("active");currentNewFilter=btn.dataset.new;}if(document.getElementById("productSections"))renderProducts();if(document.getElementById("tableBody"))renderTable();if(document.getElementById("tierOv"))renderTierOv();});
+  bar.addEventListener("click",e=>{const btn=e.target.closest(".filter-btn");if(!btn)return;if(btn.dataset.brand!==undefined){bar.querySelectorAll(".filter-btn[data-brand]").forEach(b=>b.classList.remove("active"));btn.classList.add("active");currentBrandFilter=btn.dataset.brand;}if(btn.dataset.tier!==undefined){document.querySelectorAll(".filter-btn[data-tier]").forEach(b=>b.classList.remove("active"));btn.classList.add("active");currentTierFilter=btn.dataset.tier;}if(btn.dataset.new!==undefined){bar.querySelectorAll(".filter-btn[data-new]").forEach(b=>b.classList.remove("active"));btn.classList.add("active");currentNewFilter=btn.dataset.new;}if(document.getElementById("productSections"))renderProducts();if(document.getElementById("tableBody"))renderTable();  if(document.getElementById("tierOv"))renderTierOv();});
+}
+
+function renderTableTierBar(){
+  const bar=document.getElementById("tableTierBar");if(!bar)return;
+  let h='<span class="filter-label">价格档位</span>';
+  const opts=[{k:"all",n:"全部"}].concat(tierOrder.map(t=>({k:t,n:tierInfo[t].name})));
+  opts.forEach(o=>{ h+='<button class="filter-btn'+(currentTierFilter===o.k?' active':'')+'" data-tier="'+o.k+'">'+o.n+'</button>'; });
+  bar.innerHTML=h;
+  bar.addEventListener("click",e=>{
+    const btn=e.target.closest(".filter-btn");if(!btn||btn.dataset.tier===undefined)return;
+    currentTierFilter=btn.dataset.tier;
+    document.querySelectorAll(".filter-btn[data-tier]").forEach(b=>b.classList.toggle("active",b.dataset.tier===currentTierFilter));
+    if(document.getElementById("tableBody"))renderTable();
+    if(document.getElementById("tierOv"))renderTierOv();
+    if(document.getElementById("productSections"))renderProducts();
+  });
 }
 
 // ===== Shared onCompareChange: sync scatter dots + product cards (both pages) =====
