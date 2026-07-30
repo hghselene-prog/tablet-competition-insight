@@ -321,6 +321,16 @@ function renderPriceChart(){
 }
 
 // ===== Drop Chart =====
+// 价格变动数据集（首销价≠官网现价，受 dropBrand 品牌筛选），渲染与导出共用
+function getDrops(){
+  const tierW={entry:0,mid:1,midhigh:2,flagship:3,ultra:4};
+  const tierName={entry:"入门",mid:"中端",midhigh:"中高",flagship:"高端",ultra:"旗舰"};
+  return products.filter(p=>p.launchPrice>0&&p.price>0&&p.launchPrice!==p.price&&(dropBrand==="all"||p.brand===dropBrand)).map(p=>{
+    let srcT="",srcU="";
+    if(p.launchSource){const idx=p.launchSource.indexOf("||");if(idx>=0){srcU=p.launchSource.slice(0,idx);srcT=p.launchSource.slice(idx+2);}else{srcU=p.launchSource;}}
+    return {name:p.name,brand:p.brand,brandName:p.brandName,price:p.price,launchPrice:p.launchPrice,diff:p.price-p.launchPrice,pct:((p.price-p.launchPrice)/p.launchPrice)*100,tier:getTier(p.price),tierName:tierName[getTier(p.price)],lc:p.launchConfig,pc:p.priceConfig,srcT,srcU};
+  }).sort((a,b)=>(tierW[b.tier]-tierW[a.tier])||(b.price-a.price)||(Math.abs(b.diff)-Math.abs(a.diff)));
+}
 function renderDropChart(){
   const ct=document.getElementById("dropChart");if(!ct)return;
   // ---- 品牌选择按钮 ----
@@ -341,7 +351,7 @@ function renderDropChart(){
   ct.innerHTML="";
   const tierW={entry:0,mid:1,midhigh:2,flagship:3,ultra:4};
   const tierName={entry:"入门",mid:"中端",midhigh:"中高",flagship:"高端",ultra:"旗舰"};
-  const drops=products.filter(p=>p.launchPrice>0&&p.price>0&&p.launchPrice!==p.price&&(dropBrand==="all"||p.brand===dropBrand)).map(p=>({name:p.name,brand:p.brand,price:p.price,diff:p.price-p.launchPrice,pct:((p.price-p.launchPrice)/p.launchPrice)*100,tier:getTier(p.price),lc:p.launchConfig,pc:p.priceConfig})).sort((a,b)=>(tierW[b.tier]-tierW[a.tier])||(b.price-a.price)||(Math.abs(b.diff)-Math.abs(a.diff)));
+  const drops=getDrops();
   const md=drops.length>0?Math.max(...drops.map(d=>Math.abs(d.diff))):1;
   drops.forEach((d,i)=>{const up=d.diff>0,wp=(Math.abs(d.diff)/md)*100,info=brandInfo[d.brand];const mt='<span class="month-pill '+(up?'up':'down')+'" style="margin-left:6px;">调价 '+(up?'↑+':'↓-')+'¥'+Math.abs(d.diff).toLocaleString()+'</span>';const row=document.createElement("div");row.className="drop-item";row.innerHTML='<div class="drop-rank">'+(i+1)+'</div><div class="drop-name"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:'+info.color+';margin-right:4px;"></span>'+d.name+(d.lc||d.pc?`<span class="cfg-tag">${d.lc?('首销价 '+d.lc):''}${d.lc&&d.pc?' · ':''}${d.pc?('官网现 '+d.pc):''}</span>`:'')+'<span class="tier-tag t-'+d.tier+'">'+tierName[d.tier]+'</span>'+mt+'</div><div class="drop-bar-container"><div class="drop-bar" style="width:'+wp+'%;background:'+info.color+';">'+(up?'+':'-')+Math.abs(d.pct).toFixed(1)+'%</div></div><div class="drop-amount">'+(up?'+¥':'-¥')+Math.abs(d.diff).toLocaleString()+'</div>';ct.appendChild(row);});
   if(drops.length===0)ct.innerHTML='<p style="color:var(--ts);text-align:center;padding:20px;">该品牌暂无首销→现价格变动数据</p>';
@@ -374,6 +384,27 @@ function exportTable(){
   const blob=new Blob([csv],{type:"text/csv;charset=utf-8;"});
   const url=URL.createObjectURL(blob);
   const a=document.createElement("a");a.href=url;a.download="平板竞品分析_"+new Date().toISOString().slice(0,10)+".csv";document.body.appendChild(a);a.click();document.body.removeChild(a);URL.revokeObjectURL(url);
+}
+
+// ===== Export current price-change (首销→现) view to CSV =====
+function exportDrop(){
+  const drops=getDrops();
+  if(drops.length===0){alert("当前品牌暂无价格变动数据可导出");return;}
+  const label=dropBrand==="all"?"全部品牌":(brandInfo[dropBrand]?brandInfo[dropBrand].name:dropBrand);
+  const head=["排名","品牌","产品名称","价格档位","首销价","首销配置","官网现价","官网配置","变动金额","变动幅度","调价方向","首销来源"];
+  let csv="\uFEFF"+head.join(",")+"\n";
+  drops.forEach((d,i)=>{
+    const up=d.diff>0;
+    const cells=[i+1,d.brandName,d.name,d.tierName,
+      d.launchPrice>0?"¥"+d.launchPrice.toLocaleString():"",d.lc||"",
+      d.price>0?"¥"+d.price.toLocaleString():"",d.pc||"",
+      (up?"+¥":"-¥")+Math.abs(d.diff).toLocaleString(),(up?"+":"-")+Math.abs(d.pct).toFixed(1)+"%",
+      up?"涨价":"降价",d.srcT||""];
+    csv+=cells.map(c=>{c=String(c);if(c.indexOf(",")>=0||c.indexOf('"')>=0)c='"'+c.replace(/"/g,'""')+'"';return c;}).join(",")+"\n";
+  });
+  const blob=new Blob([csv],{type:"text/csv;charset=utf-8;"});
+  const url=URL.createObjectURL(blob);
+  const a=document.createElement("a");a.href=url;a.download="平板价格变动_"+label+"_"+new Date().toISOString().slice(0,10)+".csv";document.body.appendChild(a);a.click();document.body.removeChild(a);URL.revokeObjectURL(url);
 }
 
 // ===== Shared filter bar wiring (acts on whatever sections exist on the page) =====
