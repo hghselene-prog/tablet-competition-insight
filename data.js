@@ -131,7 +131,7 @@ function renderRadar(){
 function renderCmpGrid(){
   const ct=document.getElementById("cmpGridCt");if(!ct)return;
   const sel=compareList.map(i=>products[i]);const cc=Math.max(sel.length,1);
-  const rows=[{l:"现价",k:"price",t:"price",h:"low"},{l:"首销价",k:"launchPrice",t:"pp"},{l:"首销→现",k:"ppr",t:"ppr"},{l:"价格档位",k:"tier",t:"tier"},{l:"屏幕",k:"screen",t:"text",h:"high"},{l:"处理器",k:"chip",t:"text"},{l:"分辨率",k:"resolution",t:"text"},{l:"电池",k:"battery",t:"bat",h:"high"},{l:"扬声器",k:"speaker",t:"spk",h:"high"},{l:"系统",k:"os",t:"text"},{l:"手写笔",k:"pen",t:"text"},{l:"定位",k:"positioning",t:"text"}];
+  const rows=[{l:"官网现价",k:"price",t:"price",h:"low"},{l:"首销价",k:"launchPrice",t:"pp"},{l:"首销→官网现价",k:"ppr",t:"ppr"},{l:"价格档位",k:"tier",t:"tier"},{l:"屏幕",k:"screen",t:"text",h:"high"},{l:"处理器",k:"chip",t:"text"},{l:"分辨率",k:"resolution",t:"text"},{l:"电池",k:"battery",t:"bat",h:"high"},{l:"扬声器",k:"speaker",t:"spk",h:"high"},{l:"系统",k:"os",t:"text"},{l:"手写笔",k:"pen",t:"text"},{l:"定位",k:"positioning",t:"text"}];
   if(sel.length===0){ct.innerHTML='<div class="cmp-empty"><div class="hint-icon">&#128269;</div><div class="hint-text">尚未选择对比产品</div><div class="hint-sub">点击下方「+ 添加产品」选择，或返回首页勾选（最多 5 款）</div></div>';return;}
   let h=`<div class="cmp-grid" style="--cc:${cc};"><div class="cell label-cell"></div>`;
   sel.forEach((p,i)=>{const info=brandInfo[p.brand];h+=`<div class="cell ph-cell"><div class="bs" style="background:${info.color}"></div><button class="p-rm" onclick="removeFromCompare(${compareList[i]})">&times;</button><div class="pn-col">${p.name}</div><div class="pb-col">${p.brandName}${p.subBrand?" · "+p.subBrand:""}</div></div>`;});
@@ -192,7 +192,7 @@ function updateCompareUI(){
 products.forEach(p=>{ if(p.price>0&&p.launchPrice>0){ p.monthChange=p.price-p.launchPrice; } else { p.monthChange=null; } });
 function monthTrendPill(p){
   // 首销价/现价均取「起售价/入门版」，跨配置相减不代表真实涨跌，故不再显示单点「调价」 Pill；
-  // 真实首销→现对照与来源链接见卡片「首销 ¥X 起 来源↗」与对比表「首销→现」列。
+  // 真实首销→官网现价对照与来源链接见卡片「首销价 ¥X 起（来源↗）」与对比表「首销→官网现价」列。
   return "";
 }
 
@@ -289,7 +289,7 @@ function renderCard(p){
   const st=p.subBrand?'<span class="sub-brand-tag">'+p.subBrand+'</span>':'';
   let pc='';
   const _ls=p.launchSource?p.launchSource.split("||")[0]:"";const _lc=p.launchConfig?'('+p.launchConfig+')':'';const _pc=p.priceConfig?'('+p.priceConfig+')':'';
-  if(p.launchPrice&&p.launchPrice>0&&p.price>0){pc='<div class="price-compare"><span class="price-launch">首销 ¥'+p.launchPrice.toLocaleString()+' '+_lc+' 起</span>'+(p.launchSource?'<a class="src-link" href="'+_ls+'" target="_blank" rel="noopener">来源↗</a>':'')+'<span class="price-diff same">现 ¥'+p.price.toLocaleString()+' '+_pc+' 起</span></div>';}else if(p.price<=0&&p.launchPrice>0){pc='<div class="price-compare"><span class="price-launch">首销 ¥'+p.launchPrice.toLocaleString()+' '+_lc+' 起</span>'+(p.launchSource?'<a class="src-link" href="'+_ls+'" target="_blank" rel="noopener">来源↗</a>':'')+'<span class="price-diff na">已停产/EOL</span></div>';}
+  if(p.launchPrice&&p.launchPrice>0&&p.price>0){pc='<div class="price-compare"><span class="price-launch">首销价 ¥'+p.launchPrice.toLocaleString()+' '+_lc+' 起</span>'+(p.launchSource?'<a class="src-link" href="'+_ls+'" target="_blank" rel="noopener">（来源↗）</a>':'')+'<span class="price-sep">｜</span><span class="price-diff same">官网现价 ¥'+p.price.toLocaleString()+' '+_pc+' 起</span></div>';}else if(p.price<=0&&p.launchPrice>0){pc='<div class="price-compare"><span class="price-launch">首销价 ¥'+p.launchPrice.toLocaleString()+' '+_lc+' 起</span>'+(p.launchSource?'<a class="src-link" href="'+_ls+'" target="_blank" rel="noopener">（来源↗）</a>':'')+'<span class="price-diff na">已停产/EOL</span></div>';}
   let sr='<div class="spec-row"><span class="spec-label">屏幕</span><span class="spec-value">'+(p.screen||"—")+'</span></div><div class="spec-row"><span class="spec-label">处理器</span><span class="spec-value">'+(p.chip||"—")+'</span></div><div class="spec-row"><span class="spec-label">分辨率</span><span class="spec-value">'+(p.resolution||"—")+'</span></div>';
   if(p.specs){if(p.specs.battery&&p.specs.battery!=="—")sr+='<div class="spec-row"><span class="spec-label">电池</span><span class="spec-value">'+p.specs.battery+'</span></div>';if(p.specs.speaker&&p.specs.speaker!=="—")sr+='<div class="spec-row"><span class="spec-label">扬声器</span><span class="spec-value">'+p.specs.speaker+'</span></div>';if(p.specs.os&&p.specs.os!=="—")sr+='<div class="spec-row"><span class="spec-label">系统</span><span class="spec-value">'+p.specs.os+'</span></div>';if(p.specs.pen&&p.specs.pen!=="—")sr+='<div class="spec-row"><span class="spec-label">手写笔</span><span class="spec-value">'+p.specs.pen+'</span></div>';}
   const ti=tierInfo[p.tier];sr+='<div class="spec-row"><span class="spec-label">档位</span><span class="spec-value"><span class="tier-badge '+p.tier+'" style="font-size:11px">'+ti.name+'</span></span></div>';sr+='<div class="spec-row"><span class="spec-label">定位</span><span class="spec-value"><span class="spec-tag">'+p.positioning+'</span></span></div>';
@@ -305,7 +305,7 @@ function renderTable(){
     const pt=p.price>0?'¥'+p.price.toLocaleString()+(p.priceConfig?' <span class="cfg-tag">'+p.priceConfig+'</span>':'')+(p.priceFrom?'<span class="from"> 起</span>':'') :'<span class="from">EOL/缺货</span>';
     const _ls=p.launchSource?p.launchSource.split("||")[0]:"";
     const lt=p.launchPrice>0?('¥'+p.launchPrice.toLocaleString()+(p.launchConfig?' <span class="cfg-tag">'+p.launchConfig+'</span>':'')+' 起'+(p.launchSource?' <a class="src-link" href="'+_ls+'" target="_blank" rel="noopener">来源↗</a>':'')):'—';
-    let dt='—';if(p.launchPrice>0&&p.price>0){dt='<span class="launch-cell">¥'+p.launchPrice.toLocaleString()+(p.launchConfig?' <span class="cfg-tag">'+p.launchConfig+'</span>':'')+' 起</span> → <span class="price-cell-sm">¥'+p.price.toLocaleString()+(p.priceConfig?' <span class="cfg-tag">'+p.priceConfig+'</span>':'')+' 起</span>';}else if(p.launchPrice>0&&p.price<=0){dt='<span class="launch-cell">¥'+p.launchPrice.toLocaleString()+(p.launchConfig?' <span class="cfg-tag">'+p.launchConfig+'</span>':'')+' 起</span> <span class="from">EOL</span>';}
+    let dt='—';if(p.launchPrice>0&&p.price>0){dt='<span class="launch-cell">首销价 ¥'+p.launchPrice.toLocaleString()+(p.launchConfig?' <span class="cfg-tag">'+p.launchConfig+'</span>':'')+' 起</span> → <span class="price-cell-sm">官网现价 ¥'+p.price.toLocaleString()+(p.priceConfig?' <span class="cfg-tag">'+p.priceConfig+'</span>':'')+' 起</span>';}else if(p.launchPrice>0&&p.price<=0){dt='<span class="launch-cell">首销价 ¥'+p.launchPrice.toLocaleString()+(p.launchConfig?' <span class="cfg-tag">'+p.launchConfig+'</span>':'')+' 起</span> <span class="from">官网已下架/EOL</span>';}
     const ti=tierInfo[p.tier];const mt=monthTrendPill(p);
     tr.innerHTML='<td><div class="brand-cell" data-brand="'+p.brand+'"><span class="dot"></span>'+p.brandName+'</div></td><td style="font-weight:600">'+p.name+'</td><td><span class="tier-cell '+p.tier+'">'+ti.name+'</span></td><td>'+(p.screen||"—")+'</td><td>'+(p.chip||"—")+'</td><td>'+(p.resolution||"—")+'</td><td style="color:var(--ts)">'+lt+'</td><td class="price-cell">'+pt+' '+mt+'</td><td class="price-drop-cell">'+dt+'</td><td><span class="spec-tag">'+p.positioning+'</span></td>';
     tb.appendChild(tr);
@@ -343,7 +343,7 @@ function renderDropChart(){
   const tierName={entry:"入门",mid:"中端",midhigh:"中高",flagship:"高端",ultra:"旗舰"};
   const drops=products.filter(p=>p.launchPrice>0&&p.price>0&&p.launchPrice!==p.price&&(dropBrand==="all"||p.brand===dropBrand)).map(p=>({name:p.name,brand:p.brand,price:p.price,diff:p.price-p.launchPrice,pct:((p.price-p.launchPrice)/p.launchPrice)*100,tier:getTier(p.price),lc:p.launchConfig,pc:p.priceConfig})).sort((a,b)=>(tierW[b.tier]-tierW[a.tier])||(b.price-a.price)||(Math.abs(b.diff)-Math.abs(a.diff)));
   const md=drops.length>0?Math.max(...drops.map(d=>Math.abs(d.diff))):1;
-  drops.forEach((d,i)=>{const up=d.diff>0,wp=(Math.abs(d.diff)/md)*100,info=brandInfo[d.brand];const mt='<span class="month-pill '+(up?'up':'down')+'" style="margin-left:6px;">调价 '+(up?'↑+':'↓-')+'¥'+Math.abs(d.diff).toLocaleString()+'</span>';const row=document.createElement("div");row.className="drop-item";row.innerHTML='<div class="drop-rank">'+(i+1)+'</div><div class="drop-name"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:'+info.color+';margin-right:4px;"></span>'+d.name+(d.lc||d.pc?`<span class="cfg-tag">${d.lc?('首销 '+d.lc):''}${d.lc&&d.pc?' · ':''}${d.pc?('现 '+d.pc):''}</span>`:'')+'<span class="tier-tag t-'+d.tier+'">'+tierName[d.tier]+'</span>'+mt+'</div><div class="drop-bar-container"><div class="drop-bar" style="width:'+wp+'%;background:'+info.color+';">'+(up?'+':'-')+Math.abs(d.pct).toFixed(1)+'%</div></div><div class="drop-amount">'+(up?'+¥':'-¥')+Math.abs(d.diff).toLocaleString()+'</div>';ct.appendChild(row);});
+  drops.forEach((d,i)=>{const up=d.diff>0,wp=(Math.abs(d.diff)/md)*100,info=brandInfo[d.brand];const mt='<span class="month-pill '+(up?'up':'down')+'" style="margin-left:6px;">调价 '+(up?'↑+':'↓-')+'¥'+Math.abs(d.diff).toLocaleString()+'</span>';const row=document.createElement("div");row.className="drop-item";row.innerHTML='<div class="drop-rank">'+(i+1)+'</div><div class="drop-name"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:'+info.color+';margin-right:4px;"></span>'+d.name+(d.lc||d.pc?`<span class="cfg-tag">${d.lc?('首销价 '+d.lc):''}${d.lc&&d.pc?' · ':''}${d.pc?('官网现 '+d.pc):''}</span>`:'')+'<span class="tier-tag t-'+d.tier+'">'+tierName[d.tier]+'</span>'+mt+'</div><div class="drop-bar-container"><div class="drop-bar" style="width:'+wp+'%;background:'+info.color+';">'+(up?'+':'-')+Math.abs(d.pct).toFixed(1)+'%</div></div><div class="drop-amount">'+(up?'+¥':'-¥')+Math.abs(d.diff).toLocaleString()+'</div>';ct.appendChild(row);});
   if(drops.length===0)ct.innerHTML='<p style="color:var(--ts);text-align:center;padding:20px;">该品牌暂无首销→现价格变动数据</p>';
 }
 
@@ -362,7 +362,7 @@ function renderNewSummary(){
 function exportTable(){
   const rows=getFiltered();
   if(rows.length===0){alert("当前筛选无产品可导出");return;}
-  const head=["品牌","产品名称","子品牌","价格档位","屏幕尺寸","处理器","分辨率","首销价","现价","价格变动","定位"];
+  const head=["品牌","产品名称","子品牌","价格档位","屏幕尺寸","处理器","分辨率","首销价","官网现价","价格变动","定位"];
   let csv="\uFEFF"+head.join(",")+"\n";
   rows.forEach(p=>{
     const diff=(p.launchPrice>0&&p.price>0)?(p.price-p.launchPrice):null;
