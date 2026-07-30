@@ -302,8 +302,9 @@ function renderTable(){
   const tb=document.getElementById("tableBody");if(!tb)return;tb.innerHTML="";getFiltered().forEach(p=>{
     const tr=document.createElement("tr");
     const pt=p.price>0?'¥'+p.price.toLocaleString()+(p.priceFrom?'<span class="from"> 起</span>':'') :'<span class="from">EOL/缺货</span>';
-    const lt=p.launchPrice>0?'¥'+p.launchPrice.toLocaleString():'—';
-    let dt='—';const _ls=p.launchSource?p.launchSource.split("||")[0]:"";if(p.launchPrice>0&&p.price>0){dt='<span class="launch-cell">¥'+p.launchPrice.toLocaleString()+' 起</span> → <span class="price-cell-sm">¥'+p.price.toLocaleString()+' 起</span>'+(p.launchSource?' <a class="src-link" href="'+_ls+'" target="_blank" rel="noopener">↗</a>':'');}else if(p.launchPrice>0&&p.price<=0){dt='<span class="launch-cell">¥'+p.launchPrice.toLocaleString()+' 起</span> <span class="from">EOL</span>';}
+    const _ls=p.launchSource?p.launchSource.split("||")[0]:"";
+    const lt=p.launchPrice>0?('¥'+p.launchPrice.toLocaleString()+' 起'+(p.launchSource?' <a class="src-link" href="'+_ls+'" target="_blank" rel="noopener">来源↗</a>':'')):'—';
+    let dt='—';if(p.launchPrice>0&&p.price>0){dt='<span class="launch-cell">¥'+p.launchPrice.toLocaleString()+' 起</span> → <span class="price-cell-sm">¥'+p.price.toLocaleString()+' 起</span>';}else if(p.launchPrice>0&&p.price<=0){dt='<span class="launch-cell">¥'+p.launchPrice.toLocaleString()+' 起</span> <span class="from">EOL</span>';}
     const ti=tierInfo[p.tier];const mt=monthTrendPill(p);
     tr.innerHTML='<td><div class="brand-cell" data-brand="'+p.brand+'"><span class="dot"></span>'+p.brandName+'</div></td><td style="font-weight:600">'+p.name+'</td><td><span class="tier-cell '+p.tier+'">'+ti.name+'</span></td><td>'+(p.screen||"—")+'</td><td>'+(p.chip||"—")+'</td><td>'+(p.resolution||"—")+'</td><td style="color:var(--ts)">'+lt+'</td><td class="price-cell">'+pt+' '+mt+'</td><td class="price-drop-cell">'+dt+'</td><td><span class="spec-tag">'+p.positioning+'</span></td>';
     tb.appendChild(tr);
