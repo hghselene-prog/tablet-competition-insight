@@ -234,7 +234,9 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei
 .drop-item{display:flex;align-items:center;gap:12px;margin-bottom:10px;padding:8px 12px;border-radius:8px;background:#f9f9fb}
 .drop-item:hover{background:#f0f1f5}
 .drop-rank{width:24px;height:24px;border-radius:50%;background:#e63946;color:#fff;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.drop-name{width:200px;font-size:13px;font-weight:600;flex-shrink:0}
+.drop-name{width:200px;font-size:13px;font-weight:600;flex-shrink:0;line-height:1.4}
+.drop-name .drop-cfg{display:block;font-size:11px;font-weight:500;color:#64748b;margin-top:2px}
+.cfg-tag{display:inline-block;font-size:11px;font-weight:700;color:#475569;background:#eef1f6;border:1px solid #e2e8f0;border-radius:4px;padding:0 5px;margin-left:4px;vertical-align:middle;white-space:nowrap;flex-shrink:0}
 .drop-bar-container{flex:1;height:24px;background:#f0f1f5;border-radius:6px;overflow:hidden}
 .drop-bar{height:100%;border-radius:6px;display:flex;align-items:center;padding-left:8px;font-size:11px;font-weight:700;color:#fff}
 .drop-amount{width:80px;text-align:right;font-size:13px;font-weight:700;color:#e63946;flex-shrink:0}
