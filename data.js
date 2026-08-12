@@ -480,3 +480,393 @@ function selectCurrentFilter(){
   items.forEach(p=>{if(compareList.length<MAX_COMPARE&&!compareList.includes(p._idx))compareList.push(p._idx);});
   saveCompare();updateCompareUI();
 }
+
+const CONSUMER_VOICE = {
+  "updated": "2026-08-12",
+  "note": "消费者声音：汇总各品牌平板在视频/社媒平台的用户与 KOL 声音（当前华为种子数据来自 B站 KOL 视频整理）。按品牌→产品组织；每条支持 视频链接 / 图片 / 报告 三种形态。report 字段预留给后续「消费者声音报告」。",
+  "brands": {
+    "huawei": {
+      "products": [
+        {
+          "name": "MatePad Pro Max",
+          "voices": [
+            {
+              "type": "video",
+              "title": "华为最薄平板！MatePad Pro Max 究竟是怎么做到的？",
+              "author": "胜利文绉绉",
+              "play": 1280305,
+              "date": "2026-06-01",
+              "url": "https://www.bilibili.com/video/BV1VAVf6WEg8",
+              "compare": false
+            },
+            {
+              "type": "video",
+              "title": "掀桌子的一代｜华为MatePad Pro Max",
+              "author": "林捂捂",
+              "play": 718429,
+              "date": "2026-06-01",
+              "url": "https://www.bilibili.com/video/BV1xnVQ6oEN2",
+              "compare": false
+            },
+            {
+              "type": "video",
+              "title": "怎么能这么薄？！—华为MatePad Pro Max 解析",
+              "author": "搞机所",
+              "play": 636813,
+              "date": "2026-06-01",
+              "url": "https://www.bilibili.com/video/BV1xxV96wEaF",
+              "compare": false
+            },
+            {
+              "type": "video",
+              "title": "华为把电脑塞进了平板里？深度体验MatePad Pro Max",
+              "author": "科技宅小明",
+              "play": 537930,
+              "date": "2026-06-01",
+              "url": "https://www.bilibili.com/video/BV1GpVU6fEgH",
+              "compare": false
+            },
+            {
+              "type": "video",
+              "title": "华为matepad pro max，这次还能领先吗",
+              "author": "科技禁锢",
+              "play": 213719,
+              "date": "2026-08-06",
+              "url": "https://www.bilibili.com/video/BV16UuH6pETj",
+              "compare": false
+            },
+            {
+              "type": "video",
+              "title": "华为MatePad Pro Max价格公布弹幕炸裂！真香！",
+              "author": "红米K100新品发布",
+              "play": 181174,
+              "date": "2026-06-01",
+              "url": "https://www.bilibili.com/video/BV1J2VZ6PEWZ",
+              "compare": false
+            },
+            {
+              "type": "video",
+              "title": "值不值？华为MatePad Pro Max超细体验，对比Pro13.2：120W快充+麒麟T93Pro+电脑桌面+超窄边框+星跃键盘",
+              "author": "别龙马吃牛内面",
+              "play": 110109,
+              "date": "2026-06-01",
+              "url": "https://www.bilibili.com/video/BV1Db5F6WE6g",
+              "compare": true
+            },
+            {
+              "type": "video",
+              "title": "华为 MatePad Pro Max 拆机",
+              "author": "YCS杨长顺",
+              "play": 101167,
+              "date": "2026-06-03",
+              "url": "https://www.bilibili.com/video/BV1umVm6XEaW",
+              "compare": false
+            }
+          ]
+        },
+        {
+          "name": "MatePad Pro 2026",
+          "voices": [
+            {
+              "type": "video",
+              "title": "【大屏生产力平板推荐】2026华为MatePad Pro Max轻办公实测，能不能替代电脑？",
+              "author": "电子蛋野菌",
+              "play": 122949,
+              "date": "2026-06-11",
+              "url": "https://www.bilibili.com/video/BV1swEB6cEfR",
+              "compare": false
+            },
+            {
+              "type": "video",
+              "title": "值不值？华为MatePad Pro12 2026超细体验，小的Pro Max~麒麟T93+电脑桌面",
+              "author": "别龙马吃牛内面",
+              "play": 63017,
+              "date": "2026-08-05",
+              "url": "https://www.bilibili.com/video/BV1UxM16aE9b",
+              "compare": false
+            },
+            {
+              "type": "video",
+              "title": "华为续航最长平板 MatePad Pro 2026 发布：麒麟 T93 芯片，5999 元起",
+              "author": "゙数码情报站",
+              "play": 19760,
+              "date": "2026-08-05",
+              "url": "https://www.bilibili.com/video/BV13eMk6bEC4",
+              "compare": false
+            },
+            {
+              "type": "video",
+              "title": "2026下半年华为即将发布的3款新平板！配置预测和外观变化。",
+              "author": "是阿羽同学呀",
+              "play": 19719,
+              "date": "2026-07-05",
+              "url": "https://www.bilibili.com/video/BV1FuTC6rEVb",
+              "compare": false
+            },
+            {
+              "type": "video",
+              "title": "华为 MatePad Pro 2026 旗舰平板官宣 8 月 5 日亮相",
+              "author": "゙数码情报站",
+              "play": 11498,
+              "date": "2026-07-30",
+              "url": "https://www.bilibili.com/video/BV1aC3W6nE19",
+              "compare": false
+            },
+            {
+              "type": "video",
+              "title": "「参数分解」华为MatePad Pro 12英寸，标准和悦享版的差别。",
+              "author": "阳光使者2025",
+              "play": 6128,
+              "date": "2026-08-07",
+              "url": "https://www.bilibili.com/video/BV1Qvut6sEpg",
+              "compare": false
+            },
+            {
+              "type": "video",
+              "title": "2026华为MatePadPro开箱！这可能是学生党最需要的鸿蒙生产力神器",
+              "author": "科技家电魅力未来",
+              "play": 4236,
+              "date": "2026-02-25",
+              "url": "https://www.bilibili.com/video/BV1YRfyB8Ett",
+              "compare": false
+            },
+            {
+              "type": "video",
+              "title": "【平板电脑测评】2026年618全价位平板选购指南｜苹果华为小米联想避坑必看、学生党网课追剧平替、柔光屏护眼大容量续航全解析",
+              "author": "委屈丫丫",
+              "play": 1841,
+              "date": "2026-06-06",
+              "url": "https://www.bilibili.com/video/BV1uK7S6PEgo",
+              "compare": false
+            }
+          ]
+        },
+        {
+          "name": "MatePad Edge",
+          "voices": [
+            {
+              "type": "video",
+              "title": "华为首款鸿蒙二合一平板电脑发布！沉浸式上手体验来了！ 杭州",
+              "author": "dpitns02451",
+              "play": 821649,
+              "date": "2026-07-21",
+              "url": "https://www.bilibili.com/video/BV1wCKx6hEYx",
+              "compare": false
+            },
+            {
+              "type": "video",
+              "title": "这台华为鸿蒙二合一，能不能成为你的下一台电脑？",
+              "author": "笔吧评测室",
+              "play": 645786,
+              "date": "2025-12-10",
+              "url": "https://www.bilibili.com/video/BV1g5m4ByE2B",
+              "compare": false
+            },
+            {
+              "type": "video",
+              "title": "人类为了一台真的二合一平板电脑，到底走了多少弯路？【差评君】",
+              "author": "差评君",
+              "play": 505017,
+              "date": "2025-12-10",
+              "url": "https://www.bilibili.com/video/BV1mwmtBrEvE",
+              "compare": false
+            },
+            {
+              "type": "video",
+              "title": "华为MatePad Edge鸿蒙二合一全网最细真机开箱！！电脑&amp;平板两种模式竟可以来回切换？？",
+              "author": "李大锤同学",
+              "play": 438166,
+              "date": "2025-11-19",
+              "url": "https://www.bilibili.com/video/BV1BxynBwEeN",
+              "compare": false
+            },
+            {
+              "type": "video",
+              "title": "【大家测】5999元起 “买一得二”华为MatePad Edge 开箱体验 | 鸿蒙二合一平板电脑 多种形态 超强散热",
+              "author": "大家测",
+              "play": 232121,
+              "date": "2025-11-27",
+              "url": "https://www.bilibili.com/video/BV1HRSMBHE1S",
+              "compare": false
+            },
+            {
+              "type": "video",
+              "title": "夯！华为MatePad Edge万字超细体验，对比鸿蒙电脑+MatePad Pro13.2平板有哪些不同？麒麟X90怎么样？还有电脑微信？",
+              "author": "别龙马吃牛内面",
+              "play": 180328,
+              "date": "2025-11-25",
+              "url": "https://www.bilibili.com/video/BV1KZUQBLE9m",
+              "compare": true
+            },
+            {
+              "type": "video",
+              "title": "华为MatePad Edge 超详细深度体验！华为如何重新定义二合一平板电脑？！",
+              "author": "李大锤同学",
+              "play": 113494,
+              "date": "2025-11-25",
+              "url": "https://www.bilibili.com/video/BV14uUmBaEqs",
+              "compare": false
+            },
+            {
+              "type": "video",
+              "title": "用了7天华为MatePad Edge，我差点信了…",
+              "author": "源机话",
+              "play": 101769,
+              "date": "2025-12-04",
+              "url": "https://www.bilibili.com/video/BV14r2hBUEuT",
+              "compare": false
+            }
+          ]
+        },
+        {
+          "name": "MatePad 11.5 S 2026",
+          "voices": [
+            {
+              "type": "video",
+              "title": "买前必看！华为MatePad 11.5 2026柔光版选购指南，和MatePad 11.5S灵动版对比怎么选？麒麟8020/T82/T82B有什么区别？",
+              "author": "别龙马吃牛内面",
+              "play": 129897,
+              "date": "2026-02-08",
+              "url": "https://www.bilibili.com/video/BV1iMcwzUEpt",
+              "compare": true
+            },
+            {
+              "type": "video",
+              "title": "荣耀平板20&amp;华为 MatePad 11.5s｜2026年两款超火学习平板怎么选",
+              "author": "福瑞科技",
+              "play": 92407,
+              "date": "2026-06-02",
+              "url": "https://www.bilibili.com/video/BV1XqVo6nEHp",
+              "compare": true
+            },
+            {
+              "type": "video",
+              "title": "华为入门款平板怎么选？华为matepad Air 12 2025、11.5 S  2025、11.5 2026、11.5 S 2024该怎么选",
+              "author": "奉仙数码",
+              "play": 671,
+              "date": "2026-04-26",
+              "url": "https://www.bilibili.com/video/BV1AZodB3E4W",
+              "compare": true
+            },
+            {
+              "type": "video",
+              "title": "2026暑假适合入手的华为平板：华为MatePad 11.5 2026、华为MatePad 11.5 S 灵动款 2025",
+              "author": "奉仙数码",
+              "play": 483,
+              "date": "2026-07-09",
+              "url": "https://www.bilibili.com/video/BV11JME6DExc",
+              "compare": false
+            },
+            {
+              "type": "video",
+              "title": "华为matepad 11.5s2026款首发攻略来啦！首发直接叠加国补，教育优惠，双旦活动，跟着学姐",
+              "author": "托洛夫斯基徐",
+              "play": 121,
+              "date": "2026-08-11",
+              "url": "https://www.bilibili.com/video/BV1M5ue6PEVF",
+              "compare": false
+            }
+          ]
+        },
+        {
+          "name": "MatePad 11.5 2026",
+          "voices": [
+            {
+              "type": "video",
+              "title": "孩子们 我不是板皇",
+              "author": "弎秋缒",
+              "play": 14577,
+              "date": "2026-07-29",
+              "url": "https://www.bilibili.com/video/BV1TN3k6FEPD",
+              "compare": false
+            },
+            {
+              "type": "video",
+              "title": "华为MatePad 11.5 2026鸿蒙7.0更新，超多实用新功能",
+              "author": "玩机小课堂",
+              "play": 2235,
+              "date": "2026-07-29",
+              "url": "https://www.bilibili.com/video/BV1tb316gEZ6",
+              "compare": false
+            },
+            {
+              "type": "video",
+              "title": "2026款华为MatePad11.5！对比2024升级什么？ 华为MatePad11.5 .....",
+              "author": "ottnrw55909",
+              "play": 569,
+              "date": "2026-07-27",
+              "url": "https://www.bilibili.com/video/BV11v3w6jEzP",
+              "compare": true
+            },
+            {
+              "type": "video",
+              "title": "2026款华为MatePad11.5！对比2024升级什么？ 华为MatePad11.5 2026款",
+              "author": "m來Cg去皆江湖",
+              "play": 316,
+              "date": "2026-08-02",
+              "url": "https://www.bilibili.com/video/BV1se3R6ZEoE",
+              "compare": true
+            },
+            {
+              "type": "video",
+              "title": "【平板测评】2026千元平板选购指南，华为MatePad 11.5 2026对比荣耀平板GT，性能屏幕续航全维度深度解析",
+              "author": "小黄测评",
+              "play": 218,
+              "date": "2026-07-25",
+              "url": "https://www.bilibili.com/video/BV189K46kE5P",
+              "compare": true
+            },
+            {
+              "type": "video",
+              "title": "千元高性价比平板推荐，华为MatePad 11.5 2026对比荣耀平板GT，普通用户入手哪款不踩坑",
+              "author": "好物共享",
+              "play": 135,
+              "date": "2026-07-30",
+              "url": "https://www.bilibili.com/video/BV1fggz6NEF3",
+              "compare": true
+            },
+            {
+              "type": "video",
+              "title": "给大家看一下我新买的设备—华为matepad 11.5 2026，请关注我",
+              "author": "浅雾游戏解说",
+              "play": 116,
+              "date": "2026-07-17",
+              "url": "https://www.bilibili.com/video/BV1scKj6uEGC",
+              "compare": false
+            },
+            {
+              "type": "video",
+              "title": "平板测评之轻生产力平板对决，华为MatePad 11.5 2026对比荣耀平板GT，办公学习效率谁更高",
+              "author": "老张聊科技",
+              "play": 111,
+              "date": "2026-07-21",
+              "url": "https://www.bilibili.com/video/BV1HuKt6aEET",
+              "compare": true
+            }
+          ]
+        }
+      ],
+      "report": null
+    },
+    "apple": {
+      "products": [],
+      "report": null
+    },
+    "honor": {
+      "products": [],
+      "report": null
+    },
+    "xiaomi": {
+      "products": [],
+      "report": null
+    },
+    "oppo": {
+      "products": [],
+      "report": null
+    },
+    "vivo": {
+      "products": [],
+      "report": null
+    }
+  }
+};

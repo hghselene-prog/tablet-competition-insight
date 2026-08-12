@@ -436,3 +436,67 @@ tbody tr:last-child td{border-bottom:none}
 .price-drop-cell .drop-pct-up{color:#15803d;font-weight:600}
 
 .price-legend{font-size:12px;color:#64748b;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:8px 12px;margin:8px 0 16px;line-height:1.6;}
+
+/* ===== 消费者声音模块 (Consumer Voice) ===== */
+.voice-meta{margin-top:10px;font-size:13px;color:#6b7280;}
+.voice-brand-nav{position:sticky;top:0;z-index:20;display:flex;flex-wrap:wrap;gap:8px;padding:12px 0 10px;background:#fff;border-bottom:1px solid #eef0f3;}
+.voice-brand-tab{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border:1px solid #e5e7eb;border-radius:999px;font-size:13px;font-weight:600;color:#374151;background:#fff;text-decoration:none;transition:.15s;}
+.voice-brand-tab:hover{border-color:var(--bc);color:var(--bc);}
+.voice-brand-tab .vbt-dot{width:8px;height:8px;border-radius:50%;background:var(--bc);}
+.voice-brand-section{margin:22px 0 34px;scroll-margin-top:64px;}
+.voice-brand-head{display:flex;align-items:center;justify-content:space-between;border-left:4px solid #c8102e;background:#fafbfc;border-radius:0 10px 10px 0;padding:12px 16px;margin-bottom:8px;}
+.vbh-left{display:flex;align-items:center;gap:12px;}
+.vbh-logo{width:34px;height:34px;border-radius:8px;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center;}
+.vbh-name{font-size:17px;font-weight:800;color:#111827;}
+.vbh-tag{font-size:12px;color:#9ca3af;margin-top:1px;}
+.vbh-count{font-size:13px;color:#6b7280;font-weight:600;}
+.vc-placeholder{display:flex;align-items:center;gap:12px;padding:24px;background:#fafbfc;border:1px dashed #e2e5ea;border-radius:12px;color:#9ca3af;font-size:14px;}
+.vc-ph-icon{font-size:26px;}
+.voice-prod{margin:14px 0 6px;}
+.voice-prod-name{font-size:15px;font-weight:700;color:#1f2937;margin:10px 0 10px;padding-left:2px;}
+.voice-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(264px,1fr));gap:14px;}
+.voice-card{display:flex;flex-direction:column;background:#fff;border:1px solid #edf0f3;border-radius:12px;overflow:hidden;text-decoration:none;color:inherit;transition:.15s;}
+.voice-card:hover{box-shadow:0 6px 20px rgba(17,24,39,.08);transform:translateY(-2px);border-color:#d7dbe0;}
+.vc-thumb{height:120px;background:linear-gradient(135deg,#eef2f7,#e3e9f1);display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.vc-thumb img{width:100%;height:100%;object-fit:cover;}
+.vc-thumb-play{font-size:34px;color:#fff;background:linear-gradient(135deg,#ff5b6e,#ff3b5c);width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(255,59,92,.35);}
+.vc-thumb-doc{font-size:34px;color:#fff;background:linear-gradient(135deg,#3b82f6,#2563eb);width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;}
+.vc-body{padding:11px 13px 13px;flex:1;display:flex;flex-direction:column;gap:7px;}
+.vc-badgerow{display:flex;align-items:center;gap:6px;}
+.vc-badge{font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px;background:#eef2f7;color:#475569;}
+.vc-video .vc-badge{background:#ffe9ec;color:#e0394f;}
+.vc-image .vc-badge{background:#e6f4ff;color:#1d6fd6;}
+.vc-report .vc-badge{background:#eafaf1;color:#1ba784;}
+.vc-cmp{font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px;background:#fff3e0;color:#c97a12;}
+.vc-title{font-size:13.5px;font-weight:600;line-height:1.45;color:#1f2937;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;}
+.vc-meta{display:flex;flex-wrap:wrap;gap:10px;font-size:12px;color:#9ca3af;margin-top:auto;}
+.vc-author{color:#4b5563;font-weight:600;}
+.vc-play{color:#ef4444;}
+.voice-report{margin-top:14px;padding:14px 16px;border:1px dashed #d8dee7;border-radius:12px;background:#fcfdfe;}
+.voice-report-title{font-weight:700;color:#111827;margin-bottom:8px;}
+.voice-report-body{font-size:13.5px;color:#374151;line-height:1.7;}
+.voice-report-ph{display:flex;align-items:center;gap:10px;font-size:13px;color:#9ca3af;}
+.vr-ph-tag{font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px;background:#eef0f3;color:#8a93a0;}
+
+/* ===== 消费者声音：分年筛选 + 以产品分类概览 ===== */
+.voice-yearbar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:12px 18px;background:#fff;border:1px solid #eef0f3;border-radius:12px;margin:0 0 4px;}
+.vyb-label{font-size:13px;font-weight:700;color:#374151;white-space:nowrap;}
+.vyb-pills{display:flex;gap:8px;flex-wrap:wrap;}
+.vyb-pill{padding:6px 16px;border:1px solid #e5e7eb;border-radius:999px;font-size:13px;font-weight:600;color:#6b7280;background:#fff;cursor:pointer;transition:.15s;}
+.vyb-pill:hover{border-color:#c8102e;color:#c8102e;}
+.vyb-pill.vyb-on{background:#c8102e;border-color:#c8102e;color:#fff;}
+.vyb-hint{font-size:12px;color:#9ca3af;}
+.voice-cat{margin:12px 0 6px;padding:14px 16px;background:#fbfcfe;border:1px solid #edf0f3;border-radius:12px;}
+.vc-cat-title{font-size:14px;font-weight:700;color:#1f2937;margin-bottom:10px;padding-bottom:8px;border-bottom:1px dashed #e5e8ec;}
+.vc-cat-title b{color:#c8102e;font-size:15px;margin-left:4px;}
+.vc-cat-item{display:flex;align-items:flex-start;gap:14px;padding:9px 0;border-bottom:1px solid #f1f3f6;}
+.vc-cat-item:last-child{border-bottom:none;}
+.vc-cat-pname{flex:0 0 200px;font-size:14px;font-weight:700;color:#111827;display:flex;flex-direction:column;gap:3px;}
+.vc-cat-views{font-size:12px;font-weight:600;color:#6b7280;}
+.vc-top-list{display:flex;flex-direction:column;gap:6px;flex:1;min-width:0;}
+.vc-top-link{display:flex;align-items:center;gap:9px;text-decoration:none;color:#374151;padding:5px 9px;border-radius:8px;background:#fff;border:1px solid #eef0f3;transition:.12s;min-width:0;}
+.vc-top-link:hover{border-color:#f1b4bd;background:#fff5f6;}
+.vc-rank{flex:0 0 20px;height:20px;border-radius:6px;background:#c8102e;color:#fff;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center;}
+.vc-top-title{flex:1;font-size:13px;line-height:1.4;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.vc-top-play{flex:0 0 auto;font-size:12px;font-weight:700;color:#ef4444;white-space:nowrap;}
+.vc-top-empty{font-size:13px;color:#9ca3af;}

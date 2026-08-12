@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>消费者声音 | 平板电脑竞品分析</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="tn-brand">平板竞品分析</div>
+  <div class="tn-links">
+    <a href="index.html">概览</a>
+    <a href="products.html">产品列表</a>
+    <a href="insights.html">市场洞察</a>
+    <a href="voice.html" class="tn-on">消费者声音</a>
+  </div>
+</nav>
+
+<div class="page-head">
+  <h1>消费者声音</h1>
+  <p class="subtitle">按 <strong>品牌 → 产品</strong> 汇总各平板在视频 / 社媒平台的用户与 KOL 声音。每条声音支持「视频链接 / 图片 / 报告」三种形态，点击即可跳转原视频或查看素材。下方每个品牌保留「消费者声音报告」预留区，后续可直接补充深度报告。</p>
+  <div class="voice-meta">数据更新：<span id="voiceUpdated"></span> ｜ 当前种子：华为（来自 B站 KOL 视频整理）；其他品牌陆续补充</div>
+</div>
+
+<!-- 分年筛选：为后续各品牌平板浏览量热力图预留分年维度 -->
+<div class="voice-yearbar" id="voiceYearBar">
+  <span class="vyb-label">分年筛选</span>
+  <div class="vyb-pills" id="voiceYearPills"></div>
+  <span class="vyb-hint">（分年维度为后续「各品牌平板浏览量热力」预留）</span>
+</div>
+
+<div class="voice-brand-nav" id="voiceBrandNav"></div>
+
+<div class="container" id="voiceRoot"></div>
+
+<div class="footer">
+  <p>平板电脑竞品分析 · 消费者声音模块 · 视频/图片链接均指向原平台，仅供研究参考</p>
+  <p style="margin-top:6px;">报告区为预留模块，后续补充各品牌消费者声音深度分析</p>
+</div>
+
+<script src="data.js"></script>
+<script>
+// ===== Page: 消费者声音 (Consumer Voice) =====
+(function(){
+  const cv = window.CONSUMER_VOICE || {brands:{}, updated:""};
+  document.getElementById("voiceUpdated").textContent = cv.updated || "—";
+
+  const fmtPlay = n => (n>=10000) ? (n/10000).toFixed(1).replace(/\.0$/,"")+"万" : String(n);
+
+  // ---- 收集所有出现过的年份（降序），用于分年筛选 ----
+  const years = new Set();
+  brandOrder.forEach(b=>{
+    const bd = cv.brands[b];
+    if(!bd) return;
+    (bd.products||[]).forEach(p=>(p.voices||[]).forEach(v=>{ if(v.date) years.add(v.date.slice(0,4)); }));
+  });
+  const yearList = Array.from(years).filter(Boolean).sort((a,b)=>b-a);
+  let stateYear = "all";
+
+  // ---- 年份筛选 pills ----
+  const pills = document.getElementById("voiceYearPills");
+  function mkPill(val, label){
+    const el = document.createElement("button");
+    el.className = "vyb-pill";
+    el.dataset.year = val;
+    el.textContent = label;
+    if(val===stateYear) el.classList.add("vyb-on");
+    el.onclick = ()=>{ stateYear = val; syncPills(); render(); };
+    return el;
+  }
+  pills.appendChild(mkPill("all","全部"));
+  yearList.forEach(y=>pills.appendChild(mkPill(y, y+"年")));
+  function syncPills(){ [...pills.children].forEach(c=> c.classList.toggle("vyb-on", c.dataset.year===stateYear)); }
+
+  // ---- 品牌快捷导航（不随年份变） ----
+  const nav = document.getElementById("voiceBrandNav");
+  brandOrder.forEach(b=>{
+    const info = brandInfo[b];
+    const a = document.createElement("a");
+    a.href = "#brand-"+b;
+    a.className = "voice-brand-tab";
+    a.style.setProperty("--bc", info.color);
+    a.innerHTML = `<span class="vbt-dot"></span>${info.name}`;
+    nav.appendChild(a);
+  });
+
+  // ---- 主体渲染 ----
+  function render(){
+    const root = document.getElementById("voiceRoot");
+    root.innerHTML = "";
+
+    brandOrder.forEach(b=>{
+      const info = brandInfo[b];
+      const bd = cv.brands[b] || {products:[], report:null};
+      const sec = document.createElement("div");
+      sec.className = "voice-brand-section";
+      sec.id = "brand-"+b;
+
+      // 按年份过滤 + 聚合
+      const prods = (bd.products||[]).map(p=>{
+        const vs = (p.voices||[]).filter(v=> stateYear==="all" || (v.date && v.date.slice(0,4)===stateYear));
+        const views = vs.reduce((s,v)=>s+(v.play||0), 0);
+        const top3 = [...vs].sort((a,b)=>(b.play||0)-(a.play||0)).slice(0,3);
+        return { name:p.name, vs, views, top3 };
+      }).filter(p=>p.vs.length>0);
+
+      const brandViews = prods.reduce((s,p)=>s+p.views, 0);
+      const brandVoices = prods.reduce((s,p)=>s+p.vs.length, 0);
+
+      // 品牌头部
+      const head = document.createElement("div");
+      head.className = "voice-brand-head";
+      head.style.borderLeftColor = info.color;
+      head.innerHTML = `<div class="vbh-left"><span class="vbh-logo" style="background:${info.color}">${info.logo||info.name[0]}</span>`
+        + `<div><div class="vbh-name">${info.name}</div><div class="vbh-tag">${info.tag||""}</div></div></div>`
+        + `<div class="vbh-count">${prods.length? brandVoices+" 条声音 · 整体浏览 "+fmtPlay(brandViews) : "待补充"}</div>`;
+      sec.appendChild(head);
+
+      if(prods.length===0){
+        const ph = document.createElement("div");
+        ph.className = "vc-placeholder";
+        ph.innerHTML = `<div class="vc-ph-icon">📭</div><div>「${info.name}」消费者声音数据暂未整理，敬请期待后续补充。</div>`;
+        sec.appendChild(ph);
+      } else {
+        // 以产品分类概览：每款产品 Top3 链接 + 该产品浏览量；品牌整体浏览量在标题
+        const ov = document.createElement("div");
+        ov.className = "voice-cat";
+        ov.innerHTML = `<div class="vc-cat-title">以产品分类 · 整体浏览量 <b>${fmtPlay(brandViews)}</b></div>`;
+        prods.forEach(p=>{
+          const item = document.createElement("div");
+          item.className = "vc-cat-item";
+          const topLinks = p.top3.length
+            ? p.top3.map((v,i)=>`<a class="vc-top-link" href="${v.url||"javascript:void(0)"}" target="_blank" rel="noopener noreferrer" title="${v.title.replace(/"/g,"&quot;")}"><span class="vc-rank">${i+1}</span><span class="vc-top-title">${v.title}</span><span class="vc-top-play">${fmtPlay(v.play||0)}</span></a>`).join("")
+            : `<span class="vc-top-empty">暂无</span>`;
+          item.innerHTML = `<div class="vc-cat-pname">${p.name}<span class="vc-cat-views">浏览 ${fmtPlay(p.views)}</span></div><div class="vc-top-list">${topLinks}</div>`;
+          ov.appendChild(item);
+        });
+        sec.appendChild(ov);
+
+        // 详细声音卡片（全量、随年份过滤）
+        prods.forEach(prod=>{
+          const pbox = document.createElement("div");
+          pbox.className = "voice-prod";
+          const pname = document.createElement("div");
+          pname.className = "voice-prod-name";
+          pname.textContent = prod.name;
+          pbox.appendChild(pname);
+
+          const grid = document.createElement("div");
+          grid.className = "voice-grid";
+          prod.vs.forEach(v=>{
+            const card = document.createElement("a");
+            card.className = "voice-card vc-"+v.type;
+            card.href = v.url || "javascript:void(0)";
+            card.target = "_blank";
+            card.rel = "noopener noreferrer";
+            const badge = v.type==="video" ? "视频" : (v.type==="image" ? "图片" : "报告");
+            const thumb = v.thumb
+              ? `<div class="vc-thumb"><img src="${v.thumb}" alt=""></div>`
+              : (v.type==="report"
+                  ? `<div class="vc-thumb vc-thumb-doc">📄</div>`
+                  : `<div class="vc-thumb vc-thumb-play">▶</div>`);
+            const cmp = (v.compare) ? `<span class="vc-cmp">对比</span>` : "";
+            const meta = [];
+            if(v.author) meta.push(`<span class="vc-author">${v.author}</span>`);
+            if(v.play) meta.push(`<span class="vc-play">▶ ${fmtPlay(v.play)}</span>`);
+            if(v.date) meta.push(`<span class="vc-date">${v.date}</span>`);
+            card.innerHTML = `${thumb}`
+              + `<div class="vc-body">`
+              + `<div class="vc-badgerow"><span class="vc-badge">${badge}</span>${cmp}</div>`
+              + `<div class="vc-title">${v.title}</div>`
+              + `<div class="vc-meta">${meta.join("")}</div>`
+              + `</div>`;
+            grid.appendChild(card);
+          });
+          pbox.appendChild(grid);
+          sec.appendChild(pbox);
+        });
+      }
+
+      // 预留「消费者声音报告」区
+      const rep = document.createElement("div");
+      rep.className = "voice-report";
+      if(bd.report){
+        rep.innerHTML = `<div class="voice-report-title">📊 消费者声音报告 · ${bd.report.title||""}</div><div class="voice-report-body">${bd.report.html||""}</div>`;
+      } else {
+        rep.innerHTML = `<div class="voice-report-ph"><span class="vr-ph-tag">预留</span>「${info.name}」消费者声音报告将在此补充（深度分析 / 痛点聚类 / 情绪概览等）</div>`;
+      }
+      sec.appendChild(rep);
+
+      root.appendChild(sec);
+    });
+  }
+
+  render();
+})();
+</script>
+</body>
+</html>
