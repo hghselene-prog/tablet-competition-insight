@@ -483,7 +483,7 @@ function selectCurrentFilter(){
 
 const CONSUMER_VOICE = {
   "updated": "2026-08-12",
-  "note": "消费者声音：汇总各品牌平板在视频/社媒平台的用户与 KOL 声音（当前华为种子数据来自 B站 KOL 视频整理）。按品牌→产品组织；每条支持 视频链接 / 图片 / 报告 三种形态。report 字段预留给后续「消费者声音报告」。",
+  "note": "消费者声音：汇总各品牌平板在 B站 的 KOL 评测/开箱视频（按型号关键词检索）。按品牌→产品组织；每条为视频链接。report 字段预留给后续「消费者声音报告」。数据更新：2026-08-12。",
   "brands": {
     "huawei": {
       "products": [
@@ -849,23 +849,4495 @@ const CONSUMER_VOICE = {
       "report": null
     },
     "apple": {
-      "products": [],
+      "products": [
+            {
+                  "name": "iPad Air M4",
+                  "voices": [
+                        {
+                              "type": "video",
+                              "title": "你真的需要一台iPad Air M4嘛？看完再决定！ iPadAir iPad 生产力工具 平板推荐 平板选购",
+                              "author": "十八秒看信",
+                              "play": 1448,
+                              "date": "2026-07-23",
+                              "url": "https://www.bilibili.com/video/BV1Swgm6kEdA",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "再降价：教育优惠：Apple iPad Air 11英寸 M4芯片 深空灰色 128G",
+                              "author": "家电小常识1001",
+                              "play": 1232,
+                              "date": "2026-07-24",
+                              "url": "https://www.bilibili.com/video/BV17Ygb6zETL",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "Apple iPad Air 13英寸 M4芯片 蓝色 256G",
+                              "author": "南序家电日记",
+                              "play": 1158,
+                              "date": "2026-07-23",
+                              "url": "https://www.bilibili.com/video/BV1oUgU6FE16",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "Apple iPad Air 13英寸 M4芯片 深空灰色 256G",
+                              "author": "家电优选频道",
+                              "play": 1144,
+                              "date": "2026-07-23",
+                              "url": "https://www.bilibili.com/video/BV1F2gU6aEGF",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "Apple iPad Air 11英寸 M4芯片 深空灰色 256G",
+                              "author": "数码少年馆",
+                              "play": 1140,
+                              "date": "2026-07-23",
+                              "url": "https://www.bilibili.com/video/BV1Z2gU6hEoc",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "Apple iPad Air 2026 13英寸 M4芯片 深空灰 256G",
+                              "author": "家电小常识1001",
+                              "play": 1137,
+                              "date": "2026-07-23",
+                              "url": "https://www.bilibili.com/video/BV1oSgU6bENv",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "再降价：教育优惠：Apple iPad Air 2026 11英寸 M4芯片 深空灰色 256G",
+                              "author": "小茹讲数码",
+                              "play": 1136,
+                              "date": "2026-07-23",
+                              "url": "https://www.bilibili.com/video/BV1M8gU6VEM3",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "Apple iPad Air 13英寸 M4芯片 深空灰色 256G",
+                              "author": "数码情报局さ",
+                              "play": 1135,
+                              "date": "2026-07-23",
+                              "url": "https://www.bilibili.com/video/BV1VLgU6XEgD",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "教育优惠：Apple iPad Air 11英寸 M4芯片 深空灰色 128G",
+                              "author": "数码玩物志",
+                              "play": 1133,
+                              "date": "2026-07-23",
+                              "url": "https://www.bilibili.com/video/BV1VLgU6XE9T",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "再降价：教育优惠：Apple iPad Air 11英寸 M4芯片 深空灰色 128G",
+                              "author": "辰序优选社",
+                              "play": 1132,
+                              "date": "2026-07-23",
+                              "url": "https://www.bilibili.com/video/BV1MsgU62Evh",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "Apple iPad Air 2026 11英寸 M4芯片 深空灰色 128G",
+                              "author": "觅渡辰",
+                              "play": 1126,
+                              "date": "2026-07-23",
+                              "url": "https://www.bilibili.com/video/BV1kRg16bExT",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "Apple iPad Air 13英寸 M4芯片 深空灰色 256G",
+                              "author": "简配数码君",
+                              "play": 1122,
+                              "date": "2026-07-23",
+                              "url": "https://www.bilibili.com/video/BV1WBgx6zEGy",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "Apple iPad Air 2026 11英寸 M4芯片 深空灰色 128G",
+                              "author": "赛博生活优选",
+                              "play": 1104,
+                              "date": "2026-07-24",
+                              "url": "https://www.bilibili.com/video/BV1swga6tEeB",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "Apple iPad Air 2026 13英寸 M4芯片 深空灰 256G",
+                              "author": "幻想科技喵",
+                              "play": 1102,
+                              "date": "2026-07-24",
+                              "url": "https://www.bilibili.com/video/BV1Eagb6gEp8",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "再降价：教育优惠：Apple iPad Air 2026 11英寸 M4芯片 深空灰色 256G",
+                              "author": "3C避坑大魔王",
+                              "play": 1101,
+                              "date": "2026-07-24",
+                              "url": "https://www.bilibili.com/video/BV1cGga6DEr7",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "Apple iPad Air 13英寸 M4芯片 深空灰色 128G",
+                              "author": "3C避坑大魔王",
+                              "play": 1101,
+                              "date": "2026-07-24",
+                              "url": "https://www.bilibili.com/video/BV1ELga6UEZZ",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "Apple iPad Air 13英寸 M4芯片 深空灰色 256G",
+                              "author": "家电生活派",
+                              "play": 1099,
+                              "date": "2026-07-24",
+                              "url": "https://www.bilibili.com/video/BV1x7gb6SE8B",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "Apple iPad Air 2026 11英寸 M4芯片 深空灰色 128G",
+                              "author": "真机实测情报局",
+                              "play": 1099,
+                              "date": "2026-07-24",
+                              "url": "https://www.bilibili.com/video/BV1m8gt6QEYa",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "Apple iPad Air 13英寸 M4芯片 深空灰色 128G",
+                              "author": "数码小黑板さ",
+                              "play": 1090,
+                              "date": "2026-07-24",
+                              "url": "https://www.bilibili.com/video/BV1Lzgb6vEJ4",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "Apple iPad Air 11英寸 M4芯片 深空灰色 256G",
+                              "author": "数码行业观察员",
+                              "play": 1077,
+                              "date": "2026-07-24",
+                              "url": "https://www.bilibili.com/video/BV1aggh6AEu5",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "教育优惠：Apple iPad Air 11英寸 M4芯片 深空灰色 128G",
+                              "author": "良物数码局",
+                              "play": 1077,
+                              "date": "2026-07-24",
+                              "url": "https://www.bilibili.com/video/BV14Lgh6fEhA",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "Apple iPad Air 11英寸 M4芯片 星光色 128G",
+                              "author": "老虎夏洛特",
+                              "play": 1076,
+                              "date": "2026-07-24",
+                              "url": "https://www.bilibili.com/video/BV18Xgh6eEAg",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "Apple iPad Air 13英寸 M4芯片 蓝色 256G",
+                              "author": "量子好物集",
+                              "play": 1075,
+                              "date": "2026-07-24",
+                              "url": "https://www.bilibili.com/video/BV14wga6tENd",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "Apple iPad Air 13英寸 M4芯片 深空灰色 128G",
+                              "author": "小娴讲数码",
+                              "play": 1055,
+                              "date": "2026-07-25",
+                              "url": "https://www.bilibili.com/video/BV1oN3T6GEJm",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "Apple iPad Air 13英寸 M4芯片 深空灰色 128G",
+                              "author": "小霏说数码",
+                              "play": 951,
+                              "date": "2026-07-26",
+                              "url": "https://www.bilibili.com/video/BV1QS356sEhM",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "鸣潮启动时长对比原神崩铁，设备ipad air M4",
+                              "author": "outdoburde",
+                              "play": 468,
+                              "date": "2026-07-22",
+                              "url": "https://www.bilibili.com/video/BV1v4g16mE3t",
+                              "compare": true
+                        },
+                        {
+                              "type": "video",
+                              "title": "Apple iPad Air 13英寸 M4芯片 深空灰色 128G",
+                              "author": "数码次元观测",
+                              "play": 347,
+                              "date": "2026-08-04",
+                              "url": "https://www.bilibili.com/video/BV1Tquc6gEYT",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "Apple iPad Air 13英寸 M4芯片 深空灰色 128G",
+                              "author": "科技省钱君",
+                              "play": 337,
+                              "date": "2026-08-08",
+                              "url": "https://www.bilibili.com/video/BV1uauG6GEwn",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "Apple iPad Air 13英寸 M4芯片 深空灰色 128G",
+                              "author": "小羊饱饱-o",
+                              "play": 319,
+                              "date": "2026-08-07",
+                              "url": "https://www.bilibili.com/video/BV1FJut6iEFX",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "Apple iPad Air 13英寸 M4芯片 深空灰色 128G",
+                              "author": "全屋家电参谋",
+                              "play": 313,
+                              "date": "2026-08-10",
+                              "url": "https://www.bilibili.com/video/BV1ACud69EKR",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "Apple iPad Air 2026 11英寸 M4芯片 深空灰色 256G",
+                              "author": "数码干货君",
+                              "play": 86,
+                              "date": "2026-08-07",
+                              "url": "https://www.bilibili.com/video/BV1vwus6nEzc",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "开学季MacBook Air M5值不值得买？学习/创作/续航/生态全体验分享",
+                              "author": "美少女测士",
+                              "play": 82,
+                              "date": "2026-08-12",
+                              "url": "https://www.bilibili.com/video/BV1QZgG67EtK",
+                              "compare": true
+                        },
+                        {
+                              "type": "video",
+                              "title": "学生会员：Apple iPad Air 2026 11英寸 M4芯片 星光色 128G",
+                              "author": "科技小木",
+                              "play": 42,
+                              "date": "2026-08-05",
+                              "url": "https://www.bilibili.com/video/BV1gvMk6ZEPA",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "教育优惠 国补 限地区 再降价 Apple iPad Air 2026 11英寸 M4芯片 深空灰色 128G 4色可选",
+                              "author": "数码小侦探",
+                              "play": 27,
+                              "date": "2026-07-27",
+                              "url": "https://www.bilibili.com/video/BV1N1gR64EaH",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "学生会员：Apple iPad Air 2026 11英寸 M4芯片 星光色 128G",
+                              "author": "数码佬柯",
+                              "play": 25,
+                              "date": "2026-07-23",
+                              "url": "https://www.bilibili.com/video/BV1xFgX6JEc9",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "教育优惠 国补 限地区 再降价 Apple iPad Air 2026 11英寸 M4芯片 深空灰色 128G 4色可选",
+                              "author": "打工数码哥",
+                              "play": 21,
+                              "date": "2026-08-08",
+                              "url": "https://www.bilibili.com/video/BV16Huu6HEB7",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "沉浸式开箱 M4‑iPad Air｜打造实用主义平板主屏幕|英文原生 vlog｜新 iPad 开箱 + 功能分区，适合磨耳朵",
+                              "author": "土狼1号",
+                              "play": 14,
+                              "date": "2026-08-09",
+                              "url": "https://www.bilibili.com/video/BV1Kzu26vEVr",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "Apple iPad Air 2026 11英寸 M4芯片 深空灰色 256G 公开版",
+                              "author": "科技飞侠",
+                              "play": 11,
+                              "date": "2026-08-05",
+                              "url": "https://www.bilibili.com/video/BV1UEMC6tE7B",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "Apple iPad Air 2026 11英寸 M4芯片 星光色 256G",
+                              "author": "数码小闪电",
+                              "play": 11,
+                              "date": "2026-07-27",
+                              "url": "https://www.bilibili.com/video/BV1Xggd6uE5n",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "Apple iPad Air 2026 11英寸 M4芯片 深空灰色 256G 公开版",
+                              "author": "科技小旋风",
+                              "play": 9,
+                              "date": "2026-07-23",
+                              "url": "https://www.bilibili.com/video/BV1Cjgm6AEe2",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "PLUS：Apple iPad Air 2026 13英寸 M4芯片 深空灰色 128G",
+                              "author": "科技迷哥",
+                              "play": 7,
+                              "date": "2026-07-23",
+                              "url": "https://www.bilibili.com/video/BV1Pegx6GEqJ",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "Apple iPad Air 2026 13英寸 M4芯片 256G",
+                              "author": "数码极客员",
+                              "play": 6,
+                              "date": "2026-07-24",
+                              "url": "https://www.bilibili.com/video/BV1Ywgh6BEDN",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "开箱新款 M4芯片iPad Air 屏幕超大.180351",
+                              "author": "雨辰来来",
+                              "play": 4,
+                              "date": "2026-08-12",
+                              "url": "https://www.bilibili.com/video/BV1Tbuk6dEGN",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "Apple iPad Air 2026 13英寸 M4芯片 深空灰色 256G",
+                              "author": "数码小桃",
+                              "play": 4,
+                              "date": "2026-07-22",
+                              "url": "https://www.bilibili.com/video/BV14dg66WEpj",
+                              "compare": false
+                        }
+                  ]
+            },
+            {
+                  "name": "iPad Air M3",
+                  "voices": [
+                        {
+                              "type": "video",
+                              "title": "真不值得购买吗？2025款 iPad Air M3版本开箱验机实测「科技美学开箱」",
+                              "author": "科技美学",
+                              "play": 849349,
+                              "date": "2025-03-15",
+                              "url": "https://www.bilibili.com/video/BV1R8QyYQECz",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "iPad Air M3为什么是我唯一推荐的iPad！？",
+                              "author": "哎呀_思",
+                              "play": 298888,
+                              "date": "2025-03-15",
+                              "url": "https://www.bilibili.com/video/BV1NLQUYUE1Q",
+                              "compare": false
+                        }
+                  ]
+            },
+            {
+                  "name": "iPad 11代 A16",
+                  "voices": [
+                        {
+                              "type": "video",
+                              "title": "iPad 11评测！国补后值得买吗？详细对比分析 iPad A16/iPadAirM3/iPad10/iPad9/iPadProM4/2024/2025",
+                              "author": "动然",
+                              "play": 23137,
+                              "date": "2025-03-14",
+                              "url": "https://www.bilibili.com/video/BV1EAQ3YwEpf",
+                              "compare": true
+                        }
+                  ]
+            },
+            {
+                  "name": "iPad Pro M5",
+                  "voices": [
+                        {
+                              "type": "video",
+                              "title": "「科技美学开箱」M5芯片 iPad Pro 2025是否值得购买？ 七大升级都有啥？ 对比M4版本 iPad Pro",
+                              "author": "科技美学",
+                              "play": 641777,
+                              "date": "2025-10-21",
+                              "url": "https://www.bilibili.com/video/BV1bHW9z3Euh",
+                              "compare": true
+                        },
+                        {
+                              "type": "video",
+                              "title": "「小白」iPad Pro M5体验：附Pro选购指南",
+                              "author": "小白测评",
+                              "play": 493438,
+                              "date": "2025-10-21",
+                              "url": "https://www.bilibili.com/video/BV1KnWQzPEU1",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "iPad Pro M5 开箱：和 iPhone Air 的 eSIM 有哪些差别？",
+                              "author": "钟文泽",
+                              "play": 385076,
+                              "date": "2025-10-23",
+                              "url": "https://www.bilibili.com/video/BV1oksqz1Eqw",
+                              "compare": true
+                        },
+                        {
+                              "type": "video",
+                              "title": "「黑貓」银色 iPad Pro M5 开箱 + 简单评测：一次小小升级",
+                              "author": "黑貓的野望",
+                              "play": 246718,
+                              "date": "2025-12-31",
+                              "url": "https://www.bilibili.com/video/BV1zeiuBmEQG",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "M5接近征服120帧原神！iPad Pro 2025 2K全高帧率测试",
+                              "author": "人鬼秀我挨揍",
+                              "play": 41893,
+                              "date": "2025-12-08",
+                              "url": "https://www.bilibili.com/video/BV15HmABQE65",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "iPad Pro M5 原神日常表现",
+                              "author": "Lekinze",
+                              "play": 15425,
+                              "date": "2025-11-18",
+                              "url": "https://www.bilibili.com/video/BV1y5CzBtEHn",
+                              "compare": false
+                        }
+                  ]
+            }
+      ],
       "report": null
     },
     "honor": {
-      "products": [],
+      "products": [
+            {
+                  "name": "荣耀 MagicPad 3 Pro",
+                  "voices": [
+                        {
+                              "type": "video",
+                              "title": "如何用平板本地爽玩Steam游戏？荣耀MagicPad3 Pro演示",
+                              "author": "大甲虫先生腿很多",
+                              "play": 398400,
+                              "date": "2026-01-31",
+                              "url": "https://www.bilibili.com/video/BV1cW6nBfEuv",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "Linux+PC级模式，真的能让安卓有生产力？平板推荐 2026荣耀MagicPad3 Pro 12.3",
+                              "author": "小冯整挺好",
+                              "play": 168186,
+                              "date": "2026-04-30",
+                              "url": "https://www.bilibili.com/video/BV1999eBQEN8",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "13.3有了 您看7.9那个事？荣耀MagicPad3 Pro蓝光频闪极速测试",
+                              "author": "全是干货的大胖鸽",
+                              "play": 50322,
+                              "date": "2026-03-20",
+                              "url": "https://www.bilibili.com/video/BV13CA7zZEQy",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "如何用平板爽玩《地平线6》？还能本地玩Steam和EPIC游戏！荣耀MagicPad3 Pro演示",
+                              "author": "大甲虫先生腿很多",
+                              "play": 31867,
+                              "date": "2026-07-31",
+                              "url": "https://www.bilibili.com/video/BV1cqGP6mEdK",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "同为第五代骁龙8至尊大屏平板，vivo Pad6 Pro和荣耀MagicPad3 Pro 13.3怎么选？高性能旗舰大尺寸平板推荐",
+                              "author": "奉仙数码",
+                              "play": 13725,
+                              "date": "2026-03-27",
+                              "url": "https://www.bilibili.com/video/BV1yZXHBqECm",
+                              "compare": true
+                        },
+                        {
+                              "type": "video",
+                              "title": "2026开学平板选购｜大屏生产力vs小屏便携怎么选？",
+                              "author": "一分钟的开箱",
+                              "play": 8679,
+                              "date": "2026-07-30",
+                              "url": "https://www.bilibili.com/video/BV1En3b6rEAB",
+                              "compare": true
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀MagicPad3 Pro 13.3极客中心原神高分辨率简单实机测试",
+                              "author": "BoNunn",
+                              "play": 8419,
+                              "date": "2026-07-15",
+                              "url": "https://www.bilibili.com/video/BV13dNi6uE2r",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "「荣耀MagicPad 3 Pro」平板也能玩转龙虾?",
+                              "author": "Code壳实验室",
+                              "play": 8116,
+                              "date": "2026-03-15",
+                              "url": "https://www.bilibili.com/video/BV1S1w3zMEsw",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀PC模式超详细体验，可以说是风味十足。。",
+                              "author": "感觉测评_Zooe",
+                              "play": 7572,
+                              "date": "2026-08-04",
+                              "url": "https://www.bilibili.com/video/BV1k9M965EtL",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀MagicPad3 Pro 12.3，适合影音娱乐，也能学习轻办公。",
+                              "author": "阳光使者2025",
+                              "play": 2701,
+                              "date": "2026-08-02",
+                              "url": "https://www.bilibili.com/video/BV1L33R6CEkn",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板MagicPad3Pro系列怎么选？ 同样是荣耀平板MagicPad 3 Pro，12.3英寸和13.3英寸到底该怎么选？",
+                              "author": "酥机长",
+                              "play": 1427,
+                              "date": "2026-08-05",
+                              "url": "https://www.bilibili.com/video/BV1ChMC6JELF",
+                              "compare": true
+                        },
+                        {
+                              "type": "video",
+                              "title": "百元内最适配荣耀magicpad3pro的三件套",
+                              "author": "评分君",
+                              "play": 1183,
+                              "date": "2026-08-04",
+                              "url": "https://www.bilibili.com/video/BV1zuuc6tEWB",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "全网最详细的荣耀平板magicpad3pro扩展屏模式评测",
+                              "author": "评分君",
+                              "play": 1024,
+                              "date": "2026-07-31",
+                              "url": "https://www.bilibili.com/video/BV1UnGP6tEz3",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "超高亮度超薄机身！全能荣耀MagicPad 3 Pro 12.3对比性能13.3英寸，旧款能买吗？",
+                              "author": "极科君聊数码",
+                              "play": 457,
+                              "date": "2026-08-05",
+                              "url": "https://www.bilibili.com/video/BV1VaMy6BEo5",
+                              "compare": true
+                        },
+                        {
+                              "type": "video",
+                              "title": "平板秒变PC，荣耀平板也能轻办公！",
+                              "author": "小杨KrayTech",
+                              "play": 415,
+                              "date": "2026-08-03",
+                              "url": "https://www.bilibili.com/video/BV1kH3d6REgL",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板MagicOS 11.0内测招募正式开启！",
+                              "author": "酥机长",
+                              "play": 216,
+                              "date": "2026-08-07",
+                              "url": "https://www.bilibili.com/video/BV1hjub64Eap",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "迈克尔贝环绕运镜荣耀平板",
+                              "author": "酥机长",
+                              "play": 107,
+                              "date": "2026-08-07",
+                              "url": "https://www.bilibili.com/video/BV1Fjut6BEKN",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "【平板选购容易踩坑？】2026年8月全价位平板梳理｜千元入门到大屏旗舰全覆盖",
+                              "author": "小葵数码",
+                              "play": 75,
+                              "date": "2026-08-05",
+                              "url": "https://www.bilibili.com/video/BV1u5Mr6WELU",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀MagicPad3 Pro平板电脑深度实测：性能、护眼、续航，优缺点一次说透！从芯片到体验，值不值得入手？",
+                              "author": "京挑京选",
+                              "play": 47,
+                              "date": "2026-08-04",
+                              "url": "https://www.bilibili.com/video/BV1uMuF6gE3s",
+                              "compare": false
+                        }
+                  ]
+            },
+            {
+                  "name": "荣耀平板 10 Pro",
+                  "voices": [
+                        {
+                              "type": "video",
+                              "title": "听劝！想买荣耀平板10 Pro的人，看看这条视频再做决定也不迟！",
+                              "author": "若川科技洞察局",
+                              "play": 37818,
+                              "date": "2026-05-18",
+                              "url": "https://www.bilibili.com/video/BV1gQ5Z69EWw",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "把钱花屏幕上的荣耀平板10 Pro真的好用？",
+                              "author": "优秀的子都",
+                              "play": 33586,
+                              "date": "2026-01-13",
+                              "url": "https://www.bilibili.com/video/BV16Pr5B3E6z",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "【荣耀平板10 Pro评测】2000档学生平板，到底值不值？",
+                              "author": "Yoko视频工作室",
+                              "play": 28095,
+                              "date": "2026-01-13",
+                              "url": "https://www.bilibili.com/video/BV1Bi6oBxEwX",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "MagicOS 10.0封神！荣耀平板10 Pro系统功能全拆解，效率直接翻倍",
+                              "author": "一周数码说",
+                              "play": 26793,
+                              "date": "2026-02-28",
+                              "url": "https://www.bilibili.com/video/BV1vjADzsENK",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板10pro柔光板好还是玻璃版本好",
+                              "author": "佛系测评家-小生",
+                              "play": 18731,
+                              "date": "2026-03-15",
+                              "url": "https://www.bilibili.com/video/BV1SAwuzFEC5",
+                              "compare": true
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板10pro，降价1000元后值得入手吗？【优点＆缺点】",
+                              "author": "旧机测",
+                              "play": 13499,
+                              "date": "2026-07-28",
+                              "url": "https://www.bilibili.com/video/BV13o3T6qEah",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板10 Pro的性能跑分和游戏体验",
+                              "author": "金玉2011",
+                              "play": 8618,
+                              "date": "2026-02-23",
+                              "url": "https://www.bilibili.com/video/BV1vifiB6Exg",
+                              "compare": true
+                        },
+                        {
+                              "type": "video",
+                              "title": "平板也能设置锁屏视频了！荣耀平板10pro更新了哪些新功能？",
+                              "author": "一分钟的开箱",
+                              "play": 5222,
+                              "date": "2026-03-30",
+                              "url": "https://www.bilibili.com/video/BV1YCXYB2EDc",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀magicpad3pro碉堡的续航，开极客中心自定义，向日葵远程办公，2小时30分钟仅耗电10%！",
+                              "author": "夜月文文",
+                              "play": 2859,
+                              "date": "2026-03-25",
+                              "url": "https://www.bilibili.com/video/BV1BDQUBPEoD",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀 平板X10 Pro 11.5英寸 苍山灰 8GB+256GB",
+                              "author": "数码不踩坑",
+                              "play": 1333,
+                              "date": "2026-07-22",
+                              "url": "https://www.bilibili.com/video/BV16Ngz6BEL1",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀 平板X10 Pro 11.5英寸 苍山灰 8GB+256GB",
+                              "author": "家电潮流馆",
+                              "play": 1151,
+                              "date": "2026-07-19",
+                              "url": "https://www.bilibili.com/video/BV185K662ELp",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀 平板10 Pro 11.5英寸 苍山灰 12GB+256GB",
+                              "author": "幻想科技喵",
+                              "play": 1131,
+                              "date": "2026-07-28",
+                              "url": "https://www.bilibili.com/video/BV1Su3v6VE7L",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀 平板X10 Pro 11.5英寸 苍山灰 8GB+256GB",
+                              "author": "购机逃坑实录",
+                              "play": 1114,
+                              "date": "2026-07-23",
+                              "url": "https://www.bilibili.com/video/BV1nrgx6qEfv",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板10Pro优缺点总结！2000块的平板真的能用？ #平板电脑",
+                              "author": "觅崖兑词Um3",
+                              "play": 1083,
+                              "date": "2026-04-17",
+                              "url": "https://www.bilibili.com/video/BV1HFdqB5EKo",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀 平板10 Pro 11.5英寸 苍山灰 12GB+256GB",
+                              "author": "萤窗映雪案",
+                              "play": 1046,
+                              "date": "2026-07-29",
+                              "url": "https://www.bilibili.com/video/BV1bt3C6AENe",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀 平板10 Pro 11.5英寸 苍山灰 12GB+256GB",
+                              "author": "家电好物精选社",
+                              "play": 1024,
+                              "date": "2026-07-31",
+                              "url": "https://www.bilibili.com/video/BV1Yd3a65E7X",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀 平板X10 Pro 11.5英寸 苍山灰 8GB+256GB",
+                              "author": "清序家电局",
+                              "play": 926,
+                              "date": "2026-07-20",
+                              "url": "https://www.bilibili.com/video/BV1jiKm61Ep9",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀 平板10 Pro 11.5英寸 苍山灰 12GB+256GB",
+                              "author": "家电优选频道",
+                              "play": 905,
+                              "date": "2026-07-27",
+                              "url": "https://www.bilibili.com/video/BV1fCgZ6sEvb",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀 平板X10 Pro 11.5英寸 苍山灰 8GB+256GB",
+                              "author": "小小讲家电",
+                              "play": 896,
+                              "date": "2026-07-20",
+                              "url": "https://www.bilibili.com/video/BV1ieK16uE5P",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀 平板X10 Pro 11.5英寸 苍山灰 8GB+256GB",
+                              "author": "家电小惊喜",
+                              "play": 466,
+                              "date": "2026-07-16",
+                              "url": "https://www.bilibili.com/video/BV15RKG61EDv",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀 平板10 Pro 11.5英寸 苍山灰 12GB+256GB",
+                              "author": "小晴说数码",
+                              "play": 459,
+                              "date": "2026-08-01",
+                              "url": "https://www.bilibili.com/video/BV1c8Gu6ZEF9",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "【4月平板终极评测】不要随大流，只看需求选！",
+                              "author": "叨哔叨哔评测",
+                              "play": 457,
+                              "date": "2026-04-26",
+                              "url": "https://www.bilibili.com/video/BV1tjZFBREs3",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀 平板10 Pro 11.5英寸 苍山灰 12GB+256GB",
+                              "author": "赴野数码集",
+                              "play": 429,
+                              "date": "2026-08-01",
+                              "url": "https://www.bilibili.com/video/BV1qPGV6cEPD",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀 平板10 Pro 11.5英寸 苍山灰 12GB+256GB",
+                              "author": "购机逃坑实录",
+                              "play": 311,
+                              "date": "2026-08-09",
+                              "url": "https://www.bilibili.com/video/BV1HSu26ZEhB",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "学习还是爱奇艺？荣耀平板X10 Pro开箱视频！",
+                              "author": "南宁荣耀哥",
+                              "play": 239,
+                              "date": "2026-03-18",
+                              "url": "https://www.bilibili.com/video/BV1UxwYzhEcw",
+                              "compare": true
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀 平板10 Pro 11.5英寸 苍山灰 12GB+256GB",
+                              "author": "花影扫阶苔",
+                              "play": 217,
+                              "date": "2026-08-04",
+                              "url": "https://www.bilibili.com/video/BV1yAuA6gEnN",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "别再瞎买了❗学生党平板到底怎么选？",
+                              "author": "煲一锅数码周",
+                              "play": 162,
+                              "date": "2026-08-06",
+                              "url": "https://www.bilibili.com/video/BV1hJuJ6eESC",
+                              "compare": true
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板10Pro优缺点总结！2000块的平板真的能用？ #平板电脑",
+                              "author": "鹅池哦风复古",
+                              "play": 121,
+                              "date": "2026-03-17",
+                              "url": "https://www.bilibili.com/video/BV15AwSzHEUA",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板X10 Pro【国家补贴】11.5英寸2.5K护眼屏 荣耀学习空间 全金属一体机身 8GB+256GB 苍山灰",
+                              "author": "暮色存档子",
+                              "play": 108,
+                              "date": "2026-04-24",
+                              "url": "https://www.bilibili.com/video/BV1L7oVBBEnY",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀 平板10 Pro 11.5英寸 苍山灰 12GB+256GB",
+                              "author": "数码次元观测",
+                              "play": 64,
+                              "date": "2026-08-11",
+                              "url": "https://www.bilibili.com/video/BV1rGuq6wEhD",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "华为原装超级快充充电器p70p60p50p40mate70 60 50 40 30nova13 12 11 10 9 7pro适配荣耀畅玩手机平板 10V2",
+                              "author": "好物种草官诸葛朗",
+                              "play": 44,
+                              "date": "2026-04-17",
+                              "url": "https://www.bilibili.com/video/BV1XbdeBdEoz",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板10Pro柔光礼盒版测评，这柔光屏幕看着真舒服",
+                              "author": "静静精选",
+                              "play": 32,
+                              "date": "2026-04-07",
+                              "url": "https://www.bilibili.com/video/BV1jnDYB1ELU",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板X10 Pro上手体验 1107619531",
+                              "author": "桃气满满店3",
+                              "play": 24,
+                              "date": "2026-05-23",
+                              "url": "https://www.bilibili.com/video/BV1KoGa6BEdP",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板10 Pro 礼盒版【国家补贴】11.5英寸荣耀绿洲护眼屏 内置荣耀Pencil4s AI笔 12+256玉龙雪7831",
+                              "author": "B购",
+                              "play": 15,
+                              "date": "2026-03-11",
+                              "url": "https://www.bilibili.com/video/BV1q6cRzqEeW",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板10 Pro 11.5英寸144Hz刷新率2.8K超清屏 网课学习娱乐二合一游戏办公Pad 玉龙雪 柔光版 12GB+256GB 礼盒装",
+                              "author": "他就累了吧",
+                              "play": 14,
+                              "date": "2026-03-10",
+                              "url": "https://www.bilibili.com/video/BV1ycNczgEBo",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板X10 Pro 学习娱乐两不误 1093526844",
+                              "author": "美妆盒子",
+                              "play": 12,
+                              "date": "2026-04-30",
+                              "url": "https://www.bilibili.com/video/BV1ru9bB7Egt",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板10Pro自由摆放操作不设限",
+                              "author": "熊泓峰",
+                              "play": 11,
+                              "date": "2026-05-24",
+                              "url": "https://www.bilibili.com/video/BV1UrG569ES4",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "华为原装超级快充充电器p70p60p50p40mate70 60 50 40 30nova13 12 11 10 9 7pro适配荣耀畅玩手机平板 10V2",
+                              "author": "好物种草官汤琿騏",
+                              "play": 10,
+                              "date": "2026-04-17",
+                              "url": "https://www.bilibili.com/video/BV1cLdeBiEgc",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板10 Pro 礼盒版【国家补贴】11.5英寸荣耀绿洲护眼屏 内置荣耀Pencil4s AI笔 12+256玉龙雪",
+                              "author": "大牛甄选",
+                              "play": 10,
+                              "date": "2026-03-11",
+                              "url": "https://www.bilibili.com/video/BV1B6cRzqEyV",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板10 Pro 礼盒版 1101902735",
+                              "author": "哥哥好物馆",
+                              "play": 9,
+                              "date": "2026-04-21",
+                              "url": "https://www.bilibili.com/video/BV1iodrBDEhN",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "华为原装超级快充充电器p70p60p50p40mate70 60 50 40 30nova13 12 11 10 9 7pro适配荣耀畅玩手机平板 10V2",
+                              "author": "好物种草官任鑠翃",
+                              "play": 9,
+                              "date": "2026-04-17",
+                              "url": "https://www.bilibili.com/video/BV1oHdeBhEGG",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "华为【3C认证】原装88W全能充电器超级快充P60 Mate60pro 70 50 40proX5nova10荣耀手机平板笔记本电脑 【华为88W超级快充套",
+                              "author": "好物种草官廖逸纯",
+                              "play": 8,
+                              "date": "2026-04-17",
+                              "url": "https://www.bilibili.com/video/BV1QzdiBoEA3",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "华为原装超级快充充电器p70p60p50p40mate70 60 50 40 30nova13 12 11 10 9 7pro适配荣耀畅玩手机平板 10V2",
+                              "author": "好物种草官江麓姮",
+                              "play": 8,
+                              "date": "2026-04-17",
+                              "url": "https://www.bilibili.com/video/BV1A3deBuE52",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板10 Pro 礼盒版 【国家补贴】11.5英寸荣耀绿洲护眼屏 内置荣耀Pencil4s AI笔12+256苍山灰",
+                              "author": "亓官觉",
+                              "play": 7,
+                              "date": "2026-05-02",
+                              "url": "https://www.bilibili.com/video/BV1QxR5BwEEU",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板X10 Pro 柔光版【国家补贴】11.5英寸2.5K护眼柔光屏 荣耀学习空间 8+256GB 苍山灰",
+                              "author": "宋罗幽",
+                              "play": 7,
+                              "date": "2026-04-25",
+                              "url": "https://www.bilibili.com/video/BV1qFoXBpEmd",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "千元出头，护眼，质感，续航都不错。荣耀平板X10Pro产品力还是不错的！#荣耀平板X10Pro#荣耀平板-7595190229838342057",
+                              "author": "寂豢撂蹲Tl8",
+                              "play": 6,
+                              "date": "2026-08-11",
+                              "url": "https://www.bilibili.com/video/BV1YHuY6zEB8",
+                              "compare": true
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板X10 Pro【国家补贴】11.5英寸2.5K护眼屏 荣耀学习空间 全金属一体机身 8GB+256GB 苍山灰",
+                              "author": "太叔達",
+                              "play": 6,
+                              "date": "2026-05-22",
+                              "url": "https://www.bilibili.com/video/BV1E1Li6GEBt",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "华为原装超级快充充电器p70p60p50p40mate70 60 50 40 30nova13 12 11 10 9 7pro适配荣耀畅玩手机平板 10V2",
+                              "author": "好物种草官任麓韶",
+                              "play": 5,
+                              "date": "2026-04-17",
+                              "url": "https://www.bilibili.com/video/BV1NKdeBkEEz",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "#荣耀平板10Pro到手有一段时间了，刚开始会认为自己会不适应柔光屏，用了一个月，发现竟然越用越爽，这个售价2000左右，但是给了非常多的平板，我个人认为在荣耀",
+                              "author": "床栏列智Oa3",
+                              "play": 4,
+                              "date": "2026-08-09",
+                              "url": "https://www.bilibili.com/video/BV11JuV6uELE",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板X10Pro学生上网课神器超清屏幕用起来 1136815420",
+                              "author": "七七精选小店孔麗翳",
+                              "play": 4,
+                              "date": "2026-07-02",
+                              "url": "https://www.bilibili.com/video/BV1DrT76XEcK",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板10 Pro 柔光礼盒版【国家补贴】荣耀类纸柔光屏 内置荣耀Pencil4s AI笔 12+256GB 玉龙雪",
+                              "author": "澹台杏",
+                              "play": 4,
+                              "date": "2026-05-22",
+                              "url": "https://www.bilibili.com/video/BV1qPLe6aE62",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板X10 Pro 开箱分享 1093547249",
+                              "author": "笔记本电脑严选",
+                              "play": 4,
+                              "date": "2026-04-30",
+                              "url": "https://www.bilibili.com/video/BV1Kz9hBiEry",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板10 Pro 11.5英寸144Hz刷新率2.8K超清屏 网课学习娱乐二合一游戏办公Pad 玉龙雪 柔光版 12GB+256GB 礼盒装",
+                              "author": "樱桃小汽水的精选日记",
+                              "play": 4,
+                              "date": "2026-03-13",
+                              "url": "https://www.bilibili.com/video/BV1DiwEztE43",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板10Pro柔光版第一时间上手，天玑8350至尊版处理器+115英寸柔光屏。#荣耀平板10Pro柔光版#荣耀平板#数码科技-759187440251148",
+                              "author": "仄萄荒吭Zy2",
+                              "play": 3,
+                              "date": "2026-08-11",
+                              "url": "https://www.bilibili.com/video/BV1GKue6zEgm",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀 平板10 Pro 11.5英寸 苍山灰 12GB+256GB",
+                              "author": "蝉腹卧松风",
+                              "play": 3,
+                              "date": "2026-08-05",
+                              "url": "https://www.bilibili.com/video/BV13kM26zE6Q",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板X10 Pro 柔光版【国家补贴】11.5英寸2.5K护眼柔光屏 荣耀学习空间 8+256GB 苍山灰",
+                              "author": "澹台躬",
+                              "play": 3,
+                              "date": "2026-05-22",
+                              "url": "https://www.bilibili.com/video/BV1ymLY6VEDG",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板X10 Pro 1147753992",
+                              "author": "阿涛分享乐正菊",
+                              "play": 3,
+                              "date": "2026-04-30",
+                              "url": "https://www.bilibili.com/video/BV1Cb9aBwEJB",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板10 Pro 柔光礼盒版【国家补贴】荣耀类纸柔光屏 内置荣耀Pencil4s AI笔 12+256GB 玉龙雪",
+                              "author": "测评达人好物df",
+                              "play": 3,
+                              "date": "2026-04-29",
+                              "url": "https://www.bilibili.com/video/BV1n49DBLE6S",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "华为原装超级快充充电器p70p60p50p40mate70 60 50 40 30nova13 12 11 10 9 7pro适配荣耀畅玩手机平板 10V2",
+                              "author": "好物种草官梁艮耜",
+                              "play": 3,
+                              "date": "2026-04-17",
+                              "url": "https://www.bilibili.com/video/BV1dsdeBbEY8",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板X10 Pro【国家补贴】11.5英寸2.5K护眼屏 荣耀学习空间 全金属一体机身 8GB+256GB 晴空蓝",
+                              "author": "人不用来",
+                              "play": 2,
+                              "date": "2026-04-25",
+                              "url": "https://www.bilibili.com/video/BV1LKoXBEEAL",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板X10 Pro 1147753992",
+                              "author": "来了老弟南门华",
+                              "play": 2,
+                              "date": "2026-04-21",
+                              "url": "https://www.bilibili.com/video/BV17odrBDENB",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板10 Pro 11.5英寸144Hz刷新率2.8K超清屏 网课学习娱乐二合一游戏办公Pad 玉龙雪 柔光版 12GB+256GB 礼盒装",
+                              "author": "青空回响ovo",
+                              "play": 2,
+                              "date": "2026-03-14",
+                              "url": "https://www.bilibili.com/video/BV1aTw4znEks",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板X10Pro大屏沉浸看剧上课都超给力 1136816872",
+                              "author": "好物分享官黎誉畅",
+                              "play": 1,
+                              "date": "2026-04-24",
+                              "url": "https://www.bilibili.com/video/BV1n1oVBEEGp",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板X10Pro学生上网课神器超清屏幕用起来 1136815420",
+                              "author": "榜单好物推荐常薰久",
+                              "play": 1,
+                              "date": "2026-04-23",
+                              "url": "https://www.bilibili.com/video/BV1nfohBYEQ8",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "华为原装超级快充充电器p70p60p50p40mate70 60 50 40 30nova13 12 11 10 9 7pro适配荣耀畅玩手机平板 10V2",
+                              "author": "好物种草官秦卿袆",
+                              "play": 1,
+                              "date": "2026-04-17",
+                              "url": "https://www.bilibili.com/video/BV1A3deBuEa6",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "华为原装超级快充充电器p70p60p50p40mate70 60 50 40 30nova13 12 11 10 9 7pro适配荣耀畅玩手机平板 10V2",
+                              "author": "好物种草官钟离铎",
+                              "play": 1,
+                              "date": "2026-04-17",
+                              "url": "https://www.bilibili.com/video/BV1sMdeB3Exz",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板10 Pro 11.5英寸144Hz刷新率2.8K超清屏 网课学习娱乐二合一游戏办公Pad 玉龙雪 柔光版 12GB+256GB 礼盒装",
+                              "author": "日向夏帆x",
+                              "play": 1,
+                              "date": "2026-03-10",
+                              "url": "https://www.bilibili.com/video/BV1FMPfzoEpB",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板10Pro 1129465826",
+                              "author": "朴物集选",
+                              "play": 0,
+                              "date": "2026-04-28",
+                              "url": "https://www.bilibili.com/video/BV1LP9rBgEFJ",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板X10 Pro苍山灰版｜感拉满，颜值天花板！",
+                              "author": "琦琦风影",
+                              "play": 0,
+                              "date": "2026-04-26",
+                              "url": "https://www.bilibili.com/video/BV19RoRBpEm7",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板X10 Pro【国家补贴】11.5英寸2.5K护眼屏 荣耀学习空间 全金属一体机身 8GB+256GB 苍山灰",
+                              "author": "龙遐闰",
+                              "play": 0,
+                              "date": "2026-04-24",
+                              "url": "https://www.bilibili.com/video/BV1oVoVBgESW",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "华为原装超级快充充电器p70p60p50p40mate70 60 50 40 30nova13 12 11 10 9 7pro适配荣耀畅玩手机平板 10V2",
+                              "author": "好物种草官谢鑫轶",
+                              "play": 0,
+                              "date": "2026-04-17",
+                              "url": "https://www.bilibili.com/video/BV1XbdeBdEZM",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "华为原装超级快充充电器p70p60p50p40mate70 60 50 40 30nova13 12 11 10 9 7pro适配荣耀畅玩手机平板 10V2",
+                              "author": "好物种草官周绣豫",
+                              "play": 0,
+                              "date": "2026-04-17",
+                              "url": "https://www.bilibili.com/video/BV1w3deBuE1y",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "华为原装超级快充充电器p70p60p50p40mate70 60 50 40 30nova13 12 11 10 9 7pro适配荣耀畅玩手机平板 10V2",
+                              "author": "好物种草官王靖澄",
+                              "play": 0,
+                              "date": "2026-04-17",
+                              "url": "https://www.bilibili.com/video/BV112deB5E8E",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板10 Pro 11.5英寸144Hz刷新率2.8K超清屏 网课学习娱乐二合一游戏办公Pad 玉龙雪 柔光版 12GB+256GB 礼盒装",
+                              "author": "顾星辞666",
+                              "play": 0,
+                              "date": "2026-03-14",
+                              "url": "https://www.bilibili.com/video/BV1C4w4ziESJ",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板10 Pro 11.5英寸144Hz刷新率2.8K超清屏 网课学习娱乐二合一游戏办公Pad 玉龙雪 柔光版 12GB+256GB 礼盒装",
+                              "author": "森屿鹿眠mm",
+                              "play": 0,
+                              "date": "2026-03-11",
+                              "url": "https://www.bilibili.com/video/BV1VecZzuEXp",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板10 Pro 11.5英寸144Hz刷新率2.8K超清屏 网课学习娱乐二合一游戏办公Pad 玉龙雪 柔光版 12GB+256GB 礼盒装",
+                              "author": "人不用来",
+                              "play": 0,
+                              "date": "2026-03-10",
+                              "url": "https://www.bilibili.com/video/BV1anPfzmEou",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板10 Pro 11.5英寸144Hz刷新率2.8K超清屏 网课学习娱乐二合一游戏办公Pad 玉龙雪 柔光版 12GB+256GB 礼盒装",
+                              "author": "凉柚与云M",
+                              "play": 0,
+                              "date": "2026-03-10",
+                              "url": "https://www.bilibili.com/video/BV1rcPfzhEU1",
+                              "compare": false
+                        }
+                  ]
+            },
+            {
+                  "name": "荣耀平板 X10 Pro",
+                  "voices": [
+                        {
+                              "type": "video",
+                              "title": "逆天平板避雷第二期，点名表扬:荣耀X10 Pro、荣耀X9 Pro、OPPO Pad Air5",
+                              "author": "中国机长-起飞版",
+                              "play": 43871,
+                              "date": "2026-01-18",
+                              "url": "https://www.bilibili.com/video/BV1ujr9BiEpQ",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "【学生平板推荐】荣耀平板X10 Pro 测评",
+                              "author": "做裙子的Cc",
+                              "play": 43311,
+                              "date": "2026-02-28",
+                              "url": "https://www.bilibili.com/video/BV1H1AazXEzS",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板10Pro开箱展示",
+                              "author": "小光的数码屋",
+                              "play": 37395,
+                              "date": "2026-01-18",
+                              "url": "https://www.bilibili.com/video/BV1qLksBqETJ",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "学生党平板【荣耀平板X10 Pro】使用体验",
+                              "author": "玩酷数码",
+                              "play": 30798,
+                              "date": "2026-02-28",
+                              "url": "https://www.bilibili.com/video/BV18hAazAEYa",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "千元柔光护眼天花板！荣耀平板X10 Pro测评",
+                              "author": "特务喵喵",
+                              "play": 29729,
+                              "date": "2026-02-27",
+                              "url": "https://www.bilibili.com/video/BV1RVADz4EUa",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀Power2价格公布弹幕炸裂！10080毫安巨无霸电池真香！",
+                              "author": "红米K100新品发布",
+                              "play": 27530,
+                              "date": "2026-01-05",
+                              "url": "https://www.bilibili.com/video/BV1L3i4B4E7Z",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "【全程回放】荣耀Power2新品发布会",
+                              "author": "数码新品发布会",
+                              "play": 4278,
+                              "date": "2026-01-05",
+                              "url": "https://www.bilibili.com/video/BV1qui4BZE5t",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "【电池天花板】荣耀Power2价格公布弹幕逆天！差点10086电池！",
+                              "author": "发布会直播姬",
+                              "play": 2982,
+                              "date": "2026-01-05",
+                              "url": "https://www.bilibili.com/video/BV1GqixBDEWW",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "「参数分解」荣耀平板X10 Pro，适合上网课，不建议拿来干别的。",
+                              "author": "阳光使者2025",
+                              "play": 2814,
+                              "date": "2026-01-10",
+                              "url": "https://www.bilibili.com/video/BV1f1rGBvEP7",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板X10 Pro，不仅是平板，还是孩子的学习好搭子",
+                              "author": "小杨KrayTech",
+                              "play": 1918,
+                              "date": "2026-01-09",
+                              "url": "https://www.bilibili.com/video/BV1TvrNBFEpy",
+                              "compare": true
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀Power2价格公布香吗？10080毫安电池续航巨无霸！",
+                              "author": "荣耀RobotPhone发布",
+                              "play": 1783,
+                              "date": "2026-01-05",
+                              "url": "https://www.bilibili.com/video/BV1LEibB8EAm",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板X10 Pro柔光版，适合孩子的护眼好平板",
+                              "author": "陆一手数码分享",
+                              "play": 706,
+                              "date": "2026-01-06",
+                              "url": "https://www.bilibili.com/video/BV1ZXqcBxEEb",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板X10 Pro/荣耀平板X10 Pro柔光版的对比和区别，荣耀平板X10 Pro/荣耀平板X10 Pro柔光版使用体验测评，这两款的性价比哪个更高",
+                              "author": "梦之长安",
+                              "play": 555,
+                              "date": "2026-01-12",
+                              "url": "https://www.bilibili.com/video/BV1aSrhByEsN",
+                              "compare": true
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板10 Pro、X10 Pro发布：2499元、1499元起，还有一款荣耀亲选AI通话耳机",
+                              "author": "xqjxqj",
+                              "play": 541,
+                              "date": "2026-01-05",
+                              "url": "https://www.bilibili.com/video/BV1wyibBCEbc",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板X10 Pro提前开箱评测，除了是平板还能是学习机  荣耀平板X10pro  荣耀.....",
+                              "author": "fghfg34535",
+                              "play": 309,
+                              "date": "2026-02-24",
+                              "url": "https://www.bilibili.com/video/BV14Mf1BDEan",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板X10 Pro：千元价位，全家共享",
+                              "author": "数码小甜",
+                              "play": 305,
+                              "date": "2026-01-08",
+                              "url": "https://www.bilibili.com/video/BV1i7iQBbEeL",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "柔光+高刷+大电池！荣耀X10 Pro柔光版一台搞定学习、追剧、办公全场景",
+                              "author": "科技洛克",
+                              "play": 151,
+                              "date": "2026-01-10",
+                              "url": "https://www.bilibili.com/video/BV1JzrGBzEzj",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "孩子学习，家长省心：荣耀平板X10 Pro体验！",
+                              "author": "喵呜测评",
+                              "play": 64,
+                              "date": "2026-01-06",
+                              "url": "https://www.bilibili.com/video/BV1aDqPBsEn3",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板X10Pro柔光板，学习看护，家长放心",
+                              "author": "斑马野谈",
+                              "play": 60,
+                              "date": "2026-01-08",
+                              "url": "https://www.bilibili.com/video/BV12Ci9BJE7j",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板x10pro开箱",
+                              "author": "大牛甄选",
+                              "play": 58,
+                              "date": "2026-01-09",
+                              "url": "https://www.bilibili.com/video/BV1akrPBvE6o",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板X10 Pro 开箱分享！",
+                              "author": "发现美好东西",
+                              "play": 53,
+                              "date": "2026-02-18",
+                              "url": "https://www.bilibili.com/video/BV1PGZDB8ELq",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板X10 Pro，专属资源助力孩子成长",
+                              "author": "好物学长",
+                              "play": 50,
+                              "date": "2026-01-17",
+                              "url": "https://www.bilibili.com/video/BV1JqryBcEBb",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "适合学习和办公，荣耀平板X10 Pro 柔光版",
+                              "author": "精选宝贝",
+                              "play": 49,
+                              "date": "2026-01-29",
+                              "url": "https://www.bilibili.com/video/BV1iXzoBDEu4",
+                              "compare": true
+                        },
+                        {
+                              "type": "video",
+                              "title": "孩子学习，家长娱乐，荣耀平板X10 Pro柔光屏全给你搞定",
+                              "author": "茄子egg",
+                              "play": 33,
+                              "date": "2026-01-09",
+                              "url": "https://www.bilibili.com/video/BV19jrNB3Efo",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板X10 Pro平板",
+                              "author": "必购",
+                              "play": 16,
+                              "date": "2026-01-17",
+                              "url": "https://www.bilibili.com/video/BV1vVrUBAEjm",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板X10 Pro【国家补贴】11.5英寸2.5K护眼屏 荣耀学习空间 全金属一体机身 8GB+128GB 苍山灰0345",
+                              "author": "好物学长",
+                              "play": 15,
+                              "date": "2026-03-10",
+                              "url": "https://www.bilibili.com/video/BV1uKPZzuECX",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板X10 Pro 开箱分享！",
+                              "author": "小羊优选",
+                              "play": 11,
+                              "date": "2026-01-15",
+                              "url": "https://www.bilibili.com/video/BV1aBrfBdEG8",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "孩子学习，家长省心荣耀平板X10 Pro体验！",
+                              "author": "小羊优选",
+                              "play": 9,
+                              "date": "2026-03-08",
+                              "url": "https://www.bilibili.com/video/BV1yUNNzXECc",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板X10 Pro 开箱分享！",
+                              "author": "必购",
+                              "play": 9,
+                              "date": "2026-01-15",
+                              "url": "https://www.bilibili.com/video/BV1YBrfBdEKa",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀x10pro平板",
+                              "author": "必购",
+                              "play": 9,
+                              "date": "2026-01-12",
+                              "url": "https://www.bilibili.com/video/BV1sPraBNEjY",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀 X10Pro开箱",
+                              "author": "必购",
+                              "play": 9,
+                              "date": "2026-01-09",
+                              "url": "https://www.bilibili.com/video/BV1gkrPBvEzY",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板X10 Pro 开箱分享！",
+                              "author": "好物学长",
+                              "play": 8,
+                              "date": "2026-02-18",
+                              "url": "https://www.bilibili.com/video/BV1NGZDB8EwH",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板X10 Pro 学习娱乐两不误！",
+                              "author": "大牛甄选",
+                              "play": 6,
+                              "date": "2026-01-15",
+                              "url": "https://www.bilibili.com/video/BV19BrfBdEWX",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "家里小孩的学习机 荣耀X10 Pro平板电脑",
+                              "author": "必购",
+                              "play": 5,
+                              "date": "2026-01-09",
+                              "url": "https://www.bilibili.com/video/BV1gyrPBPEqv",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板X10 Pro 学习娱乐两不误！",
+                              "author": "小羊优选",
+                              "play": 4,
+                              "date": "2026-02-18",
+                              "url": "https://www.bilibili.com/video/BV1PGZDB8Eck",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板X10 Pro【国家补贴】11.5英寸2.5K护眼屏 荣耀学习空间 全金属一体机身 8GB+128GB 苍山灰",
+                              "author": "B购",
+                              "play": 3,
+                              "date": "2026-03-10",
+                              "url": "https://www.bilibili.com/video/BV1MTPZzBEGn",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板X10Pro上手",
+                              "author": "小羊优选",
+                              "play": 2,
+                              "date": "2026-01-09",
+                              "url": "https://www.bilibili.com/video/BV1gyrPBPELe",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板X10 Pro，孩子学习更安心",
+                              "author": "B购",
+                              "play": 1,
+                              "date": "2026-01-17",
+                              "url": "https://www.bilibili.com/video/BV1JqryBcEkz",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板X10Pro#官方正品精选好物",
+                              "author": "量子小茶",
+                              "play": 0,
+                              "date": "2026-01-09",
+                              "url": "https://www.bilibili.com/video/BV1aBrwB8EXA",
+                              "compare": false
+                        }
+                  ]
+            },
+            {
+                  "name": "荣耀平板 GT Pro",
+                  "voices": [
+                        {
+                              "type": "video",
+                              "title": "2100块，这就是世界上最好的平板！荣耀平板GT Pro详细测评，平板中的智界R7？",
+                              "author": "简机测评SimpleTech",
+                              "play": 211599,
+                              "date": "2025-02-17",
+                              "url": "https://www.bilibili.com/video/BV12bwRebEBC",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板GT Pro分享，1600元就能买到一个oled显示屏的平板电脑！！！",
+                              "author": "喜欢就挂JustGua",
+                              "play": 11405,
+                              "date": "2025-06-02",
+                              "url": "https://www.bilibili.com/video/BV1zp7SzaE6r",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "全新1799入手OLED平板！荣耀平板GT Pro",
+                              "author": "给自己1個微笑",
+                              "play": 9775,
+                              "date": "2025-07-07",
+                              "url": "https://www.bilibili.com/video/BV1zs3yzPEMD",
+                              "compare": false
+                        }
+                  ]
+            },
+            {
+                  "name": "荣耀平板 V9",
+                  "voices": [
+                        {
+                              "type": "video",
+                              "title": "降价后成了千元板皇，一加平板真体验，对比小米平板7、荣耀平板V9、小新PadPro 12.7",
+                              "author": "纸飞机Paperfly",
+                              "play": 316703,
+                              "date": "2025-04-04",
+                              "url": "https://www.bilibili.com/video/BV1o9ZRYqEHT",
+                              "compare": true
+                        },
+                        {
+                              "type": "video",
+                              "title": "发布半年，荣耀平板V9柔光版还香吗？",
+                              "author": "大甲虫先生腿很多",
+                              "play": 114229,
+                              "date": "2025-09-20",
+                              "url": "https://www.bilibili.com/video/BV1LiWLz7EyA",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "有话我直说！荣耀平板V9真实体验，6个缺点4个优点。",
+                              "author": "小龙的科技生活",
+                              "play": 66744,
+                              "date": "2025-01-04",
+                              "url": "https://www.bilibili.com/video/BV1cBrsYJEGj",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "刀法精准！同样配置的荣耀平板GT和荣耀平板V9该怎么选？",
+                              "author": "一分钟的开箱",
+                              "play": 41102,
+                              "date": "2025-04-30",
+                              "url": "https://www.bilibili.com/video/BV128GbzBEnc",
+                              "compare": true
+                        },
+                        {
+                              "type": "video",
+                              "title": "荣耀平板GT和荣耀平板V9！有什么差别？哪一个更适合你",
+                              "author": "林半仙数码",
+                              "play": 13790,
+                              "date": "2025-05-11",
+                              "url": "https://www.bilibili.com/video/BV15kETzkEA4",
+                              "compare": true
+                        }
+                  ]
+            }
+      ],
       "report": null
     },
     "xiaomi": {
-      "products": [],
+      "products": [
+            {
+                  "name": "Xiaomi Pad 8 Pro",
+                  "voices": [
+                        {
+                              "type": "video",
+                              "title": "【大家测】首发体验 小米Pad 8 Pro柔光版开箱测试 | 11.2 英寸 3.2K屏幕 骁龙8至尊版",
+                              "author": "大家测",
+                              "play": 436499,
+                              "date": "2025-09-19",
+                              "url": "https://www.bilibili.com/video/BV1YBWVzMErv",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "小米平板8 Pro首发测评：终于有常规尺寸的安卓板皇了！不仅是平板更是一台PC游戏主机？",
+                              "author": "WHYLAB",
+                              "play": 396922,
+                              "date": "2025-09-19",
+                              "url": "https://www.bilibili.com/video/BV1MxWGztEAn",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "Air般身材，Pro级实力！Xiaomi Pad 8 Pro上手体验",
+                              "author": "花生説",
+                              "play": 383384,
+                              "date": "2025-09-19",
+                              "url": "https://www.bilibili.com/video/BV1NTW3zDEGp",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "【享拆】Xiaomi Pad 8 Pro 拆解：轻薄不减配！",
+                              "author": "微机分WekiHome",
+                              "play": 321952,
+                              "date": "2025-09-19",
+                              "url": "https://www.bilibili.com/video/BV16NW5zUEkW",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "原来小尺寸才是平板的正确答案？！小米Pad 8 Pro使用体验",
+                              "author": "Winnie龟龟仔",
+                              "play": 217610,
+                              "date": "2025-09-23",
+                              "url": "https://www.bilibili.com/video/BV1STJCzKEkm",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "双十一学生党终极对比：2–3K买到Pro级体验，谁把预算变生产力",
+                              "author": "Yo点高科技",
+                              "play": 67246,
+                              "date": "2025-11-07",
+                              "url": "https://www.bilibili.com/video/BV1UW23BbEK2",
+                              "compare": true
+                        },
+                        {
+                              "type": "video",
+                              "title": "2–3K闭眼选？双十一学生全能平板横评谁更稳",
+                              "author": "极客玩家阿城",
+                              "play": 50762,
+                              "date": "2025-11-07",
+                              "url": "https://www.bilibili.com/video/BV1PT2gBHEvn",
+                              "compare": true
+                        },
+                        {
+                              "type": "video",
+                              "title": "【评说】小米Pad 8 Pro，骁龙8至尊+澎湃OS3正式版，表现怎样？",
+                              "author": "评说",
+                              "play": 28519,
+                              "date": "2025-09-19",
+                              "url": "https://www.bilibili.com/video/BV17mp4z1EgU",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "第一次搭载骁龙8至尊的小米平板： Xiaomi Pad 8 Pro 小米平板 小米平板8P.....",
+                              "author": "fjenfkvke9",
+                              "play": 1118,
+                              "date": "2025-10-22",
+                              "url": "https://www.bilibili.com/video/BV1i4sbz9EsK",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "作为忠实果粉的我，为啥会选择Xiaomi Pad 8 Pro小米Pad8Pro 11寸.....",
+                              "author": "愛的自在法敢雅",
+                              "play": 772,
+                              "date": "2025-10-08",
+                              "url": "https://www.bilibili.com/video/BV129HczDEK8",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "【享拆】Xiaomi Pad 8 Pro 拆解：轻薄不减配！ 小米平板新成员，Xiaomi.....",
+                              "author": "ftmbkx393997",
+                              "play": 734,
+                              "date": "2025-10-21",
+                              "url": "https://www.bilibili.com/video/BV1NmWXzvEkx",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "新款Xiaomi Pad 8 Pro到底有哪些升级亮点！",
+                              "author": "夜晚呦点甜",
+                              "play": 556,
+                              "date": "2025-10-05",
+                              "url": "https://www.bilibili.com/video/BV12JnkzwEoL",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "【享拆】Xiaomi Pad 8 Pro 拆解：轻薄不减配！ 小米平板新成员，Xiaomi.....",
+                              "author": "mmvpn1167739",
+                              "play": 398,
+                              "date": "2025-12-05",
+                              "url": "https://www.bilibili.com/video/BV1722VBHESj",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "Xiaomi Pad 8 Pro 拆解：轻薄不减配！ 小米平板新成员，Xiaomi.....",
+                              "author": "fjenfkvke9",
+                              "play": 387,
+                              "date": "2025-10-22",
+                              "url": "https://www.bilibili.com/video/BV1i4sbz9EJ9",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "Xiaomi Pad 8 Pro上手测评！",
+                              "author": "胖胖好物甄选",
+                              "play": 120,
+                              "date": "2025-10-22",
+                              "url": "https://www.bilibili.com/video/BV14usbzTEHn",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "小米平板8 Pro平板电脑Xiaomi Pad 8 Pro 办公游戏平板小米pad8 pro 小米正品",
+                              "author": "TAO精选测评",
+                              "play": 40,
+                              "date": "2025-12-21",
+                              "url": "https://www.bilibili.com/video/BV1udqSBUEdW",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "自己真的喜欢的话，那就不需要在意别人的看法.xiaomi Pad 8 Pro",
+                              "author": "蓝鲸不能堕落啦",
+                              "play": 26,
+                              "date": "2025-12-21",
+                              "url": "https://www.bilibili.com/video/BV1zbq1BDEBf",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "Xiaomi Pad 8 Pro上手测评！",
+                              "author": "大牛甄选",
+                              "play": 25,
+                              "date": "2025-10-08",
+                              "url": "https://www.bilibili.com/video/BV1fJxdzTEyW",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "平板新选择丨Xiaomi Pad 8 Pro",
+                              "author": "我丢啊i",
+                              "play": 18,
+                              "date": "2025-12-03",
+                              "url": "https://www.bilibili.com/video/BV11QShBQEe4",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "第一次搭载骁龙8至尊的小米平板： Xiaomi Pad 8 Pro#小米平板#小米平板8Pro#安卓",
+                              "author": "奶泡芙小铺",
+                              "play": 18,
+                              "date": "2025-10-07",
+                              "url": "https://www.bilibili.com/video/BV14nxRzmEV3",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "Xiaomi Pad 8 Pro搭载高刷屏幕与高性能芯片，适合办公学习，续航持久，提升日常使用体验。",
+                              "author": "大超真实测评",
+                              "play": 7,
+                              "date": "2025-11-18",
+                              "url": "https://www.bilibili.com/video/BV1rsCrBbE6m",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "小米Xiaomi Pad 8 Pro，护眼模式长时间使",
+                              "author": "涂好物分享2",
+                              "play": 7,
+                              "date": "2025-11-07",
+                              "url": "https://www.bilibili.com/video/BV1bG2NBkEWC",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "第一次搭载骁龙8至尊的小米平板： Xiaomi Pad 8 Pro#小米平板#小米平板8Pro#安卓",
+                              "author": "累累好物分享",
+                              "play": 6,
+                              "date": "2025-11-25",
+                              "url": "https://www.bilibili.com/video/BV1rmUDBAEya",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "你们等的Xiaomi Pad 8 Pro 终于来了，它采用骁龙8至尊芯片，兼容PC版浏览器和3A游戏，影音娱乐都全能！#新品发布 #平板电脑 #小米 #小米17",
+                              "author": "糖糖豆豆的好物",
+                              "play": 6,
+                              "date": "2025-10-02",
+                              "url": "https://www.bilibili.com/video/BV1vJHPzrEr4",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "Xiaomi Pad88Pro 沉浸式开箱#小米 #小米之家 #普宁 #pad8 #新品",
+                              "author": "累累好物分享",
+                              "play": 4,
+                              "date": "2025-11-25",
+                              "url": "https://www.bilibili.com/video/BV1rmUDBAEsZ",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "小米Xiaomi Pad 8 Pro，超薄设计彰显时尚",
+                              "author": "涂好物分享2",
+                              "play": 4,
+                              "date": "2025-11-07",
+                              "url": "https://www.bilibili.com/video/BV1Lf2PBpEQG",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "小米新平板——Xiaomi Pad 7 Pro，轻薄机身搭配120Hz高刷屏，追剧办公更流畅；骁龙8 Gen2芯片性能强，多任务不卡顿，续航持久，支持快充，出差",
+                              "author": "静怡分享好物",
+                              "play": 3,
+                              "date": "2025-11-24",
+                              "url": "https://www.bilibili.com/video/BV1Y9UGByEaF",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "Xiaomi Pad 8Pro 小米平板8Pro 游戏 办公平板#平板电脑 #小米平板#",
+                              "author": "啊博分享",
+                              "play": 3,
+                              "date": "2025-10-19",
+                              "url": "https://www.bilibili.com/video/BV1XKsczeExn",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "Xiaomi Pad88Pro 沉浸式开箱#小米 #小米之家 #普宁 #pad8 #新品",
+                              "author": "啊博分享",
+                              "play": 3,
+                              "date": "2025-10-15",
+                              "url": "https://www.bilibili.com/video/BV1Q24ezAEJ2",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "小米Xiaomi Pad 8 Pro，智能节电模式延长",
+                              "author": "岳岳优选好物",
+                              "play": 2,
+                              "date": "2025-10-23",
+                              "url": "https://www.bilibili.com/video/BV11LsYzmEmt",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "Xiaomi Pad 8 Pro上手测评！",
+                              "author": "M_Brother",
+                              "play": 2,
+                              "date": "2025-10-18",
+                              "url": "https://www.bilibili.com/video/BV1BxWpzTEVX",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "Xiaomi Pad88Pro 沉浸式开箱#小米 #小米之家 #普宁 #pad8 #新品",
+                              "author": "是柚屿呀啊",
+                              "play": 2,
+                              "date": "2025-10-15",
+                              "url": "https://www.bilibili.com/video/BV1CT4zzNEp4",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "【8+128】Xiaomi Pad 8 Pro 小米平板 8 Pro 游戏 办公小米平板8pro#小米pad8pro #数码产品 #平板电脑 #数码 #平板",
+                              "author": "小冉95",
+                              "play": 1,
+                              "date": "2025-12-04",
+                              "url": "https://www.bilibili.com/video/BV1Lb2YBvEMu",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "小米小家电官方旗舰店Xiaomi Pad 8 Pro",
+                              "author": "KevinasQ",
+                              "play": 1,
+                              "date": "2025-11-08",
+                              "url": "https://www.bilibili.com/video/BV1RQ1DBUEfw",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "便携生产力工具，Xiaomi Pad 8 Pro！",
+                              "author": "清高好物推荐",
+                              "play": 1,
+                              "date": "2025-10-28",
+                              "url": "https://www.bilibili.com/video/BV1PNyzBbEV1",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "Xiaomi Pad88Pro 沉浸式开箱#小米 #小米之家 #普宁 #pad8 #新品",
+                              "author": "小c好物分享",
+                              "play": 0,
+                              "date": "2025-11-02",
+                              "url": "https://www.bilibili.com/video/BV1FKyZB6ETr",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "小米（MI） Xiaomi  Pad 8 Pro 平板电脑 年度旗舰新品 冰晶蓝 16GB+512GB 柔光版",
+                              "author": "新新好物分享0001",
+                              "play": 0,
+                              "date": "2025-10-24",
+                              "url": "https://www.bilibili.com/video/BV1CFsnzgEvm",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "小米Xiaomi Pad 8 Pro，强大处理器应对复",
+                              "author": "悠悠优选好物A",
+                              "play": 0,
+                              "date": "2025-10-23",
+                              "url": "https://www.bilibili.com/video/BV15fsaz8EHG",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "Xiaomi Pad88Pro 沉浸式开箱#小米 #小米之家 #普宁 #pad8 #新品",
+                              "author": "累累好物分享",
+                              "play": 0,
+                              "date": "2025-10-18",
+                              "url": "https://www.bilibili.com/video/BV1xdWszsEaQ",
+                              "compare": false
+                        }
+                  ]
+            },
+            {
+                  "name": "Xiaomi Pad 7 Ultra",
+                  "voices": [
+                        {
+                              "type": "video",
+                              "title": "浅谈小米Pad7 Ultra：小米平板都卖这么贵了？",
+                              "author": "花生説",
+                              "play": 674608,
+                              "date": "2025-07-14",
+                              "url": "https://www.bilibili.com/video/BV1PKuEzeEb1",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "【享拆】小米 Pad 7 Ultra 拆解：旗舰安卓平板就该这么做～",
+                              "author": "微机分WekiHome",
+                              "play": 521588,
+                              "date": "2025-05-23",
+                              "url": "https://www.bilibili.com/video/BV1LNJ4zYEr7",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "小米Pad 7 Ultra全面测评：玄戒O1降频版啥体验？「白问」",
+                              "author": "白问豆豆",
+                              "play": 449570,
+                              "date": "2025-05-23",
+                              "url": "https://www.bilibili.com/video/BV1hHJHzjEeg",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "【大家测】首款玄戒平板！5699元起售 超轻薄机身，超窄边框！Xiaomi Pad 7 Ultra 柔光版开箱快速体验",
+                              "author": "大家测",
+                              "play": 160611,
+                              "date": "2025-05-23",
+                              "url": "https://www.bilibili.com/video/BV1hDj7zFEis",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "搭载玄戒O1的小米平板7 ULtra首发开箱体验，真的不像一颗新芯片的表现！",
+                              "author": "摄影师云飞",
+                              "play": 144169,
+                              "date": "2025-05-22",
+                              "url": "https://www.bilibili.com/video/BV1igJHz9EyG",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "没有任何适配?小米Pad7Ultra两个月使用!实话实说...",
+                              "author": "小猪隊长",
+                              "play": 116393,
+                              "date": "2025-07-30",
+                              "url": "https://www.bilibili.com/video/BV14Qhwz5EPK",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "感受一下 Xiaomi Pad 7 Ultra 的 8 扬声器！",
+                              "author": "凉心暖男賊",
+                              "play": 37374,
+                              "date": "2025-05-23",
+                              "url": "https://www.bilibili.com/video/BV1mwJtzWEx1",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "适配不学 学上平板也用OLED了 小米Pad 7 Ultra频闪极速测试！",
+                              "author": "全是干货的大胖鸽",
+                              "play": 24492,
+                              "date": "2025-05-28",
+                              "url": "https://www.bilibili.com/video/BV1qVjvzEEAK",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "Pad 7 Ultra 压力测试！吃鸡1080P+HDR高清+120+抗锯齿全部拉满榨干玄戒O1",
+                              "author": "守晨星诉约",
+                              "play": 23289,
+                              "date": "2025-05-28",
+                              "url": "https://www.bilibili.com/video/BV1LRjvznEjr",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "试试用小米Pad 7 Ultra串流",
+                              "author": "某枣吖",
+                              "play": 14759,
+                              "date": "2025-05-23",
+                              "url": "https://www.bilibili.com/video/BV13qjnziEA9",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "xiaomi Pad 7 Ultra 量产版顶配开箱",
+                              "author": "创客薛源Chinaxueyuan",
+                              "play": 9686,
+                              "date": "2025-05-23",
+                              "url": "https://www.bilibili.com/video/BV1aQjJzTEpM",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "Xiaomi Pad Ultra｜云视听",
+                              "author": "守晨星诉约",
+                              "play": 9035,
+                              "date": "2025-06-23",
+                              "url": "https://www.bilibili.com/video/BV1d3KxzaEGR",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "Xiaomi Pad 7 Ultra云视听｜海阔天空",
+                              "author": "守晨星诉约",
+                              "play": 8560,
+                              "date": "2025-07-12",
+                              "url": "https://www.bilibili.com/video/BV1fPuGz6EfJ",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "小米pad7 Ultra鸣潮高画质表现",
+                              "author": "琴枫有话说",
+                              "play": 7242,
+                              "date": "2025-06-02",
+                              "url": "https://www.bilibili.com/video/BV1SF7Sz7EWZ",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "小米平板 xiaomi pad7 Ultra-目前平板最强素质扬声器",
+                              "author": "非酋-zerotwo",
+                              "play": 6682,
+                              "date": "2025-05-24",
+                              "url": "https://www.bilibili.com/video/BV1BqjbzBEgf",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "Xiaomi Pad 7 Ultra 和 iPad Pro对比开箱来啦~",
+                              "author": "洪老狮",
+                              "play": 6571,
+                              "date": "2025-05-23",
+                              "url": "https://www.bilibili.com/video/BV1CtjJzXE9Y",
+                              "compare": true
+                        },
+                        {
+                              "type": "video",
+                              "title": "小米平板xiaomi pad7ultra，看视频体验，手机录屏",
+                              "author": "小忆忆忆忆忆忆忆忆忆",
+                              "play": 5748,
+                              "date": "2025-07-27",
+                              "url": "https://www.bilibili.com/video/BV1C88izYEQ6",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "【小米】发布会完整版 2025.5.22「小米15周年战略新品发布会｜玄戒O1 XRING｜xiaomi YU7｜15S pro｜Pad7 Ultra」",
+                              "author": "冰蓝色蛋挞",
+                              "play": 3209,
+                              "date": "2025-05-22",
+                              "url": "https://www.bilibili.com/video/BV1CFJHzhEba",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "我的Xiaomi Pad 7 Ultra  12g+512g(标准版)玩无限暖暖开八音套大招100%闪退",
+                              "author": "十二年一瞬间",
+                              "play": 2929,
+                              "date": "2025-05-28",
+                              "url": "https://www.bilibili.com/video/BV1uXjBzJEFU",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "Xiaomi Pad 7 Ultra首发评测：小米的第一次都在这了",
+                              "author": "锋潮评测",
+                              "play": 2640,
+                              "date": "2025-05-23",
+                              "url": "https://www.bilibili.com/video/BV1sUjEznEsz",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "都说小米pad7u可以计算和配平方程式，谁说6sp不行了",
+                              "author": "霜月琉依",
+                              "play": 2557,
+                              "date": "2025-05-25",
+                              "url": "https://www.bilibili.com/video/BV1m2j3zBErW",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "Xiaomi Pad 7 Ultra云视听｜祝福",
+                              "author": "守晨星诉约",
+                              "play": 2188,
+                              "date": "2025-09-30",
+                              "url": "https://www.bilibili.com/video/BV1BqnyztEeL",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "Xiaomi  Pad 7 Ultra｜云视听",
+                              "author": "守晨星诉约",
+                              "play": 2072,
+                              "date": "2025-06-17",
+                              "url": "https://www.bilibili.com/video/BV1SxNhzeEeP",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "XIAOMI Pad 7 Ultra | 生而强大",
+                              "author": "SUNWHEEL光伦",
+                              "play": 1848,
+                              "date": "2025-06-13",
+                              "url": "https://www.bilibili.com/video/BV17YMTzpEaK",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "罗小黑战记2鹿野回忆片尾纯音乐｜Xiaomi Pad 7 Ultra",
+                              "author": "守晨星诉约",
+                              "play": 1798,
+                              "date": "2025-08-18",
+                              "url": "https://www.bilibili.com/video/BV1zaYnzoEc7",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "Xiaomi Pad 7 Ultra首发评测！",
+                              "author": "数码时代领航师",
+                              "play": 1237,
+                              "date": "2025-05-24",
+                              "url": "https://www.bilibili.com/video/BV1WNjtzrEpm",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "Xiaomi Pad 7 Ultra首发评测！",
+                              "author": "新宇华天",
+                              "play": 1097,
+                              "date": "2025-05-24",
+                              "url": "https://www.bilibili.com/video/BV1Eejbz6E84",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "【小米发布会】小米15周年战略新品发布会！",
+                              "author": "皮卡锤练习生",
+                              "play": 910,
+                              "date": "2025-05-22",
+                              "url": "https://www.bilibili.com/video/BV1AoJnzeEeD",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "14英寸OLED大屏！ Xiaomi Pad 7 Ultra体验如何？",
+                              "author": "凰家智车局",
+                              "play": 909,
+                              "date": "2025-05-27",
+                              "url": "https://www.bilibili.com/video/BV1Bkj9z3Epe",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "感受一下 Xiaomi Pad 7 Ultra 的 8 扬声器！",
+                              "author": "少女的英雄之梦",
+                              "play": 709,
+                              "date": "2025-05-24",
+                              "url": "https://www.bilibili.com/video/BV1xRjsz6EYJ",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "Xiaomi Pad 7 Ultra首发评测！",
+                              "author": "手机控探索科技",
+                              "play": 533,
+                              "date": "2025-05-26",
+                              "url": "https://www.bilibili.com/video/BV1Bsj1zDE3f",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "小米新品 Xiaomi Pad 7 Ultra 来啦~",
+                              "author": "洪老狮",
+                              "play": 494,
+                              "date": "2025-05-22",
+                              "url": "https://www.bilibili.com/video/BV1Q6Jnz5EYT",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "Xiaomi Pad 7 Ultra首发评测：小米的第一次都 Xiaomi Pad 7 U.....",
+                              "author": "魔法少女退休生活",
+                              "play": 362,
+                              "date": "2025-06-12",
+                              "url": "https://www.bilibili.com/video/BV1V4TfzsE8T",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "Xiaomi Pad 7 Ultra线下初探（配置速报）",
+                              "author": "呆呆熊带你飞",
+                              "play": 345,
+                              "date": "2025-05-30",
+                              "url": "https://www.bilibili.com/video/BV1oF7WzHEeb",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "Xiaomi Pad 7 Ultra办公娱乐全部打满，自研芯片加持更有OLED好屏",
+                              "author": "科技Daily",
+                              "play": 338,
+                              "date": "2025-05-23",
+                              "url": "https://www.bilibili.com/video/BV1EsjpzpEaD",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "换「芯」的 Xiaomi Pad 7 Ultra 真那么强？",
+                              "author": "新宇华天",
+                              "play": 318,
+                              "date": "2025-05-24",
+                              "url": "https://www.bilibili.com/video/BV1zijbzuETk",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "Xiaomi Pad 7 Ultra首发评测！",
+                              "author": "科技领航梦想家",
+                              "play": 311,
+                              "date": "2025-10-13",
+                              "url": "https://www.bilibili.com/video/BV1W741zXE5M",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "小米平板7 Ultra平板电脑 Xiaomi Pad 7 Ultra小米平板官旗新品玄戒",
+                              "author": "TAO精选测评",
+                              "play": 185,
+                              "date": "2025-12-21",
+                              "url": "https://www.bilibili.com/video/BV16jqDBNEQU",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "小米pad7ultra背板出现污渍，集中在左右两侧，也是我经常拿的地方，完全擦不掉",
+                              "author": "快哄哄老子",
+                              "play": 180,
+                              "date": "2025-05-31",
+                              "url": "https://www.bilibili.com/video/BV1e17WzDEr5",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "xiaomi pad 7 ultra，《生而强大见证》  安卓  ”板王“ 的诞生，雷军：碉堡了",
+                              "author": "酥瑞思拜",
+                              "play": 116,
+                              "date": "2025-05-25",
+                              "url": "https://www.bilibili.com/video/BV1cijMzUE6m",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "小米Xiaomi Pad7 Ultra悬浮键盘，黑色款适配平板，办公打字超顺手",
+                              "author": "婧初的好物笔记",
+                              "play": 76,
+                              "date": "2025-08-30",
+                              "url": "https://www.bilibili.com/video/BV1EFhYznEsp",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "Xiaomi Pad 7 Ultra上手实测✅生产力神器 💥谁说平板只能追剧？Xiaomi Pad",
+                              "author": "阿童木分享好物",
+                              "play": 32,
+                              "date": "2025-10-15",
+                              "url": "https://www.bilibili.com/video/BV1Q24ezAELz",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "Xiaomi Pad 7 Ultra首发评测",
+                              "author": "必购",
+                              "play": 16,
+                              "date": "2025-10-25",
+                              "url": "https://www.bilibili.com/video/BV1fYsWz5EHc",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "Xiaomi Pad 7 Ultra",
+                              "author": "75830454023_bili",
+                              "play": 10,
+                              "date": "2025-08-11",
+                              "url": "https://www.bilibili.com/video/BV1S2tSzGEEJ",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "平板界的全能选手！Xiaomi Pad 7 Ultra",
+                              "author": "小云朵的百宝箱",
+                              "play": 7,
+                              "date": "2025-09-21",
+                              "url": "https://www.bilibili.com/video/BV13sWAzTEjw",
+                              "compare": false
+                        }
+                  ]
+            },
+            {
+                  "name": "Xiaomi Pad 7S Pro",
+                  "voices": [
+                        {
+                              "type": "video",
+                              "title": "【享拆】小米平板 7S Pro 12.5 拆解：壁垒正在逐步形成～",
+                              "author": "微机分WekiHome",
+                              "play": 298303,
+                              "date": "2025-06-19",
+                              "url": "https://www.bilibili.com/video/BV1mvNHziEo4",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "【大家测】Xiaomi Pad 7S Pro 12.5开箱测试 | 搭载玄戒O1芯片 主打轻薄体验 3.2K LCD屏幕",
+                              "author": "大家测",
+                              "play": 264526,
+                              "date": "2025-06-19",
+                              "url": "https://www.bilibili.com/video/BV1nwNJzHEzy",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "【评说】小米Pad 7S Pro，LCD+玄戒O1的大平板怎样？",
+                              "author": "评说",
+                              "play": 68640,
+                              "date": "2025-06-19",
+                              "url": "https://www.bilibili.com/video/BV156Nnz5EzT",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "小米平板 7S Pro 真实体验：媲美超大杯？",
+                              "author": "科技小辛",
+                              "play": 40245,
+                              "date": "2025-06-19",
+                              "url": "https://www.bilibili.com/video/BV16nNEzJEd6",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "小米 Xiaomi Pad 7S Pro~沉浸式开箱&amp;游戏实测～",
+                              "author": "BOXLITE-X",
+                              "play": 32266,
+                              "date": "2025-06-28",
+                              "url": "https://www.bilibili.com/video/BV1soKmz3E3w",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "小米 Pad 7S Pro 上手体验！ 自研的好处这不就来了！",
+                              "author": "数码热评站",
+                              "play": 21637,
+                              "date": "2025-08-01",
+                              "url": "https://www.bilibili.com/video/BV1r8h7zyEcB",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "「邦尼評測」扯！小米平板 7！大升級，價格還超香？Xiaomi Pad 7 Pro 開箱評測（3.2K 144Hz、台積電 8s Gen 3 奈米柔光螢幕 Xi",
+                              "author": "邦尼幫你",
+                              "play": 16984,
+                              "date": "2025-05-09",
+                              "url": "https://www.bilibili.com/video/BV1S955zCEZT",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "Xiaomi小米Pad 7S Pro 12.5充电评测：120W快充搭配10610mAh大电池，24分钟可充电50%",
+                              "author": "充电头网评测室",
+                              "play": 9424,
+                              "date": "2025-07-18",
+                              "url": "https://www.bilibili.com/video/BV1e9uyz4EJr",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "xiaomi pad 7uitra所搭载的玄戒O1或为残血版",
+                              "author": "云语y",
+                              "play": 7932,
+                              "date": "2025-05-20",
+                              "url": "https://www.bilibili.com/video/BV1zHJ8zEEd5",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "Xiaomi Pad 7S Pro沉浸式开箱游戏实测",
+                              "author": "尊贵的5位QQ用户",
+                              "play": 2468,
+                              "date": "2025-06-29",
+                              "url": "https://www.bilibili.com/video/BV1GSgZzhEQh",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "小米 Xiaomi Pad 7S Pro沉浸式开箱 ！",
+                              "author": "江湖浪客寻梦者",
+                              "play": 1440,
+                              "date": "2025-07-23",
+                              "url": "https://www.bilibili.com/video/BV1sc8cziEFX",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "替掉iPad承接好体验，Xiaomi Pad 7S Pro当真超能干？",
+                              "author": "科技Daily",
+                              "play": 1325,
+                              "date": "2025-06-19",
+                              "url": "https://www.bilibili.com/video/BV1kyNdztEnq",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "GRID Legends &amp; Xiaomi Pad 7s Pro 画质修改实测",
+                              "author": "II555",
+                              "play": 402,
+                              "date": "2025-08-01",
+                              "url": "https://www.bilibili.com/video/BV1tH8mzBExE",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "【多地国补】Xiaomi Pad 7S Pro 办公 娱乐 学习平板#小米pad7spro #数码产品 #平板电脑 #数码 #手机数码",
+                              "author": "大文好物推荐",
+                              "play": 201,
+                              "date": "2025-12-05",
+                              "url": "https://www.bilibili.com/video/BV1LX2VBEEfK",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "Xiaomi Pad 7S Pro 12.5小米平板7S Pro平板电脑小米平板",
+                              "author": "TAO精选测评",
+                              "play": 27,
+                              "date": "2025-12-21",
+                              "url": "https://www.bilibili.com/video/BV1tcqDBLEvQ",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "Xiaomi Pad 7S Pro震撼登场，新一代平板引领潮",
+                              "author": "星空泥石流",
+                              "play": 3,
+                              "date": "2025-09-04",
+                              "url": "https://www.bilibili.com/video/BV1VbaSzbEqg",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "【多地国补】Xiaomi Pad 7S Pro 办公 娱乐 学习平板#小米pad7spro #手机数码 #数码产品 #平板电脑 #平板",
+                              "author": "小冉95",
+                              "play": 0,
+                              "date": "2025-12-06",
+                              "url": "https://www.bilibili.com/video/BV1ro2HB2EQc",
+                              "compare": false
+                        }
+                  ]
+            },
+            {
+                  "name": "REDMI Pad 2 Pro",
+                  "voices": [
+                        {
+                              "type": "video",
+                              "title": "【大家测】入门平板 REDMI Pad 2 Pro开箱体验 | 12000mAh巨无霸电池",
+                              "author": "大家测",
+                              "play": 178017,
+                              "date": "2026-01-29",
+                              "url": "https://www.bilibili.com/video/BV1HW6FBMERy",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "红米REDMI Pad 2 Pro千元平板离谱苹果Mac配件",
+                              "author": "老张是大佬",
+                              "play": 87623,
+                              "date": "2026-01-29",
+                              "url": "https://www.bilibili.com/video/BV1cA6MBREaA",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "苹果用户：冲我来的？千元平板 红米REDMI Pad 2 Pro体验",
+                              "author": "刘钚冷",
+                              "play": 30479,
+                              "date": "2026-03-13",
+                              "url": "https://www.bilibili.com/video/BV1JGcQzFEbp",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "REDMI Pad 2 Pro平板电脑的优缺点解析， 红米Pad 2 Pro平板电脑怎么样，小米REDMI Pad 2 Pro平板值不值得买？",
+                              "author": "梦之长安",
+                              "play": 23645,
+                              "date": "2026-01-31",
+                              "url": "https://www.bilibili.com/video/BV1CE6nBwExA",
+                              "compare": true
+                        },
+                        {
+                              "type": "video",
+                              "title": "红米 Pad 2 Pro 简单开箱",
+                              "author": "小王搞机v",
+                              "play": 16700,
+                              "date": "2026-01-31",
+                              "url": "https://www.bilibili.com/video/BV1gg61ByEKg",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "千元档学习神器！REDMI Pad 2 Pro真实体验",
+                              "author": "科技小辛",
+                              "play": 10757,
+                              "date": "2026-01-29",
+                              "url": "https://www.bilibili.com/video/BV1z2zfBYEZR",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "重度游戏我选红米k Pad2",
+                              "author": "热爱数码的小魏w",
+                              "play": 1813,
+                              "date": "2026-07-28",
+                              "url": "https://www.bilibili.com/video/BV1wr3F6vEfn",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "关于红米Pad2pro的热门问题，这个视频全包括了#红米pad2pro #REDMI#新年货新年价",
+                              "author": "壤鸵不谛Vu7",
+                              "play": 386,
+                              "date": "2026-07-21",
+                              "url": "https://www.bilibili.com/video/BV1pNKx64EMv",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "红米Pad Pro骁龙7SGEN2 16+256运行变形金刚:塞博坦陨落",
+                              "author": "晓齐R",
+                              "play": 164,
+                              "date": "2026-08-06",
+                              "url": "https://www.bilibili.com/video/BV14uun6FEbm",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "米米 8Gen2 设备一键解锁工具！使用 Xiaomi Pad 6S Pro 演示",
+                              "author": "岚天呀",
+                              "play": 113,
+                              "date": "2026-08-12",
+                              "url": "https://www.bilibili.com/video/BV1NLuC6sEiS",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "REDMI pad 2 pro全网最快沉浸开箱#REDMIpad2pro #小米 #红米 #pad",
+                              "author": "库里波救我O",
+                              "play": 52,
+                              "date": "2026-08-05",
+                              "url": "https://www.bilibili.com/video/BV1a1Mz6WEsk",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "小米 Redmi Pad 2 Pro 平板电脑 8GB+256GB 银色",
+                              "author": "数码小桃",
+                              "play": 12,
+                              "date": "2026-08-07",
+                              "url": "https://www.bilibili.com/video/BV1n3ux6PEYp",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "【新品上市】REDMI Pad 2 Pro 12.1英寸 2.5K 学习 娱乐 红米平板",
+                              "author": "腥孤嗽秘Xm9",
+                              "play": 4,
+                              "date": "2026-08-10",
+                              "url": "https://www.bilibili.com/video/BV1YouQ6tEFX",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "小米 Redmi Pad 2 Pro 平板电脑 8GB+256GB 银色",
+                              "author": "数码小希",
+                              "play": 4,
+                              "date": "2026-08-02",
+                              "url": "https://www.bilibili.com/video/BV1XZ3X6eEus",
+                              "compare": false
+                        }
+                  ]
+            },
+            {
+                  "name": "Xiaomi Pad 8",
+                  "voices": [
+                        {
+                              "type": "video",
+                              "title": "小米Pad 8 让我想起了一位故人！",
+                              "author": "我是HYK",
+                              "play": 168405,
+                              "date": "2025-09-19",
+                              "url": "https://www.bilibili.com/video/BV1uyW3zxEyE",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "小米平板8上手测评：性能大升级，值得买吗？",
+                              "author": "且听Phone吟",
+                              "play": 63734,
+                              "date": "2025-09-19",
+                              "url": "https://www.bilibili.com/video/BV1otW3zKEUv",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "小米 Pad 8～沉浸式开箱&amp;游戏实测～",
+                              "author": "BOXLITE-X",
+                              "play": 39951,
+                              "date": "2025-09-27",
+                              "url": "https://www.bilibili.com/video/BV1jBnJzDEDZ",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "小米Pad 8体验分享 出厂就是Xiaomi HyperOS 3",
+                              "author": "瓦力评测",
+                              "play": 33553,
+                              "date": "2025-09-19",
+                              "url": "https://www.bilibili.com/video/BV1UUWVz8Ej3",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "小米平板8和小米平板7 Pro怎么选？小米新款平板值不值得入手，参数对比",
+                              "author": "奉仙数码",
+                              "play": 21519,
+                              "date": "2025-09-29",
+                              "url": "https://www.bilibili.com/video/BV1WanqzUEoW",
+                              "compare": true
+                        },
+                        {
+                              "type": "video",
+                              "title": "小米平板8选标准版还是Pro？看完秒懂，别花冤枉钱！",
+                              "author": "时空操控师的你",
+                              "play": 17016,
+                              "date": "2025-10-27",
+                              "url": "https://www.bilibili.com/video/BV19ms2zPELj",
+                              "compare": true
+                        },
+                        {
+                              "type": "video",
+                              "title": "小米平板8标准版真实体验，值得买吗？",
+                              "author": "电器科技点亮未来",
+                              "play": 9567,
+                              "date": "2025-11-05",
+                              "url": "https://www.bilibili.com/video/BV1u61sBwEsH",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "小米平板Pad8 优点和缺点解读，小米平板8 怎么样，适合哪些人群，小米Pad8 值得入手吗？",
+                              "author": "叁哥说",
+                              "play": 9155,
+                              "date": "2025-09-30",
+                              "url": "https://www.bilibili.com/video/BV11Sn1zuEx8",
+                              "compare": true
+                        }
+                  ]
+            },
+            {
+                  "name": "REDMI K Pad",
+                  "voices": [
+                        {
+                              "type": "video",
+                              "title": "红米K Pad &amp; K80 至尊版上手体验：天玑9400+小平板和大手机表现如何？",
+                              "author": "极客湾Geekerwan",
+                              "play": 1229596,
+                              "date": "2025-06-19",
+                              "url": "https://www.bilibili.com/video/BV1iwN4zeEUo",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "【大家测】iPad mini平替？REDMI K Pad 小平板开箱体验 | 双C口扩展多玩法 3K LCD屏幕+165Hz刷新率 旗舰天玑9400+处理器",
+                              "author": "大家测",
+                              "play": 593138,
+                              "date": "2025-06-19",
+                              "url": "https://www.bilibili.com/video/BV1ToNpz3EH3",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "【享拆】REDMI K Pad 拆解：一次性牙膏挤爆？",
+                              "author": "微机分WekiHome",
+                              "play": 561378,
+                              "date": "2025-06-19",
+                              "url": "https://www.bilibili.com/video/BV1YSNsz9EyL",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "红米首个小平板K Pad，真的适合打游戏吗？",
+                              "author": "穷评",
+                              "play": 284447,
+                              "date": "2025-07-05",
+                              "url": "https://www.bilibili.com/video/BV1ya3RzgERG",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "【云飞首发】REDMI K Pad 详细测评，红米小屏旗舰平板能打过iPad mini 吗？",
+                              "author": "摄影师云飞",
+                              "play": 273737,
+                              "date": "2025-06-19",
+                              "url": "https://www.bilibili.com/video/BV1fZNxzTE1h",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "暴打iPad mini？REDMI K Pad到底有多强",
+                              "author": "科技小辛",
+                              "play": 190267,
+                              "date": "2025-06-19",
+                              "url": "https://www.bilibili.com/video/BV1eQN7zuEzH",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "到底谁狂暴？红米 K Pad 评测 vs iPad mini 7、Y700 四代 | 大米评测",
+                              "author": "大米评测",
+                              "play": 186873,
+                              "date": "2025-07-26",
+                              "url": "https://www.bilibili.com/video/BV1wi84zBEs3",
+                              "compare": true
+                        },
+                        {
+                              "type": "video",
+                              "title": "红米 K Pad游戏测试来啦，快来看看玩吃鸡能稳定流畅120帧呗？",
+                              "author": "喂驴来了",
+                              "play": 138977,
+                              "date": "2025-06-28",
+                              "url": "https://www.bilibili.com/video/BV1noK1zYEoE",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "REDMI K Pad深度体验：KO我们自己",
+                              "author": "机太美JTM",
+                              "play": 137331,
+                              "date": "2025-10-01",
+                              "url": "https://www.bilibili.com/video/BV1d3HpzfEoa",
+                              "compare": false
+                        }
+                  ]
+            },
+            {
+                  "name": "REDMI Pad 2",
+                  "voices": [
+                        {
+                              "type": "video",
+                              "title": "【大家测】999元起售 REDMI Pad 2开箱体验 学习机市场的新成员 做你的学习好搭子",
+                              "author": "大家测",
+                              "play": 91705,
+                              "date": "2025-08-22",
+                              "url": "https://www.bilibili.com/video/BV13jYfzpEQ4",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "REDMI Pad 2~沉浸式开箱&amp;游戏实测～",
+                              "author": "BOXLITE-X",
+                              "play": 50862,
+                              "date": "2025-08-07",
+                              "url": "https://www.bilibili.com/video/BV1TgtBzMExn",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "小米REDMI Pad 2平板电脑优点与缺点介绍，REDMIPad2怎么样，红米平板2值得入手吗？",
+                              "author": "小新侃数码",
+                              "play": 26674,
+                              "date": "2025-08-01",
+                              "url": "https://www.bilibili.com/video/BV176hJz1EsL",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "Redmi Pad 2 评测",
+                              "author": "老实人们在搬运",
+                              "play": 17791,
+                              "date": "2025-06-28",
+                              "url": "https://www.bilibili.com/video/BV1R2KyznEfQ",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "红米REDMI Pad 2好不好用？配置如何？优缺点+入手建议！",
+                              "author": "大C评测",
+                              "play": 12813,
+                              "date": "2025-08-08",
+                              "url": "https://www.bilibili.com/video/BV135t2zqECG",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "Redmi Pad 2正式开售！999元性价比天花板？简单聊一下！",
+                              "author": "白鹭说数码",
+                              "play": 12776,
+                              "date": "2025-08-15",
+                              "url": "https://www.bilibili.com/video/BV13KbxzjEbx",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "红米REDMI Pad 2优缺点评测，REDMIPad2怎么样，红米平板2值得入手吗？",
+                              "author": "大白讲数码",
+                              "play": 8231,
+                              "date": "2025-08-01",
+                              "url": "https://www.bilibili.com/video/BV1r8h7zyE3n",
+                              "compare": false
+                        }
+                  ]
+            }
+      ],
       "report": null
     },
     "oppo": {
-      "products": [],
+      "products": [
+            {
+                  "name": "OPPO Pad 5 Pro",
+                  "voices": [
+                        {
+                              "type": "video",
+                              "title": "大平板是工作，小平板是生活！OPPO Pad Mini &amp; OPPO Pad 5 Pro首发体验",
+                              "author": "大狸子切切里",
+                              "play": 2162996,
+                              "date": "2026-04-16",
+                              "url": "https://www.bilibili.com/video/BV1hQdhB5EKa",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "「小白」OPPO Pad 5 Pro&amp;Pad Mini全面测评：娱乐办公全都要！",
+                              "author": "小白测评",
+                              "play": 2036787,
+                              "date": "2026-04-16",
+                              "url": "https://www.bilibili.com/video/BV15CdhBSEn2",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "OPPO 平板最新出的 OPPO Pad 6 、OPPO Pad5 Pro、OPPO Pad Mini ，学习/办公/娱乐，哪款更适合你？",
+                              "author": "神奇的冯不悔",
+                              "play": 165240,
+                              "date": "2026-05-27",
+                              "url": "https://www.bilibili.com/video/BV1ZHG26oEsh",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "一台平板的生产力竟和PC旗鼓相当？OPPO Pad 5 Pro使用体验分享",
+                              "author": "玩机体验派",
+                              "play": 151313,
+                              "date": "2026-08-08",
+                              "url": "https://www.bilibili.com/video/BV1dTub6YEwu",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "太离谱了⚡现在的大世界游戏 这么逆天了？",
+                              "author": "你好呀桃生",
+                              "play": 127516,
+                              "date": "2026-08-02",
+                              "url": "https://www.bilibili.com/video/BV1KY3R6bEu7",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "【7月平板推荐】暑假选机必看！800-5000元全价位指南，中高考毕业生专属",
+                              "author": "科技风暴X",
+                              "play": 107888,
+                              "date": "2026-07-08",
+                              "url": "https://www.bilibili.com/video/BV1BKM367ENL",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "OPPO平板 学生党+打工人 选购指南！OPPO Pad Mini &amp; Pad 5 Pro &amp; Pad 6",
+                              "author": "无双评测_Charles",
+                              "play": 85641,
+                              "date": "2026-06-16",
+                              "url": "https://www.bilibili.com/video/BV1JmjG62EUW",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "再见了，所有的空月之歌！挪德卡莱一整年的革新内容评价，由夯到拉！哪个是你的最爱？",
+                              "author": "多洛塔塔",
+                              "play": 69814,
+                              "date": "2026-08-11",
+                              "url": "https://www.bilibili.com/video/BV1gvuq67EKq",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "7.0卡池抽取+原石规划！奥黛塔值得抽吗？免费命座怎么选？后续原石福利全汇总",
+                              "author": "绝云丘丘",
+                              "play": 69676,
+                              "date": "2026-08-10",
+                              "url": "https://www.bilibili.com/video/BV1eruR6KEtQ",
+                              "compare": true
+                        },
+                        {
+                              "type": "video",
+                              "title": "【大家测】PC级平板 OPPO Pad 5 Pro开箱测试 | 13.2英寸3.4K LCD屏幕 13380mAh超大电池",
+                              "author": "大家测",
+                              "play": 68471,
+                              "date": "2026-04-20",
+                              "url": "https://www.bilibili.com/video/BV1XPoNB5Edx",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "安卓板皇OPPO Pad5 Pro上手体验！办公娱乐我都要！",
+                              "author": "小J体验馆",
+                              "play": 51371,
+                              "date": "2026-07-22",
+                              "url": "https://www.bilibili.com/video/BV1yigz67Ekx",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "专业生产力！OPPO Pad 5 Pro深度体验：绝不是大号手机！",
+                              "author": "克里体验",
+                              "play": 44709,
+                              "date": "2026-04-27",
+                              "url": "https://www.bilibili.com/video/BV1qworBHEhL",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "OPPO Pad 5 Pro 一次索然无味的迭代",
+                              "author": "感觉测评_Zooe",
+                              "play": 36357,
+                              "date": "2026-04-22",
+                              "url": "https://www.bilibili.com/video/BV1g4opBWEV5",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "一个平板三种形态？是平板也是电脑，还是扩展屏！",
+                              "author": "熊小白玩数码",
+                              "play": 25968,
+                              "date": "2026-07-17",
+                              "url": "https://www.bilibili.com/video/BV11uKn6EE73",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "把平板当电脑用！PC级办公+游戏，到底靠谱吗？",
+                              "author": "熊小白玩数码",
+                              "play": 8926,
+                              "date": "2026-07-03",
+                              "url": "https://www.bilibili.com/video/BV1DBT462ESq",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "OPPO Pad 5 Pro使用体验",
+                              "author": "搞机Ultra",
+                              "play": 8224,
+                              "date": "2026-06-01",
+                              "url": "https://www.bilibili.com/video/BV121VR6TEvw",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "夏天玩游戏OPPO Pad 5 Pro散热扛不扛得住？",
+                              "author": "小城测评",
+                              "play": 2395,
+                              "date": "2026-07-17",
+                              "url": "https://www.bilibili.com/video/BV1nLNd6MEno",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "联想拯救者Y700五代改oppoPad5pro系统，和平精英游戏帧率表现如何？  联想拯救.....",
+                              "author": "xjuriq51941",
+                              "play": 1750,
+                              "date": "2026-07-08",
+                              "url": "https://www.bilibili.com/video/BV1JrMe6QE7u",
+                              "compare": true
+                        },
+                        {
+                              "type": "video",
+                              "title": "盘点2000价位最强平板，详细对比参数情况，看看哪款最值得入手 #荣耀magicpad3 #小米平板8 #荣耀平板gt2pro #oppopad5",
+                              "author": "不知名小果数码版",
+                              "play": 1623,
+                              "date": "2026-07-03",
+                              "url": "https://www.bilibili.com/video/BV1jTTt6oErh",
+                              "compare": true
+                        },
+                        {
+                              "type": "video",
+                              "title": "OPPOpad5Pro第五人格实战表现第五代骁龙8至尊",
+                              "author": "那里啊了吧",
+                              "play": 1343,
+                              "date": "2026-07-10",
+                              "url": "https://www.bilibili.com/video/BV1AkN76KEx5",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "2026安卓旗舰平板能扛起轻中度办公了吗？ OPPO Pad 5 Pro自用2个月体验",
+                              "author": "黑氪的科技圈",
+                              "play": 1295,
+                              "date": "2026-07-24",
+                              "url": "https://www.bilibili.com/video/BV1kxgb65EWS",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "最流畅的安卓平板是它？我们对比了三台超大平板#平板#oppo#oppopad5pro#性能-7629654955741302054 (1)",
+                              "author": "ifjvcoowqcmg",
+                              "play": 1268,
+                              "date": "2026-07-31",
+                              "url": "https://www.bilibili.com/video/BV1YXGw6ZEF9",
+                              "compare": true
+                        },
+                        {
+                              "type": "video",
+                              "title": "3.5鸣潮实测OPPO Pad5 Pro骁龙八E5（卡顿并且发热）",
+                              "author": "那里啊了吧",
+                              "play": 1221,
+                              "date": "2026-07-20",
+                              "url": "https://www.bilibili.com/video/BV1d4KC6NEDn",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "拿到 OPPO Pad 5 Pro 了！是不是有点太丝滑了 #oppo #平板 #oppopad5pro #生产力",
+                              "author": "giyrjc543027",
+                              "play": 1196,
+                              "date": "2026-07-09",
+                              "url": "https://www.bilibili.com/video/BV1aCM56UEwz",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "深度体验一个月的OPPO Pad5 Pro，不愧是安卓版皇",
+                              "author": "小俞数码",
+                              "play": 991,
+                              "date": "2026-07-18",
+                              "url": "https://www.bilibili.com/video/BV1HsKw6xE7E",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "写稿、剪片、改PPT，OPPO Pad 5 Pro不开电脑也可以办公了",
+                              "author": "小城测评",
+                              "play": 921,
+                              "date": "2026-07-28",
+                              "url": "https://www.bilibili.com/video/BV1nY3q6iEhT",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "OPPO Pad 5 Pro游戏必调设置！体验直接翻倍",
+                              "author": "九五科技",
+                              "play": 841,
+                              "date": "2026-07-25",
+                              "url": "https://www.bilibili.com/video/BV1Xj3u6kExw",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "OPPO Pad 5 Pro大屏 &amp; Pad Mini小屏，该怎么选？各有侧重点，看完你就懂了",
+                              "author": "康pad",
+                              "play": 770,
+                              "date": "2026-07-11",
+                              "url": "https://www.bilibili.com/video/BV1VMNw6GE73",
+                              "compare": true
+                        },
+                        {
+                              "type": "video",
+                              "title": "实话实说！主打游戏追剧，OPPO Pad 5 Pro体验到底咋样？",
+                              "author": "小黄同学一",
+                              "play": 757,
+                              "date": "2026-07-31",
+                              "url": "https://www.bilibili.com/video/BV12N3h68Eqr",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "一个视频告诉你OPPOPad5和Pad4Pro该怎么选？#oppopad5#oppo平板#oppo双十一省心狂补节#孙颖莎同款OPPO平板#平板电脑-75625",
+                              "author": "v58230801",
+                              "play": 749,
+                              "date": "2026-07-16",
+                              "url": "https://www.bilibili.com/video/BV17CKM6qEH7",
+                              "compare": true
+                        },
+                        {
+                              "type": "video",
+                              "title": "一个视频告诉你OPPOPad5和Pad4Pro该怎么选？#oppopad5#oppo平板#oppo双十一省心狂补节#孙颖莎同款OPPO平板#平板电脑-75625",
+                              "author": "潞钥拷品Sz4",
+                              "play": 627,
+                              "date": "2026-08-04",
+                              "url": "https://www.bilibili.com/video/BV1W6uc6TEmM",
+                              "compare": true
+                        },
+                        {
+                              "type": "video",
+                              "title": "一个视频告诉你OPPOPad5和Pad4Pro该怎么选？#oppopad5#oppo平板#oppo双十一省心狂补节#孙颖莎同款OPPO平板#平板电脑-75625",
+                              "author": "岗榷百堂Uc7",
+                              "play": 622,
+                              "date": "2026-07-24",
+                              "url": "https://www.bilibili.com/video/BV1dcgh6uEub",
+                              "compare": true
+                        },
+                        {
+                              "type": "video",
+                              "title": "选的省，也要选的准，准大学生暑期平板选购指南",
+                              "author": "黑氪的科技圈",
+                              "play": 587,
+                              "date": "2026-07-14",
+                              "url": "https://www.bilibili.com/video/BV1AFNb6eE96",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "OPPO Pad 5 Pro游戏表现如何？重负载硬核实测来了",
+                              "author": "小孟科技",
+                              "play": 575,
+                              "date": "2026-07-09",
+                              "url": "https://www.bilibili.com/video/BV1h2Mj6sEAP",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "一条视频讲清楚OPPO三款新平板到底怎么选择",
+                              "author": "小希聊数码",
+                              "play": 544,
+                              "date": "2026-07-28",
+                              "url": "https://www.bilibili.com/video/BV1Rn3i69E2z",
+                              "compare": true
+                        },
+                        {
+                              "type": "video",
+                              "title": "OPPO Pad 3 Pro外屏爆裂能不能更换显示触摸完好就可以",
+                              "author": "志毅数码",
+                              "play": 510,
+                              "date": "2026-07-20",
+                              "url": "https://www.bilibili.com/video/BV1GcKm6zEzU",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "OPPOpad5Pro精美1.0渔女实战",
+                              "author": "那里啊了吧",
+                              "play": 496,
+                              "date": "2026-07-23",
+                              "url": "https://www.bilibili.com/video/BV1jMgU6tEf7",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "OPPO Pad 5 Pro点评大反馈，说真心话",
+                              "author": "春花时雨",
+                              "play": 444,
+                              "date": "2026-07-04",
+                              "url": "https://www.bilibili.com/video/BV1nTMP6YEFN",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "OPPO Pad 5 Pro这几个隐藏游戏小技巧一定不要错过",
+                              "author": "小俞数码",
+                              "play": 421,
+                              "date": "2026-07-23",
+                              "url": "https://www.bilibili.com/video/BV1QKgQ6sEgY",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "OPPO Pad 6、Pad 5Pro、Mini,这三款OPPO大小平板到底怎么选？",
+                              "author": "觅光数码",
+                              "play": 416,
+                              "date": "2026-08-01",
+                              "url": "https://www.bilibili.com/video/BV1zQGg6hEaR",
+                              "compare": true
+                        },
+                        {
+                              "type": "video",
+                              "title": "OPPO这两款平板该怎么选？ OPPOPad6  OPPOPad5Pro  OPPO40瓦散热器",
+                              "author": "vbkgkl81243",
+                              "play": 387,
+                              "date": "2026-07-14",
+                              "url": "https://www.bilibili.com/video/BV18DNX6mE2Y",
+                              "compare": true
+                        },
+                        {
+                              "type": "video",
+                              "title": "拥有类PC级生产力的OPPO Pad 5 Pro究竟怎么样？我来带大家体验一下！",
+                              "author": "青水数码",
+                              "play": 309,
+                              "date": "2026-07-31",
+                              "url": "https://www.bilibili.com/video/BV1v9GK6CEXw",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "用OPPO Pad 5 Pro已经大半个月没开电脑了，它到底凭啥让我笔记本吃灰？",
+                              "author": "小黄同学一",
+                              "play": 243,
+                              "date": "2026-07-31",
+                              "url": "https://www.bilibili.com/video/BV1xN3h68EZB",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "自用三个月，OPPO Pad 5Pro说点真心话！",
+                              "author": "许小姐驾到",
+                              "play": 175,
+                              "date": "2026-07-20",
+                              "url": "https://www.bilibili.com/video/BV1obKp6VE1C",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "2025年三款闭眼入平板推荐！#oppo#oppopad5#小米pad8pro#vivopad5Pro-7579564647594954036",
+                              "author": "大V他让他",
+                              "play": 174,
+                              "date": "2026-08-11",
+                              "url": "https://www.bilibili.com/video/BV1youa6dECy",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "【Phigros测试】OPPO Pad5 Pro",
+                              "author": "竹子Bamboo11",
+                              "play": 168,
+                              "date": "2026-07-31",
+                              "url": "https://www.bilibili.com/video/BV1DZGP6AEQ6",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "OPPO大平板和小平板就这么选准没错！",
+                              "author": "小希聊数码",
+                              "play": 144,
+                              "date": "2026-07-13",
+                              "url": "https://www.bilibili.com/video/BV14CNy6JEVL",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "深度体验OPPO Pad 5 Pro，最贴合PC平替的安卓大屏平板",
+                              "author": "小黄同学一",
+                              "play": 131,
+                              "date": "2026-07-31",
+                              "url": "https://www.bilibili.com/video/BV1yu3h6oEQW",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "【35980147】最新视频上线，求关注！",
+                              "author": "35980147",
+                              "play": 130,
+                              "date": "2026-08-08",
+                              "url": "https://www.bilibili.com/video/BV1ihuu6LEyT",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "289块钱的OPPO Pad 5 Pro，自从摆在书桌上以后，我宅家的时长明显增加了----ETEWTGERTGRDYGHDTY",
+                              "author": "bili_97161629",
+                              "play": 101,
+                              "date": "2026-07-16",
+                              "url": "https://www.bilibili.com/video/BV13AKV63EbD",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "OPPO Pad Mini &amp; OPPO Pad 5 Pro 体验：安卓板皇双子星，选大选小？#oppopad5pro #oppopadmini #抖音精选 #",
+                              "author": "寄海w",
+                              "play": 40,
+                              "date": "2026-07-07",
+                              "url": "https://www.bilibili.com/video/BV1VyMt6xEgB",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "OPPO Pad Mini &amp; OPPO Pad 5 Pro 体验：安卓板皇双子星，选大选小？#oppopad5pro #oppopadmini #抖音精选 #",
+                              "author": "嘉柚好物推荐",
+                              "play": 32,
+                              "date": "2026-08-10",
+                              "url": "https://www.bilibili.com/video/BV13euD6sEXi",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "即是生产力工具，又是娱乐神器，OPPO Pad 5 Pro就是一台全能旗舰平板",
+                              "author": "库里波救我O",
+                              "play": 30,
+                              "date": "2026-08-10",
+                              "url": "https://www.bilibili.com/video/BV1HguU6AEVy",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "平板也能有PC端体验，就选OPPO Pad 5 Pro。#oppopad5pro 新代#coloros16",
+                              "author": "沈国LGD",
+                              "play": 19,
+                              "date": "2026-08-12",
+                              "url": "https://www.bilibili.com/video/BV1juuk6zEPB",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "OPPO Pad 5 Pro测评 1156073175",
+                              "author": "小莫测评分享江江真",
+                              "play": 16,
+                              "date": "2026-07-02",
+                              "url": "https://www.bilibili.com/video/BV1u2T76nEpx",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "OPPO Pad Mini &amp; Pad 5 Pro首发体验 盼了好久的绿厂小平板终于出来了，体验到底怎么样？大平板加上悬浮键盘，更有内味了。#科技 #OPPOP",
+                              "author": "逞贸妊蹿Dh6",
+                              "play": 10,
+                              "date": "2026-08-12",
+                              "url": "https://www.bilibili.com/video/BV17Kuk6rEbA",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "轻办公首选！OPPO Pad 5 Pro真实使用感受分享",
+                              "author": "即嫉睬蓝En0",
+                              "play": 8,
+                              "date": "2026-08-07",
+                              "url": "https://www.bilibili.com/video/BV19xux6XErP",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "平板能代替笔记本吗？OPPO Pad 5 Pro体验实测 打工人轻办公，平板能代替笔记本吗？OPPO Pad 5 Pro深度实测#oppopad5pro #OP",
+                              "author": "即嫉睬蓝En0",
+                              "play": 7,
+                              "date": "2026-08-07",
+                              "url": "https://www.bilibili.com/video/BV1Rxux6XEBb",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "OPPO Pad 5 Pro体验：5点创作变化和不足之处",
+                              "author": "风禾好物推荐",
+                              "play": 2,
+                              "date": "2026-08-06",
+                              "url": "https://www.bilibili.com/video/BV1mxuJ6bEbS",
+                              "compare": false
+                        }
+                  ]
+            },
+            {
+                  "name": "OPPO Pad Mini",
+                  "voices": [
+                        {
+                              "type": "video",
+                              "title": "OPPO Pad Mini，想去哪就去哪！",
+                              "author": "妮可厅长",
+                              "play": 1443696,
+                              "date": "2026-04-16",
+                              "url": "https://www.bilibili.com/video/BV1mjdhBMEd5",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "完蛋，我被小平板绑架了！OPPO Pad Mini 深度体验",
+                              "author": "搞机所",
+                              "play": 304932,
+                              "date": "2026-05-15",
+                              "url": "https://www.bilibili.com/video/BV1jB5v6NEzb",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "小平板该怎么选？华为 MatePad Mini、OPPO Pad Mini、红米 K Pad 2 选购建议",
+                              "author": "请不要叫我测评君",
+                              "play": 212574,
+                              "date": "2026-07-29",
+                              "url": "https://www.bilibili.com/video/BV1DH3C6TEzo",
+                              "compare": true
+                        },
+                        {
+                              "type": "video",
+                              "title": "【大家测】小平板OPPO Pad Mini开箱体验对比市面热门小平板 | 单手握持 144Hz刷新率 完爆隔壁友商？",
+                              "author": "大家测",
+                              "play": 210802,
+                              "date": "2026-04-16",
+                              "url": "https://www.bilibili.com/video/BV1YwdhBUEDq",
+                              "compare": true
+                        },
+                        {
+                              "type": "video",
+                              "title": "OPPO Pad Mini游戏测试来啦，玩吃鸡能稳定流畅144帧吗",
+                              "author": "喂驴来了",
+                              "play": 194051,
+                              "date": "2026-05-03",
+                              "url": "https://www.bilibili.com/video/BV1deRFBhEvu",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "「买前必看」OPPOPadMini一个月深度使用体验|对比华为mini|购买建议",
+                              "author": "随意评测",
+                              "play": 143266,
+                              "date": "2026-06-07",
+                              "url": "https://www.bilibili.com/video/BV14gEH6DEP2",
+                              "compare": true
+                        },
+                        {
+                              "type": "video",
+                              "title": "安卓小平板大战！OPPO Pad mini  vs  红米 K Pad 2  | 大米评测",
+                              "author": "大米评测",
+                              "play": 96555,
+                              "date": "2026-08-08",
+                              "url": "https://www.bilibili.com/video/BV15nuG6SEdB",
+                              "compare": true
+                        },
+                        {
+                              "type": "video",
+                              "title": "两款OPPO Pad测评 Pro VS Mini怎么选？",
+                              "author": "小控sync",
+                              "play": 61974,
+                              "date": "2026-08-06",
+                              "url": "https://www.bilibili.com/video/BV1M1uE6oE1W",
+                              "compare": true
+                        },
+                        {
+                              "type": "video",
+                              "title": "OPPO Pad Mini的拆解它来啦！能干翻iPad mini吗！跟华为小米红魔的小平板怎么选？ OPPO Pad 3 Pro",
+                              "author": "瓜哥说手机",
+                              "play": 51086,
+                              "date": "2026-05-23",
+                              "url": "https://www.bilibili.com/video/BV14TGq6jEcK",
+                              "compare": true
+                        },
+                        {
+                              "type": "video",
+                              "title": "信他们说话这辈子有了 OPPO Pad Mini 柔光版蓝光频闪极速测试！",
+                              "author": "全是干货的大胖鸽",
+                              "play": 34193,
+                              "date": "2026-05-08",
+                              "url": "https://www.bilibili.com/video/BV16Ld3BTEAe",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "优点很猛 缺点很迷！OPPO Pad Mini的真实体验（附购买建议）",
+                              "author": "爱好比钱多",
+                              "play": 29555,
+                              "date": "2026-05-19",
+                              "url": "https://www.bilibili.com/video/BV1QzLq6NEfv",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "开学换新机怎么选？5款高性价比手机平板实测体验",
+                              "author": "猪猪猪猪里脊",
+                              "play": 9838,
+                              "date": "2026-08-08",
+                              "url": "https://www.bilibili.com/video/BV1WUuN67EpH",
+                              "compare": true
+                        }
+                  ]
+            },
+            {
+                  "name": "OPPO Pad 5",
+                  "voices": [
+                        {
+                              "type": "video",
+                              "title": "OPPO Pad 该怎么选？一期视频告诉你！「Air5、Pad 5、Pad 4 Pro评测」",
+                              "author": "科技阁",
+                              "play": 257099,
+                              "date": "2026-03-28",
+                              "url": "https://www.bilibili.com/video/BV1qvXgB9EPq",
+                              "compare": true
+                        },
+                        {
+                              "type": "video",
+                              "title": "就小平板不配用LCD和好芯片？OPPO Pad 5Pro蓝光频闪极速测试！",
+                              "author": "全是干货的大胖鸽",
+                              "play": 17346,
+                              "date": "2026-04-30",
+                              "url": "https://www.bilibili.com/video/BV1Nk96BsE7o",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "依旧大号手机？一加平板2使用体验报告（体验适用于oppopad5和pad6）",
+                              "author": "品机者",
+                              "play": 4052,
+                              "date": "2026-08-08",
+                              "url": "https://www.bilibili.com/video/BV1KTut6yEKo",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "兼顾绘画、办公、娱乐的oppo平板",
+                              "author": "李程ART",
+                              "play": 278,
+                              "date": "2026-08-08",
+                              "url": "https://www.bilibili.com/video/BV1npuu6QEgm",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "【OPPO Pad 5 推荐】孙颖莎同款旗舰平板｜国家补贴12.1英寸高性能学习办公神器｜天玑9400+旗舰芯｜12GB+256GB｜星河银配色｜轻薄游戏影音全",
+                              "author": "精选种草日记",
+                              "play": 96,
+                              "date": "2026-08-04",
+                              "url": "https://www.bilibili.com/video/BV1Q63d6kEzm",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "2000档安卓全能板王流畅得不像标准版#oppopad5#oppo平板#效率神器平板推荐#内存涨价#手机涨价-7619202980709446257",
+                              "author": "bili_3706953299659320",
+                              "play": 52,
+                              "date": "2026-08-08",
+                              "url": "https://www.bilibili.com/video/BV1YBuu6rEcz",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "【学生党高性价比推荐】OPPO Pad 5｜12.1英寸3K超清屏＋天玑9400旗舰芯｜学习办公娱乐全能平板｜星河银配色｜8GB+256GB",
+                              "author": "极简精品测评",
+                              "play": 22,
+                              "date": "2026-08-04",
+                              "url": "https://www.bilibili.com/video/BV1An3d64EMm",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "护眼无反光，新学期生产力，OPPOPad5趁涨价前赶紧冲#oppopad5#oppo平板#效率神器平板推荐#内存涨价#学生平板推荐-76217369560544",
+                              "author": "欠幸渍焊Fv5",
+                              "play": 20,
+                              "date": "2026-08-08",
+                              "url": "https://www.bilibili.com/video/BV1xeug6AEa2",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "OPPOPad5已上手体验来看看有什么惊喜吧#oppopad5#oppo平板#oppo双十一省心狂补节#孙颖莎同款OPPO平板#平板电脑-75617410515",
+                              "author": "瓜屎用耙Kf1",
+                              "play": 8,
+                              "date": "2026-08-09",
+                              "url": "https://www.bilibili.com/video/BV17duG6dEoE",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "OPPO Pad 5柔光版开箱 #OPPOPad5 #OPPO平板 #平板 #数码开箱视频 #OPPOPad",
+                              "author": "白狂妄的跳跳虎",
+                              "play": 5,
+                              "date": "2026-08-03",
+                              "url": "https://www.bilibili.com/video/BV1Ki3o6NESZ",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "OPPOPad5柔光版第一时间开箱！「次元搞机所」#OPPO平板#OPPOpad#OPPO#OPPOpad5#平板电脑-7559139909778246963",
+                              "author": "寄海w",
+                              "play": 1,
+                              "date": "2026-08-06",
+                              "url": "https://www.bilibili.com/video/BV1oLMS69EAd",
+                              "compare": false
+                        }
+                  ]
+            },
+            {
+                  "name": "OPPO Pad 6",
+                  "voices": [
+                        {
+                              "type": "video",
+                              "title": "一台平板全搞定！超全能的OPPO Pad 6 上手体验",
+                              "author": "冰淇淋不吃喵",
+                              "play": 207376,
+                              "date": "2026-05-22",
+                              "url": "https://www.bilibili.com/video/BV17MGb6CET1",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "开学装备新升级！OPPO Pad 6这次系统有点东西",
+                              "author": "小冯整挺好",
+                              "play": 157121,
+                              "date": "2026-05-23",
+                              "url": "https://www.bilibili.com/video/BV1tMGz6WEvC",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "这部安卓平板这么强？OPPO Pad 6 测评",
+                              "author": "喵橙橙评测室",
+                              "play": 69634,
+                              "date": "2026-06-11",
+                              "url": "https://www.bilibili.com/video/BV1vbEd6eEor",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "【大家测】OPPO Pad 6 柔光版开箱体验 | 大屏幕+大电量+144Hz高刷 面向学生党",
+                              "author": "大家测",
+                              "play": 21859,
+                              "date": "2026-06-15",
+                              "url": "https://www.bilibili.com/video/BV134Jg6PEF7",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "OPPOPad6 深度体验评测，一条视频告诉你优缺点",
+                              "author": "头脑数码特工",
+                              "play": 10034,
+                              "date": "2026-06-12",
+                              "url": "https://www.bilibili.com/video/BV1xuEy6SE3r",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "买这台OPPOPad6是我体验感最差的一次，有种买了二手平板的无力感",
+                              "author": "冬词数码",
+                              "play": 9577,
+                              "date": "2026-06-28",
+                              "url": "https://www.bilibili.com/video/BV1eBTg6kEdz",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "以小博大的旧神SR3M-以小博大整枪仅18万",
+                              "author": "哔啵哔探员",
+                              "play": 3397,
+                              "date": "2026-08-06",
+                              "url": "https://www.bilibili.com/video/BV1mbM16bEcG",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "OPPO Pad 6 游戏性能实测 玩原神还是有点烫手",
+                              "author": "随遇河岸231313",
+                              "play": 1276,
+                              "date": "2026-07-19",
+                              "url": "https://www.bilibili.com/video/BV1cuKN6PEDN",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "OPPOPad6游戏党可选#oppopad6#",
+                              "author": "久推笔记",
+                              "play": 1134,
+                              "date": "2026-07-15",
+                              "url": "https://www.bilibili.com/video/BV1HBNB6bE8n",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "柔光版是什么意思，买平板要买柔光版吗？",
+                              "author": "小郑小郑啊zw",
+                              "play": 1085,
+                              "date": "2026-07-24",
+                              "url": "https://www.bilibili.com/video/BV1Cmga6dEE3",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "天玑9500s性能如何？OPPO Pad6打游戏实测？#oppopad6 #oppo平板 #效率神器平板推荐",
+                              "author": "小孟科技",
+                              "play": 1057,
+                              "date": "2026-07-15",
+                              "url": "https://www.bilibili.com/video/BV1GSNe6vEro",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "2800左右六款平板测评，华为、小米、OPPO、联想、一加到底怎么选？",
+                              "author": "小牛数码优选",
+                              "play": 1038,
+                              "date": "2026-07-18",
+                              "url": "https://www.bilibili.com/video/BV1W7Kw6cErF",
+                              "compare": true
+                        },
+                        {
+                              "type": "video",
+                              "title": "OPPO Pad 6这些功能不会用≈白买",
+                              "author": "小郑小郑啊zw",
+                              "play": 991,
+                              "date": "2026-07-29",
+                              "url": "https://www.bilibili.com/video/BV1qX3169Ebr",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "OPPOPad6上手几个月体验分享#oppopad6#",
+                              "author": "久推笔记",
+                              "play": 609,
+                              "date": "2026-07-15",
+                              "url": "https://www.bilibili.com/video/BV1saNB6YExn",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "别浪费性能！OPPO Pad6新机必改6个设置",
+                              "author": "阿迪玩家",
+                              "play": 563,
+                              "date": "2026-07-31",
+                              "url": "https://www.bilibili.com/video/BV1fCGP6kESk",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "OPPO平板入手后，一定要做的设置❗️",
+                              "author": "煲一锅数码周",
+                              "play": 454,
+                              "date": "2026-08-05",
+                              "url": "https://www.bilibili.com/video/BV1TyMy68EwV",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "vivo Pad6 Pro、拯救者Y900、OPPO Pad6 Pro怎么选？",
+                              "author": "慕容甄选",
+                              "play": 365,
+                              "date": "2026-08-11",
+                              "url": "https://www.bilibili.com/video/BV1eMuB69E5X",
+                              "compare": true
+                        },
+                        {
+                              "type": "video",
+                              "title": "OPPO这三款平板怎么选？看完不纠结！ OPPO Pad 6、OPPO Pad Mini、.....",
+                              "author": "vbkgkl81243",
+                              "play": 344,
+                              "date": "2026-07-29",
+                              "url": "https://www.bilibili.com/video/BV1Gr3y6VELp",
+                              "compare": true
+                        },
+                        {
+                              "type": "video",
+                              "title": "OPPO Pad 6用了两个月！分享几个学生党使用的学习小技巧",
+                              "author": "小孟科技",
+                              "play": 323,
+                              "date": "2026-07-21",
+                              "url": "https://www.bilibili.com/video/BV1W3Ka62Es5",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "安卓全能旗舰新标杆来了！OPPO Find X10系列预计9月下旬发布！这机器有多猛？",
+                              "author": "瓜籽儿攻略",
+                              "play": 246,
+                              "date": "2026-08-11",
+                              "url": "https://www.bilibili.com/video/BV1rGuj6rE6Y",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "OPPO Pad 6值得买的一台平板",
+                              "author": "QH吉普",
+                              "play": 216,
+                              "date": "2026-07-24",
+                              "url": "https://www.bilibili.com/video/BV1Efga6JEoj",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "别再说平板只能盖泡面！生产力这块，一台OPPO Pad6就够了",
+                              "author": "觅光数码",
+                              "play": 150,
+                              "date": "2026-07-25",
+                              "url": "https://www.bilibili.com/video/BV19Y3g6SEkb",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "OPPO Pad 6 首销活动送好礼",
+                              "author": "幸福甄选",
+                              "play": 119,
+                              "date": "2026-07-29",
+                              "url": "https://www.bilibili.com/video/BV1dv3y6jEaP",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "买了OPPO Pad 6 这些实用的的功能不要错过",
+                              "author": "小俞数码",
+                              "play": 116,
+                              "date": "2026-08-01",
+                              "url": "https://www.bilibili.com/video/BV1oJGg6pEEP",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "死亡并非爱的敌人",
+                              "author": "历代光崽监护人",
+                              "play": 103,
+                              "date": "2026-07-13",
+                              "url": "https://www.bilibili.com/video/BV1nUNk6MEBs",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "学习搭子，OPPO Pad 6",
+                              "author": "QH吉普",
+                              "play": 57,
+                              "date": "2026-07-24",
+                              "url": "https://www.bilibili.com/video/BV1zfga6EEPD",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "全体追剧党和游戏党全体集合！！！99块！！99块拿下了OPPO Pad 4 Pro？？？以为是平台出了世纪bug。-----LKJU7TGJU6YHRG",
+                              "author": "隐雀独角兽Y",
+                              "play": 55,
+                              "date": "2026-07-16",
+                              "url": "https://www.bilibili.com/video/BV1Y5Kg6NEjE",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "OPPO Pad 6登场！数码宅们准备好了吗？(1655)",
+                              "author": "七七精选小店金信芙",
+                              "play": 9,
+                              "date": "2026-07-20",
+                              "url": "https://www.bilibili.com/video/BV1AEK16JExk",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "OPPO Pad 6学生平板：高效学习工具",
+                              "author": "七七精选小店顾學霜",
+                              "play": 4,
+                              "date": "2026-07-18",
+                              "url": "https://www.bilibili.com/video/BV1YAKP6EEqa",
+                              "compare": false
+                        }
+                  ]
+            },
+            {
+                  "name": "OPPO Pad Air5",
+                  "voices": [
+                        {
+                              "type": "video",
+                              "title": "【大家测】1899元起售高颜值学习平板 | OPPO Pad Air5柔光版开箱体验",
+                              "author": "大家测",
+                              "play": 74925,
+                              "date": "2025-12-30",
+                              "url": "https://www.bilibili.com/video/BV1PBvaBnEg2",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "我与iPad Air 5的杂谈_2025年了，M1还「遥遥领先」吗？",
+                              "author": "MacOSAQUA",
+                              "play": 72937,
+                              "date": "2025-12-26",
+                              "url": "https://www.bilibili.com/video/BV18DqmB5EPW",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "两千元档买学习平板？看OPPO Pad Air5就够了",
+                              "author": "喵橙橙评测室",
+                              "play": 62247,
+                              "date": "2025-12-30",
+                              "url": "https://www.bilibili.com/video/BV1qDvaB3EBr",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "用了几天，说说OPPOPadAir5的真实感受",
+                              "author": "他们叫我小仙",
+                              "play": 16965,
+                              "date": "2025-12-25",
+                              "url": "https://www.bilibili.com/video/BV1wkBDB3Eih",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "2K档学生平板怎么选？OPPO Pad Air 5体验分享",
+                              "author": "85年的栗子",
+                              "play": 13992,
+                              "date": "2025-12-30",
+                              "url": "https://www.bilibili.com/video/BV1BsvhBgEQc",
+                              "compare": true
+                        }
+                  ]
+            }
+      ],
       "report": null
     },
     "vivo": {
-      "products": [],
+      "products": [
+            {
+                  "name": "vivo Pad6 Pro",
+                  "voices": [
+                        {
+                              "type": "video",
+                              "title": "4K板皇？视听盛宴！vivo Pad6 Pro首发体验",
+                              "author": "搞机所",
+                              "play": 703380,
+                              "date": "2026-03-30",
+                              "url": "https://www.bilibili.com/video/BV1ZbXhBEETB",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "vivo Pad6 Pro首发：4K屏不够，还得高性能？",
+                              "author": "花生説",
+                              "play": 667909,
+                              "date": "2026-03-30",
+                              "url": "https://www.bilibili.com/video/BV1o3XaBSE5w",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "无4K不旗舰 vivo Pad6 Pro体验评测【新评科技】",
+                              "author": "新评科技",
+                              "play": 511618,
+                              "date": "2026-03-30",
+                              "url": "https://www.bilibili.com/video/BV1xQXhBYEeC",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "vivo Pad6 Pro：4K杜比，一步到位！",
+                              "author": "柯基小宸",
+                              "play": 391897,
+                              "date": "2026-03-30",
+                              "url": "https://www.bilibili.com/video/BV1PTXSBjEfh",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "平板需不需要上 4K？vivo Pad6 Pro 真的更清晰吗？",
+                              "author": "Navis-慢点评测",
+                              "play": 156281,
+                              "date": "2026-03-30",
+                              "url": "https://www.bilibili.com/video/BV1xoXhBFEuB",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "vivo Pad6 Pro越是大UP主吹的越是无底线",
+                              "author": "一花一劍",
+                              "play": 41050,
+                              "date": "2026-04-04",
+                              "url": "https://www.bilibili.com/video/BV1N7DTBQEuR",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "vivo Pad6 Pro来了，是入手vivo Pad5 Pro还是等新款？应该怎么选",
+                              "author": "奉仙数码",
+                              "play": 28076,
+                              "date": "2026-03-05",
+                              "url": "https://www.bilibili.com/video/BV1BCPCz2EPW",
+                              "compare": true
+                        },
+                        {
+                              "type": "video",
+                              "title": "iQOO Pad6 Pro和vivo Pad6 Pro有什么区别？该怎么选",
+                              "author": "奉仙数码",
+                              "play": 14428,
+                              "date": "2026-05-21",
+                              "url": "https://www.bilibili.com/video/BV1HJLx6JEQs",
+                              "compare": true
+                        },
+                        {
+                              "type": "video",
+                              "title": "Iqoopad6pro平板对比vivopad6pro测试,视频有点长,感兴趣的耐心看完",
+                              "author": "北清plus",
+                              "play": 4492,
+                              "date": "2026-08-04",
+                              "url": "https://www.bilibili.com/video/BV1MnuP6mEKA",
+                              "compare": true
+                        },
+                        {
+                              "type": "video",
+                              "title": "vivopad6pro多开！#新品#vivo平板#开学季#大学生必买好物-7624423682403798291",
+                              "author": "汛衷奔胀Az8",
+                              "play": 13,
+                              "date": "2026-08-08",
+                              "url": "https://www.bilibili.com/video/BV1QCuu6TEHN",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "iQOO Pad6 Pro 8GB+256GB 灰晶 国家补贴 第五代骁龙8至尊版 4K游戏电竞大屏 13000mAh 平板电脑 vivo",
+                              "author": "斐斐ie好物推荐",
+                              "play": 3,
+                              "date": "2026-08-06",
+                              "url": "https://www.bilibili.com/video/BV1QpuH6uEaD",
+                              "compare": false
+                        }
+                  ]
+            },
+            {
+                  "name": "vivo Pad5",
+                  "voices": [
+                        {
+                              "type": "video",
+                              "title": "「小白」vivo Pad5 Pro测评：天玑9400在平板表现如何？",
+                              "author": "小白测评",
+                              "play": 1684584,
+                              "date": "2025-04-18",
+                              "url": "https://www.bilibili.com/video/BV1NS56zGE69",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "平板一定要知道的实用玩法，vivo Pad5e测评",
+                              "author": "UX_有思",
+                              "play": 627056,
+                              "date": "2025-10-11",
+                              "url": "https://www.bilibili.com/video/BV1Ru4JzwEse",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "vivo 全家桶体验：是兄弟就来连我！vivo Pad5丨WATCH 5丨TWS Air3 Pro丨X200 Ultra",
+                              "author": "橙红Iris",
+                              "play": 591706,
+                              "date": "2025-08-18",
+                              "url": "https://www.bilibili.com/video/BV1qXY4zqEgS",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "「小白」OPPO Pad 5 测评：ColorOS 16+天玑9400+玩出花？",
+                              "author": "小白测评",
+                              "play": 564152,
+                              "date": "2025-10-15",
+                              "url": "https://www.bilibili.com/video/BV1Rh48zoEVT",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "超强多面手，体验打几分？vivo Pad5e学生党体验",
+                              "author": "小辰出击",
+                              "play": 415257,
+                              "date": "2025-10-11",
+                              "url": "https://www.bilibili.com/video/BV1pJ4nz5ENJ",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "游戏性能逆天，强得不像标准版！iQOO Pad5 使用体验",
+                              "author": "请不要叫我测评君",
+                              "play": 243840,
+                              "date": "2025-05-21",
+                              "url": "https://www.bilibili.com/video/BV1iGJhz5Ew9",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "2025年OV米三家热门平板-OPPO Pad5&amp;vivo Pad5 Pro&amp;小米平板8 Pro超详细对比评测！",
+                              "author": "超级赛博仓鼠",
+                              "play": 184396,
+                              "date": "2025-11-22",
+                              "url": "https://www.bilibili.com/video/BV1AoULBgEdE",
+                              "compare": true
+                        },
+                        {
+                              "type": "video",
+                              "title": "「参数分解」vivo Pad5，性价比还不错，充电慢了点，建议取消8g版本。",
+                              "author": "阳光使者2025",
+                              "play": 65120,
+                              "date": "2025-05-30",
+                              "url": "https://www.bilibili.com/video/BV19y7HzCE5Z",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "全能型真旗舰平板vivo Pad5 详细体验",
+                              "author": "科技小辛",
+                              "play": 42397,
+                              "date": "2025-05-28",
+                              "url": "https://www.bilibili.com/video/BV1hFjozqEeN",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "vivo Pad5 可还行？ vivo Pad5 稍微深度的体验",
+                              "author": "龙叔vlog",
+                              "play": 33459,
+                              "date": "2025-06-07",
+                              "url": "https://www.bilibili.com/video/BV1nUTVzkEAw",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "vivo Pad 5~沉浸式开箱&amp;游戏实测～",
+                              "author": "BOXLITE-X",
+                              "play": 28923,
+                              "date": "2025-06-17",
+                              "url": "https://www.bilibili.com/video/BV146Nvz6ERP",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "vivo Pad5，准大学生新装备！",
+                              "author": "我爱音频网",
+                              "play": 25568,
+                              "date": "2025-08-18",
+                              "url": "https://www.bilibili.com/video/BV1hZYszxEjT",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "全能得不像平板，vivo Pad5 能搞定轻办公吗？",
+                              "author": "钢炮同学啊",
+                              "play": 14430,
+                              "date": "2025-05-30",
+                              "url": "https://www.bilibili.com/video/BV1F97szNE2p",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "vivo Pad5e体验：你拿这玩意考验学生党？",
+                              "author": "满电的小贺",
+                              "play": 14422,
+                              "date": "2025-10-13",
+                              "url": "https://www.bilibili.com/video/BV1SP41zhERT",
+                              "compare": false
+                        }
+                  ]
+            },
+            {
+                  "name": "vivo Pad5 Pro",
+                  "voices": [
+                        {
+                              "type": "video",
+                              "title": "vivo Pad5 Pro上手体验：高性能轻办公平板，还能拉苹果一起上船？",
+                              "author": "花生説",
+                              "play": 1104555,
+                              "date": "2025-04-18",
+                              "url": "https://www.bilibili.com/video/BV1B85vzSEbk",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "更轻更薄还更强：vivo Pad5 Pro首发体验",
+                              "author": "搞机所",
+                              "play": 961365,
+                              "date": "2025-04-18",
+                              "url": "https://www.bilibili.com/video/BV1iv5vzjEyw",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "vivo Pad5 Pro深度体验，终于有一台同时拥有PC级WPS和顶级性能的超旗舰平板了！",
+                              "author": "纸飞机Paperfly",
+                              "play": 759431,
+                              "date": "2025-04-18",
+                              "url": "https://www.bilibili.com/video/BV1qa5vzEESQ",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "vivo Pad5 Pro，这是真板皇！",
+                              "author": "极客村长",
+                              "play": 743351,
+                              "date": "2025-04-18",
+                              "url": "https://www.bilibili.com/video/BV1iB5vz5E8X",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "vivo Pad5 Pro 体验：拒绝大号手机，娱乐+轻办公我都行！",
+                              "author": "微机分WekiHome",
+                              "play": 723269,
+                              "date": "2025-04-18",
+                              "url": "https://www.bilibili.com/video/BV1qm5rzaEjG",
+                              "compare": false
+                        },
+                        {
+                              "type": "video",
+                              "title": "【大家测】 2899元起售 vivo Pad5 Pro开箱对比 | 天玑9400旗舰处理器 13寸LCD | 对比iPad Pro、OPPO Pad 4 Pro",
+                              "author": "大家测",
+                              "play": 106455,
+                              "date": "2025-05-01",
+                              "url": "https://www.bilibili.com/video/BV1UnGbzyE6F",
+                              "compare": true
+                        },
+                        {
+                              "type": "video",
+                              "title": "【万字无恰饭测评遗风】vivo Pad5 Pro一个月深度体验报告：平板厂商比笔记本积极努力的多，但努力的不是技术，是套路…",
+                              "author": "超能测评Ultra",
+                              "play": 105785,
+                              "date": "2025-08-14",
+                              "url": "https://www.bilibili.com/video/BV1EqbzzaEGg",
+                              "compare": false
+                        }
+                  ]
+            }
+      ],
       "report": null
     }
   }
