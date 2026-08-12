@@ -40,11 +40,11 @@
   <p style="margin-top:6px;">报告区为预留模块，后续补充各品牌消费者声音深度分析</p>
 </div>
 
-<script src="data.js?v=2"></script>
+<script src="data.js?v=3"></script>
 <script>
 // ===== Page: 消费者声音 (Consumer Voice) =====
 (function(){
-  const cv = window.CONSUMER_VOICE || {brands:{}, updated:""};
+  const cv = CONSUMER_VOICE || {brands:{}, updated:""};
   document.getElementById("voiceUpdated").textContent = cv.updated || "—";
 
   const fmtPlay = n => (n>=10000) ? (n/10000).toFixed(1).replace(/\.0$/,"")+"万" : String(n);
