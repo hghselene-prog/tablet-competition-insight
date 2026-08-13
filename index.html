@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>平板电脑竞品分析 | 市场全景</title>
-<link rel="stylesheet" href="styles.css?v=5">
+<link rel="stylesheet" href="styles.css?v=2">
 </head>
 <body>
 
@@ -14,6 +14,7 @@
     <a href="index.html" class="tn-on">概览</a>
     <a href="products.html">产品列表</a>
     <a href="insights.html">市场洞察</a>
+    <a href="voice.html">消费者声音</a>
   </div>
 </nav>
 
@@ -89,7 +90,6 @@
   <div class="section-title"><span class="icon"></span>全产品规格对比表</div>
   <p class="section-desc">含首销价、官网现价、首销→官网现价对照（带 IT之家/凤凰网来源链接）和价格档位标签，横向滚动查看完整信息（受上方筛选影响）</p>
   <div class="price-legend">价格口径：首销价 = 产品上市时新闻稿公布起售价（带来源↗）；官网现价 = 品牌中国区官网当前在售起售价。两者均为"起售"口径，对应配置见各价格后的标签。</div>
-  <div class="tbl-hint">← 左右滑动查看完整表格 →</div>
   <div class="table-wrapper">
     <table id="cmpTable"><thead><tr>
       <th>品牌</th><th>产品名称</th><th>价格档位</th><th>屏幕尺寸</th><th>处理器</th><th>分辨率</th><th>首销价</th><th>官网现价</th><th>首销→官网现价(起售价)</th><th>定位</th>
@@ -109,7 +109,7 @@
   <p style="margin-top:6px;">价格信息以官网实时标价为准，首销价为产品发布时官方起售价，本页面仅供参考</p>
 </div>
 
-<script src="data.js"></script>
+<script src="data.js?v=2"></script>
 <script>
 // ===== Page 1: overview dashboard =====
 renderTierOv();renderTierSum();renderTable();renderPriceChart();renderDropChart();renderNewSummary();setupFilterBar();renderTableTierBar();updateCompareUI();
