@@ -512,3 +512,47 @@ tbody tr:last-child td{border-bottom:none}
 .voice-back{display:inline-flex;align-items:center;gap:6px;margin:6px 0 4px;padding:7px 14px;border:1px solid #e5e7eb;border-radius:999px;background:#fff;font-size:13px;font-weight:600;color:#374151;cursor:pointer;transition:.15s;}
 .voice-back:hover{border-color:#c8102e;color:#c8102e;background:#fff5f6;}
 .voice-prod-name .vc-cat-views{margin-left:8px;}
+
+/* ===== 移动端适配增强 (2026-08-13) ===== */
+/* 平板 / 大手机：导航与表格收紧，避免挤压错位 */
+@media(max-width:768px){
+  .container,.page-head{padding-left:16px;padding-right:16px}
+  .topnav{padding:10px 14px;flex-wrap:wrap;gap:8px}
+  .topnav .tn-links{flex-wrap:wrap;gap:4px}
+  .topnav .tn-links a{padding:6px 10px;font-size:12px}
+  .cmp-page-nav{padding:12px 14px;flex-wrap:wrap}
+  .cmp-page-nav .nav-title{font-size:14px;margin-left:0}
+  .cmp-grid{grid-template-columns:84px repeat(var(--cc,5),minmax(0,1fr));font-size:11px}
+  .cmp-grid .cell{padding:9px 5px}
+  .drop-chart-section{padding:18px}
+  table{font-size:12px}
+  thead th{padding:12px 9px}
+  tbody td{padding:9px 9px}
+  .tbl-hint{display:block}
+}
+/* 手机竖屏：卡片网格强制单列，章节/头部收紧，表格可贴边横滑 */
+@media(max-width:600px){
+  .product-grid,.insights-grid{grid-template-columns:1fr}
+  .ai-overview{grid-template-columns:1fr}
+  .watch-grid{grid-template-columns:1fr}
+  .tier-sum{grid-template-columns:1fr}
+  .header{padding:40px 16px 28px}
+  .header h1{font-size:24px}
+  .section-title{font-size:20px}
+  .cat-head .cat-num{font-size:17px}
+  .cat-head .cat-ttl{font-size:15px}
+  .ins-head .ttl{font-size:16px}
+  .ins-head .num{font-size:17px}
+  .ai-ov-h{font-size:13px}
+  .ai-ov-col li{font-size:12.5px}
+  .price-legend{font-size:11.5px}
+  .data-src{font-size:11.5px;padding:12px 14px}
+  .table-wrapper{border-radius:0;margin:0 -16px;box-shadow:none}
+  .drop-chart-section{padding:14px}
+  .drop-name{width:104px;font-size:11px}
+  .drop-amount{width:64px;font-size:12px}
+  .stat-item{padding:10px 14px}
+  .stat-item .num{font-size:20px}
+}
+/* 表格横向滑动提示（仅窄屏显示） */
+.tbl-hint{display:none;font-size:11px;color:#94a3b8;text-align:center;margin:0 0 8px;letter-spacing:.03em}
