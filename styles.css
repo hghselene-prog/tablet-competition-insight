@@ -514,6 +514,8 @@ tbody tr:last-child td{border-bottom:none}
 .voice-prod-name .vc-cat-views{margin-left:8px;}
 
 /* ===== 移动端适配增强 (2026-08-13) ===== */
+/* 表格横向滑动提示（仅窄屏显示） */
+.tbl-hint{display:none;font-size:11px;color:#94a3b8;text-align:center;margin:0 0 8px;letter-spacing:.03em}
 /* 平板 / 大手机：导航与表格收紧，避免挤压错位 */
 @media(max-width:768px){
   .container,.page-head{padding-left:16px;padding-right:16px}
@@ -554,5 +556,3 @@ tbody tr:last-child td{border-bottom:none}
   .stat-item{padding:10px 14px}
   .stat-item .num{font-size:20px}
 }
-/* 表格横向滑动提示（仅窄屏显示） */
-.tbl-hint{display:none;font-size:11px;color:#94a3b8;text-align:center;margin:0 0 8px;letter-spacing:.03em}
