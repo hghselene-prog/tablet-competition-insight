@@ -24,6 +24,15 @@
   <div class="voice-meta">数据更新：<span id="voiceUpdated"></span> ｜ 全品牌数据来自 B站 KOL 视频检索（2025–2026 平板发布），按型号聚合</div>
 </div>
 
+<!-- 顶部热力图：各品牌 × 各产品 浏览量一览 -->
+<section class="voice-heatmap" id="voiceHeatmapWrap">
+  <div class="vh-head">
+    <h2 class="vh-title">各品牌产品浏览量热力图</h2>
+    <span class="vh-legend">色块越深 = 该型号在 B站 的累计浏览量越高 · 点击色块可跳转至对应品牌</span>
+  </div>
+  <div class="vh-grid" id="voiceHeatmap"></div>
+</section>
+
 <!-- 分年筛选：为后续各品牌平板浏览量热力图预留分年维度 -->
 <div class="voice-yearbar" id="voiceYearBar">
   <span class="vyb-label">分年筛选</span>
@@ -103,6 +112,7 @@
     }).filter(p=>p.vs.length>0);
     const brandViews = prods.reduce((s,p)=>s+p.views, 0);
     const brandVoices = prods.reduce((s,p)=>s+p.vs.length, 0);
+    prods.sort((a,b)=> b.views - a.views);   // 品牌内：浏览量从高到低
     return { info, bd, prods, brandViews, brandVoices };
   }
 
@@ -212,7 +222,57 @@
     secEls[b] = sec;
   }
 
-  function renderAll(){ brandOrder.forEach(renderBrand); }
+  function renderAll(){ brandOrder.forEach(renderBrand); renderHeatmap(); }
+
+  // ---- 顶部热力图：各品牌 × 各产品，按累计浏览量着色 ----
+  function heatColor(t){   // t ∈ [0,1]：浅粉 → 深红
+    const lo=[253,238,240], hi=[200,16,46];
+    const r=Math.round(lo[0]+(hi[0]-lo[0])*t);
+    const g=Math.round(lo[1]+(hi[1]-lo[1])*t);
+    const b=Math.round(lo[2]+(hi[2]-lo[2])*t);
+    return `rgb(${r},${g},${b})`;
+  }
+  function renderHeatmap(){
+    const hm = document.getElementById("voiceHeatmap");
+    if(!hm) return;
+    // 收集各品牌（已含分年筛选）产品，并求全局最大浏览量用于色阶
+    const rows = brandOrder.map(b=>{
+      const { info, prods } = aggregate(b);
+      return { b, info, prods };
+    }).filter(r=> r.prods.length>0);
+    let maxV = 0;
+    rows.forEach(r=> r.prods.forEach(p=>{ if(p.views>maxV) maxV=p.views; }));
+    hm.innerHTML = "";
+    if(rows.length===0){
+      hm.innerHTML = '<p style="color:#9ca3af;font-size:13px;text-align:center;padding:18px;">该筛选下暂无消费者声音数据</p>';
+      return;
+    }
+    rows.forEach(r=>{
+      const row = document.createElement("div");
+      row.className = "vh-row";
+      const label = document.createElement("a");
+      label.className = "vh-brand";
+      label.href = "#brand-"+r.b;
+      label.style.setProperty("--bc", r.info.color);
+      label.textContent = r.info.name;
+      row.appendChild(label);
+      const cells = document.createElement("div");
+      cells.className = "vh-cells";
+      r.prods.forEach(p=>{
+        const t = maxV>0 ? p.views/maxV : 0;
+        const cell = document.createElement("a");
+        cell.className = "vh-cell";
+        cell.href = "#brand-"+r.b;
+        cell.style.background = heatColor(t);
+        cell.style.color = t>0.62 ? "#fff" : "#7a1320";
+        cell.title = p.name+" · 累计浏览 "+p.views.toLocaleString();
+        cell.innerHTML = `<span class="vh-pname">${p.name}</span><span class="vh-pviews">${fmtPlay(p.views)}</span>`;
+        cells.appendChild(cell);
+      });
+      row.appendChild(cells);
+      hm.appendChild(row);
+    });
+  }
 
   renderAll();
 })();
