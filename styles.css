@@ -479,6 +479,30 @@ tbody tr:last-child td{border-bottom:none}
 .voice-report-ph{display:flex;align-items:center;gap:10px;font-size:13px;color:#9ca3af;}
 .vr-ph-tag{font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px;background:#eef0f3;color:#8a93a0;}
 
+/* ===== 消费者声音：每产品「生成报告」按钮 + 报告面板 ===== */
+.vc-cat-foot{display:flex;justify-content:space-between;align-items:center;margin-top:6px;gap:10px}
+.vc-cat-report-btn,.voice-prod-report-btn{background:#2563eb;color:#fff;border:none;border-radius:8px;font-size:12.5px;font-weight:700;padding:7px 13px;cursor:pointer;transition:.15s;white-space:nowrap}
+.vc-cat-report-btn:hover,.voice-prod-report-btn:hover{background:#1d4ed8}
+.voice-prod-name{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.voice-prod-report-btn{margin-left:auto}
+.vc-report-panel-wrap{margin-top:10px}
+.vc-report-panel{margin-top:4px;padding:14px 16px;border:1px solid #e3e8ef;border-radius:12px;background:#fafbfc}
+.vrk-head{font-weight:800;color:#111827;font-size:14px;margin-bottom:10px;display:flex;flex-direction:column;gap:2px}
+.vrk-sub{font-weight:500;font-size:12px;color:#6b7280}
+.vrk-block{margin-bottom:10px}
+.vrk-bt{font-size:12px;font-weight:700;color:#374151;margin-bottom:6px}
+.vrk-chips{display:flex;flex-wrap:wrap;gap:6px}
+.vrk-chip{background:#eef2ff;color:#3730a3;border-radius:999px;padding:3px 10px;font-size:12px}
+.vrk-chip em{font-style:normal;font-weight:700;margin-left:4px;color:#1d4ed8}
+.vrk-chip.vrk-muted{background:#f3f4f6;color:#9ca3af}
+.vrk-list{margin:0;padding-left:18px}
+.vrk-list li{font-size:13px;color:#374151;margin-bottom:5px;line-height:1.5}
+.vrk-list a{color:#2563eb;text-decoration:none}
+.vrk-list a:hover{text-decoration:underline}
+.vrk-rank{display:inline-block;width:18px;height:18px;line-height:18px;text-align:center;background:#111827;color:#fff;border-radius:50%;font-size:11px;margin-right:6px}
+.vrk-meta{display:block;font-size:11.5px;color:#9ca3af;margin-left:24px}
+.vrk-note{font-size:11.5px;color:#9ca3af;margin-top:8px;border-top:1px dashed #e5e7eb;padding-top:8px}
+
 /* ===== 消费者声音：分年筛选 + 以产品分类概览 ===== */
 .voice-yearbar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:12px 18px;background:#fff;border:1px solid #eef0f3;border-radius:12px;margin:0 0 4px;}
 .vyb-label{font-size:13px;font-weight:700;color:#374151;white-space:nowrap;}
@@ -608,6 +632,11 @@ tbody tr:last-child td{border-bottom:none}
   .voice-card .vc-title{font-size:12.5px;-webkit-line-clamp:2}
   .voice-card .vc-meta{gap:7px;font-size:11.5px}
   .voice-report{padding:12px;border-radius:10px}
+  .vc-cat-report-btn,.voice-prod-report-btn{padding:6px 10px;font-size:11.5px}
+  .voice-prod-name{font-size:15px}
+  .vc-report-panel{padding:12px}
+  .vrk-head{font-size:13px}
+  .vrk-list a{font-size:12.5px}
   /* ---- 热力图手机适配：品牌名与色块上下堆叠 ---- */
   .voice-heatmap{padding:12px 14px;margin:14px 0 6px}
   .vh-title{font-size:14.5px}

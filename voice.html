@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>消费者声音 | 平板电脑竞品分析</title>
-<link rel="stylesheet" href="styles.css?v=5">
+<link rel="stylesheet" href="styles.css?v=6">
 </head>
 <body>
 
@@ -20,7 +20,7 @@
 
 <div class="page-head">
   <h1>消费者声音</h1>
-  <p class="subtitle">按 <strong>品牌 → 产品</strong> 汇总各平板在视频 / 社媒平台的用户与 KOL 声音。每条声音支持「视频链接 / 图片 / 报告」三种形态，点击即可跳转原视频或查看素材。下方每个品牌保留「消费者声音报告」预留区，后续可直接补充深度报告。</p>
+  <p class="subtitle">按 <strong>品牌 → 产品</strong> 汇总各平板在视频 / 社媒平台的用户与 KOL 声音。每条声音支持「视频链接 / 图片 / 报告」三种形态，点击即可跳转原视频或查看素材。<strong>每个产品均可一键「生成报告」</strong>（依据其浏览视频自动汇总关注点 / 时间分布 / 头部内容）；下方每个品牌另保留「消费者声音报告」预留区，后续可直接补充深度报告。</p>
   <div class="voice-meta">数据更新：<span id="voiceUpdated"></span> ｜ 全品牌数据来自 B站 KOL 视频检索（2025–2026 平板发布），按型号聚合</div>
 </div>
 
@@ -143,6 +143,30 @@
     return card;
   }
 
+  // 基于某产品声音数据（已受分年筛选影响）自动生成「消费者声音报告」
+  const REPORT_KW = ["屏幕","手写笔","手写","办公","游戏","影音","续航","性能","芯片","处理器","价格","性价比","轻薄","便携","多任务","分屏","生态","键盘","音质","拍照","外观","系统","鸿蒙","iPadOS","互联","笔记","学习","绘画","高刷","刷新率","护眼","扬声器","信号","散热","充电","支架"];
+  function genReport(p){
+    const vs = p.vs, n = vs.length, views = p.views;
+    const avg = n ? Math.round(views/n) : 0;
+    const top = (p.top3 && p.top3.length) ? p.top3 : [...vs].sort((a,b)=>(b.play||0)-(a.play||0)).slice(0,3);
+    const kw = {};
+    REPORT_KW.forEach(k=>{ const c = vs.filter(v=>(v.title||"").includes(k)).length; if(c>0) kw[k]=c; });
+    const kws = Object.entries(kw).sort((a,b)=>b[1]-a[1]).slice(0,8);
+    const byYear = {};
+    vs.forEach(v=>{ if(v.date){ const y=v.date.slice(0,4); byYear[y]=(byYear[y]||0)+1; } });
+    const years = Object.entries(byYear).sort((a,b)=>b[0]-a[0]);
+    const topList = top.map((v,i)=>`<li><span class="vrk-rank">${i+1}</span><a href="${v.url||"#"}" target="_blank" rel="noopener noreferrer">${v.title}</a><span class="vrk-meta">${v.author||""}${(v.author&&v.date)?" · ":""}${v.date||""} · ▶ ${fmtPlay(v.play||0)}</span></li>`).join("");
+    const kwHtml = kws.length ? kws.map(([k,c])=>`<span class="vrk-chip">${k}<em>${c}</em></span>`).join("") : `<span class="vrk-chip vrk-muted">暂无显著关键词</span>`;
+    const yHtml = years.length ? years.map(([y,c])=>`<span class="vrk-chip">${y}年<em>${c}</em></span>`).join("") : `<span class="vrk-chip vrk-muted">无日期数据</span>`;
+    return `<div class="vc-report-panel">`
+      + `<div class="vrk-head">📊 「${p.name}」消费者声音报告<span class="vrk-sub">${n} 条声音 · 累计浏览 ${fmtPlay(views)} · 平均 ${fmtPlay(avg)}/条</span></div>`
+      + `<div class="vrk-block"><div class="vrk-bt">内容关注点（标题关键词命中）</div><div class="vrk-chips">${kwHtml}</div></div>`
+      + `<div class="vrk-block"><div class="vrk-bt">时间分布</div><div class="vrk-chips">${yHtml}</div></div>`
+      + `<div class="vrk-block"><div class="vrk-bt">头部内容 Top ${top.length}</div><ul class="vrk-list">${topList}</ul></div>`
+      + `<div class="vrk-note">本报告由页面依据该型号在各平台的声音数据自动汇总，非品牌官方结论，仅供研究参考。</div>`
+      + `</div>`;
+  }
+
   // 渲染单个品牌：概览 or 详情（按 openMap[b]）
   function renderBrand(b){
     const { info, bd, prods, brandViews, brandVoices } = aggregate(b);
@@ -177,12 +201,30 @@
       const pname = document.createElement("div");
       pname.className = "voice-prod-name";
       pname.innerHTML = `${prod.name} <span class="vc-cat-views">${prod.vs.length} 条声音 · 浏览 ${fmtPlay(prod.views)}</span>`;
+      const rbtn = document.createElement("button");
+      rbtn.type = "button";
+      rbtn.className = "voice-prod-report-btn";
+      rbtn.textContent = "📊 生成报告";
+      pname.appendChild(rbtn);
       sec.appendChild(pname);
 
       const grid = document.createElement("div");
       grid.className = "voice-grid";
       prod.vs.forEach(v=> grid.appendChild(voiceCard(v)));
       sec.appendChild(grid);
+
+      const panel = document.createElement("div");
+      panel.className = "vc-report-panel-wrap";
+      panel.style.display = "none";
+      rbtn.addEventListener("click", (e)=>{
+        e.stopPropagation();
+        if(panel.dataset.built!=="1"){ panel.innerHTML = genReport(prod); panel.dataset.built="1"; }
+        const show = panel.style.display==="none";
+        panel.style.display = show ? "block" : "none";
+        rbtn.textContent = show ? "收起报告 ▲" : "📊 生成报告";
+      });
+      panel.addEventListener("click", e=> e.stopPropagation());
+      sec.appendChild(panel);
     } else {
       // 概览：以产品分类，每款产品可点击进入
       const ov = document.createElement("div");
@@ -198,7 +240,22 @@
           : `<span class="vc-top-empty">暂无</span>`;
         item.innerHTML = `<div class="vc-cat-pname">${p.name}<span class="vc-cat-views">浏览 ${fmtPlay(p.views)}</span></div>`
           + `<div class="vc-top-list">${topPreview}</div>`
-          + `<span class="vc-cat-go">查看全部 ${p.vs.length} 条 ›</span>`;
+          + `<div class="vc-cat-foot"><span class="vc-cat-go">查看全部 ${p.vs.length} 条 ›</span>`
+          + `<button type="button" class="vc-cat-report-btn">📊 生成报告</button></div>`;
+        const panel = document.createElement("div");
+        panel.className = "vc-report-panel-wrap";
+        panel.style.display = "none";
+        item.appendChild(panel);
+        const rbtn = item.querySelector(".vc-cat-report-btn");
+        rbtn.addEventListener("click", (e)=>{
+          e.stopPropagation();
+          if(panel.dataset.built!=="1"){ panel.innerHTML = genReport(p); panel.dataset.built="1"; }
+          const show = panel.style.display==="none";
+          panel.style.display = show ? "block" : "none";
+          rbtn.textContent = show ? "收起报告 ▲" : "📊 生成报告";
+        });
+        panel.addEventListener("click", e=> e.stopPropagation());
+        panel.addEventListener("keydown", e=> e.stopPropagation());
         const open = ()=>{ openMap[b]=p.name; renderBrand(b); };
         item.onclick = open;
         item.onkeydown = (e)=>{ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); open(); } };
